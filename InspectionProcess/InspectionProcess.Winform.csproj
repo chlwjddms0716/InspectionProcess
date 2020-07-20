@@ -84,5 +84,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InspectionProcess.Data\InspectionProcess.csproj">
+      <Project>{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}</Project>
+      <Name>InspectionProcess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
