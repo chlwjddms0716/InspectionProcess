@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InspectionProcess", "InspectionProcess\InspectionProcess.csproj", "{A689F6CC-272F-4D7C-B56E-7385FAE8A770}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InspectionProcess.Winform", "InspectionProcess\InspectionProcess.Winform.csproj", "{A689F6CC-272F-4D7C-B56E-7385FAE8A770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InspectionProcess", "InspectionProcess.Data\InspectionProcess.csproj", "{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A689F6CC-272F-4D7C-B56E-7385FAE8A770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A689F6CC-272F-4D7C-B56E-7385FAE8A770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A689F6CC-272F-4D7C-B56E-7385FAE8A770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A31537E-322A-4F5C-AC19-AE50B71E3C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

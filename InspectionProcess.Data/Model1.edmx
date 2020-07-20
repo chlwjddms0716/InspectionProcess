@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InspectionProcessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Inspection">
+          <Key>
+            <PropertyRef Name="InspectionId" />
+          </Key>
+          <Property Name="InspectionId" Type="int" Nullable="false" />
+          <Property Name="InspectionTeam" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="FinishTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="InspectionResult">
+          <Key>
+            <PropertyRef Name="InspectionResultId" />
+          </Key>
+          <Property Name="InspectionResultId" Type="int" Nullable="false" />
+          <Property Name="InspectionId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="NormalNumber" Type="int" Nullable="false" />
+          <Property Name="DefectiveNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Keeping">
+          <Key>
+            <PropertyRef Name="InspectionResultId" />
+            <PropertyRef Name="WarehouseId" />
+          </Key>
+          <Property Name="InspectionResultId" Type="int" Nullable="false" />
+          <Property Name="WarehouseId" Type="int" Nullable="false" />
+          <Property Name="KeepingDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Merchandise">
+          <Key>
+            <PropertyRef Name="MerchandiseId" />
+          </Key>
+          <Property Name="MerchandiseId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="ProductionTeam" Type="int" Nullable="false" />
+          <Property Name="FinishTime" Type="datetime" Nullable="false" />
+          <Property Name="MerchandiseId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamId" />
+          </Key>
+          <Property Name="TeamId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="WarehouseId" />
+          </Key>
+          <Property Name="WarehouseId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_검사결과_검수작업">
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="1" />
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inspection">
+              <PropertyRef Name="InspectionId" />
+            </Principal>
+            <Dependent Role="InspectionResult">
+              <PropertyRef Name="InspectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_검사결과_생산품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="InspectionResult">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_검수_근무조">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="InspectionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_생산_근무조">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_생산품_상품">
+          <End Role="Merchandise" Type="Self.Merchandise" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchandise">
+              <PropertyRef Name="MerchandiseId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="MerchandiseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고_검사결과1">
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="1" />
+          <End Role="Keeping" Type="Self.Keeping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InspectionResult">
+              <PropertyRef Name="InspectionResultId" />
+            </Principal>
+            <Dependent Role="Keeping">
+              <PropertyRef Name="InspectionResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고_창고">
+          <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="1" />
+          <End Role="Keeping" Type="Self.Keeping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouse">
+              <PropertyRef Name="WarehouseId" />
+            </Principal>
+            <Dependent Role="Keeping">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InspectionProcessModelStoreContainer">
+          <EntitySet Name="Inspection" EntityType="Self.Inspection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InspectionResult" EntityType="Self.InspectionResult" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Keeping" EntityType="Self.Keeping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Merchandise" EntityType="Self.Merchandise" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Warehouse" EntityType="Self.Warehouse" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_검사결과_검수작업" Association="Self.FK_검사결과_검수작업">
+            <End Role="Inspection" EntitySet="Inspection" />
+            <End Role="InspectionResult" EntitySet="InspectionResult" />
+          </AssociationSet>
+          <AssociationSet Name="FK_검사결과_생산품" Association="Self.FK_검사결과_생산품">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="InspectionResult" EntitySet="InspectionResult" />
+          </AssociationSet>
+          <AssociationSet Name="FK_검수_근무조" Association="Self.FK_검수_근무조">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Inspection" EntitySet="Inspection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_생산_근무조" Association="Self.FK_생산_근무조">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_생산품_상품" Association="Self.FK_생산품_상품">
+            <End Role="Merchandise" EntitySet="Merchandise" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고_검사결과1" Association="Self.FK_입고_검사결과1">
+            <End Role="InspectionResult" EntitySet="InspectionResult" />
+            <End Role="Keeping" EntitySet="Keeping" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고_창고" Association="Self.FK_입고_창고">
+            <End Role="Warehouse" EntitySet="Warehouse" />
+            <End Role="Keeping" EntitySet="Keeping" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InspectionProcessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Inspection">
+          <Key>
+            <PropertyRef Name="InspectionId" />
+          </Key>
+          <Property Name="InspectionId" Type="Int32" Nullable="false" />
+          <Property Name="InspectionTeam" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FinishTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="InspectionResults" Relationship="Self.FK_검사결과_검수작업" FromRole="Inspection" ToRole="InspectionResult" />
+          <NavigationProperty Name="Team" Relationship="Self.FK_검수_근무조" FromRole="Inspection" ToRole="Team" />
+        </EntityType>
+        <EntityType Name="InspectionResult">
+          <Key>
+            <PropertyRef Name="InspectionResultId" />
+          </Key>
+          <Property Name="InspectionResultId" Type="Int32" Nullable="false" />
+          <Property Name="InspectionId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <Property Name="NormalNumber" Type="Int32" Nullable="false" />
+          <Property Name="DefectiveNumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Inspection" Relationship="Self.FK_검사결과_검수작업" FromRole="InspectionResult" ToRole="Inspection" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_검사결과_생산품" FromRole="InspectionResult" ToRole="Product" />
+          <NavigationProperty Name="Keepings" Relationship="Self.FK_입고_검사결과1" FromRole="InspectionResult" ToRole="Keeping" />
+        </EntityType>
+        <EntityType Name="Keeping">
+          <Key>
+            <PropertyRef Name="InspectionResultId" />
+            <PropertyRef Name="WarehouseId" />
+          </Key>
+          <Property Name="InspectionResultId" Type="Int32" Nullable="false" />
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+          <Property Name="KeepingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="InspectionResult" Relationship="Self.FK_입고_검사결과1" FromRole="Keeping" ToRole="InspectionResult" />
+          <NavigationProperty Name="Warehouse" Relationship="Self.FK_입고_창고" FromRole="Keeping" ToRole="Warehouse" />
+        </EntityType>
+        <EntityType Name="Merchandise">
+          <Key>
+            <PropertyRef Name="MerchandiseId" />
+          </Key>
+          <Property Name="MerchandiseId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_생산품_상품" FromRole="Merchandise" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="ProductionTeam" Type="Int32" Nullable="false" />
+          <Property Name="FinishTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MerchandiseId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="InspectionResults" Relationship="Self.FK_검사결과_생산품" FromRole="Product" ToRole="InspectionResult" />
+          <NavigationProperty Name="Merchandise" Relationship="Self.FK_생산품_상품" FromRole="Product" ToRole="Merchandise" />
+          <NavigationProperty Name="Team" Relationship="Self.FK_생산_근무조" FromRole="Product" ToRole="Team" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamId" />
+          </Key>
+          <Property Name="TeamId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Inspections" Relationship="Self.FK_검수_근무조" FromRole="Team" ToRole="Inspection" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_생산_근무조" FromRole="Team" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="WarehouseId" />
+          </Key>
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Keepings" Relationship="Self.FK_입고_창고" FromRole="Warehouse" ToRole="Keeping" />
+        </EntityType>
+        <Association Name="FK_검사결과_검수작업">
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="1" />
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inspection">
+              <PropertyRef Name="InspectionId" />
+            </Principal>
+            <Dependent Role="InspectionResult">
+              <PropertyRef Name="InspectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_검수_근무조">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="InspectionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_검사결과_생산품">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="InspectionResult">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고_검사결과1">
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="1" />
+          <End Role="Keeping" Type="Self.Keeping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InspectionResult">
+              <PropertyRef Name="InspectionResultId" />
+            </Principal>
+            <Dependent Role="Keeping">
+              <PropertyRef Name="InspectionResultId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_입고_창고">
+          <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="1" />
+          <End Role="Keeping" Type="Self.Keeping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouse">
+              <PropertyRef Name="WarehouseId" />
+            </Principal>
+            <Dependent Role="Keeping">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_생산품_상품">
+          <End Role="Merchandise" Type="Self.Merchandise" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchandise">
+              <PropertyRef Name="MerchandiseId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="MerchandiseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_생산_근무조">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InspectionProcessEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Inspections" EntityType="Self.Inspection" />
+          <EntitySet Name="InspectionResults" EntityType="Self.InspectionResult" />
+          <EntitySet Name="Keepings" EntityType="Self.Keeping" />
+          <EntitySet Name="Merchandises" EntityType="Self.Merchandise" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Teams" EntityType="Self.Team" />
+          <EntitySet Name="Warehouses" EntityType="Self.Warehouse" />
+          <AssociationSet Name="FK_검사결과_검수작업" Association="Self.FK_검사결과_검수작업">
+            <End Role="Inspection" EntitySet="Inspections" />
+            <End Role="InspectionResult" EntitySet="InspectionResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_검수_근무조" Association="Self.FK_검수_근무조">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_검사결과_생산품" Association="Self.FK_검사결과_생산품">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="InspectionResult" EntitySet="InspectionResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고_검사결과1" Association="Self.FK_입고_검사결과1">
+            <End Role="InspectionResult" EntitySet="InspectionResults" />
+            <End Role="Keeping" EntitySet="Keepings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입고_창고" Association="Self.FK_입고_창고">
+            <End Role="Warehouse" EntitySet="Warehouses" />
+            <End Role="Keeping" EntitySet="Keepings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_생산품_상품" Association="Self.FK_생산품_상품">
+            <End Role="Merchandise" EntitySet="Merchandises" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_생산_근무조" Association="Self.FK_생산_근무조">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InspectionProcessModelStoreContainer" CdmEntityContainer="InspectionProcessEntities">
+          <EntitySetMapping Name="Inspections">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Inspection">
+              <MappingFragment StoreEntitySet="Inspection">
+                <ScalarProperty Name="InspectionId" ColumnName="InspectionId" />
+                <ScalarProperty Name="InspectionTeam" ColumnName="InspectionTeam" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="FinishTime" ColumnName="FinishTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InspectionResults">
+            <EntityTypeMapping TypeName="InspectionProcessModel.InspectionResult">
+              <MappingFragment StoreEntitySet="InspectionResult">
+                <ScalarProperty Name="InspectionResultId" ColumnName="InspectionResultId" />
+                <ScalarProperty Name="InspectionId" ColumnName="InspectionId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="NormalNumber" ColumnName="NormalNumber" />
+                <ScalarProperty Name="DefectiveNumber" ColumnName="DefectiveNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Keepings">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Keeping">
+              <MappingFragment StoreEntitySet="Keeping">
+                <ScalarProperty Name="InspectionResultId" ColumnName="InspectionResultId" />
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="KeepingDate" ColumnName="KeepingDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Merchandises">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Merchandise">
+              <MappingFragment StoreEntitySet="Merchandise">
+                <ScalarProperty Name="MerchandiseId" ColumnName="MerchandiseId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductionTeam" ColumnName="ProductionTeam" />
+                <ScalarProperty Name="FinishTime" ColumnName="FinishTime" />
+                <ScalarProperty Name="MerchandiseId" ColumnName="MerchandiseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warehouses">
+            <EntityTypeMapping TypeName="InspectionProcessModel.Warehouse">
+              <MappingFragment StoreEntitySet="Warehouse">
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
