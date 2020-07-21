@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Core.EntityClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,34 @@ namespace InspectionProcess.Data
                         select x.ProductId;
 
             return query.FirstOrDefault();
+        }
+
+        public List<Product> Search(int? productionId, int? merchandiseId, int? teamId)
+        {
+            var context = CreateContext();
+
+             var query = from x in context.Products
+                        select new { Product = x,  MerchandiseName = x.Merchandise.Name/*, TeamName = x.Team.Name*/};
+
+            if (productionId.HasValue)
+                query = query.Where(x => x.Product.ProductId == productionId);
+
+            if (merchandiseId.HasValue)
+                query = query.Where(x => x.Product.MerchandiseId == merchandiseId);
+            //if (teamId.HasValue) 
+            //    query = query.Where(x =>x.Product.)
+
+            var items = query.ToList();
+
+            foreach (var x in items)
+            {
+                x.Product.MerchandiseName = x.MerchandiseName;
+                //x.Product.TeamName = x.productionTeam;
+
+            }
+
+            return items.ConvertAll(x => x.Product);
+
         }
     }
 }

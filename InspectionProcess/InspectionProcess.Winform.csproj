@@ -209,6 +209,10 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Inspection.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Keeping.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Merchandise1.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Product1.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Warehouse.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
