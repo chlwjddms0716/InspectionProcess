@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class InspectionData : EntityData<Inspection>
+    public class InspectionData : EntityData<Inspection>
     {
         public Inspection Get(int inspectionId)
         {
@@ -26,6 +26,17 @@ namespace InspectionProcess.Data
         }
 
         public int GetMaxId()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Inspections
+                        orderby x.InspectionId descending
+                        select x.InspectionId;
+
+            return query.FirstOrDefault();
+        }
+
+        public object GetAllbyDate()
         {
             InspectionProcessEntities context = CreateContext();
 
