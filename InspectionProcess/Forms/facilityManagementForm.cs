@@ -18,9 +18,9 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-        private void facilityManagementForm_Load(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
+            bdsInspection.DataSource = DataRepository.Inspection.GetAllbyDate();
         }
     }
 }
