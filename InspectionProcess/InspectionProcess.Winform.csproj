@@ -271,13 +271,37 @@
     <None Include="Resources\temperature.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\humidity.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\temperature2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_123343692.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_123343794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_124223133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_124804897.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_125016507.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200721_125136783.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Muslim_Mosque-18_2044979.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
