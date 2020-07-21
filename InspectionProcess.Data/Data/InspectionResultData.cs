@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class InspectionResultData
+    class InspectionResultData 
     {
     }
 }
