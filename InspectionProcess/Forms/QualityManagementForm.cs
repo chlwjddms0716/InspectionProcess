@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InspectionProcess
+namespace InspectionProcess.Forms
 {
-    public partial class RootForm : ChildRootForm
+    public partial class QualityManagementForm : DevExpress.XtraEditors.XtraForm
     {
-        public RootForm()
+        public QualityManagementForm()
         {
             InitializeComponent();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

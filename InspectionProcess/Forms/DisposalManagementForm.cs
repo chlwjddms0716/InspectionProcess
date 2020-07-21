@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InspectionProcess
+namespace InspectionProcess.Forms
 {
-    public partial class RootForm : ChildRootForm
+    public partial class DisposalManagementForm : XtraForm
     {
-        public RootForm()
+        public DisposalManagementForm()
         {
             InitializeComponent();
         }

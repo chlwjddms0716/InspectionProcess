@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class ProductData : EntityData<Product>
+    public class ProductData : EntityData<Product>
     {
         public Product Get(int productId)
         {
