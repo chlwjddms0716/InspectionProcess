@@ -5,20 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9de4cf9275984033a3de3f4030e6f8ec" Name="Diagram1">
-        <EntityTypeShape EntityType="InspectionProcessModel.Inspection" Width="1.5" PointX="3" PointY="6.625" />
-        <EntityTypeShape EntityType="InspectionProcessModel.InspectionResult" Width="1.5" PointX="5.25" PointY="4.625" />
-        <EntityTypeShape EntityType="InspectionProcessModel.Keeping" Width="1.5" PointX="7.5" PointY="5.125" />
-        <EntityTypeShape EntityType="InspectionProcessModel.Merchandise" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="InspectionProcessModel.Product" Width="1.5" PointX="3" PointY="3.375" />
-        <EntityTypeShape EntityType="InspectionProcessModel.Team" Width="1.5" PointX="0.75" PointY="3.625" />
-        <EntityTypeShape EntityType="InspectionProcessModel.Warehouse" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Inspection" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="InspectionProcessModel.InspectionResult" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Keeping" Width="1.5" PointX="7.5" PointY="1.375" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Merchandise" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Product" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Team" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="InspectionProcessModel.Warehouse" Width="1.5" PointX="5.25" PointY="5.5" />
+        <AssociationConnector Association="InspectionProcessModel.FK_Inspection_Team" />
         <AssociationConnector Association="InspectionProcessModel.FK_검사결과_검수작업" />
-        <AssociationConnector Association="InspectionProcessModel.FK_검수_근무조" />
         <AssociationConnector Association="InspectionProcessModel.FK_검사결과_생산품" />
         <AssociationConnector Association="InspectionProcessModel.FK_입고_검사결과1" />
         <AssociationConnector Association="InspectionProcessModel.FK_입고_창고" />
-        <AssociationConnector Association="InspectionProcessModel.FK_생산품_상품" />
-        <AssociationConnector Association="InspectionProcessModel.FK_생산_근무조" />
+        <AssociationConnector Association="InspectionProcessModel.FK_Product_Merchandise" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -23,10 +23,6 @@ namespace InspectionProcess.Forms
 
         }
 
-        private void RealTimeStatusForm_Load(object sender, EventArgs e)
-        {
-            btnCCTV = BackColor.
-
-        }
+    
     }
 }
