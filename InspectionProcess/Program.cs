@@ -25,7 +25,7 @@ namespace InspectionProcess
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new facilityManagementForm());
+            Application.Run(new RealTimeStatusForm());
         }
 
         private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
