@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class InspectionData : EntityData<Inspection>
+    public class InspectionData : EntityData<Inspection>
     {
         public Inspection Get(int inspectionId)
         {

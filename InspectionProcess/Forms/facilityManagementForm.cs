@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InspectionProcess.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace InspectionProcess.Forms
         public facilityManagementForm()
         {
             InitializeComponent();
+        }
+
+        private void facilityManagementForm_Load(object sender, EventArgs e)
+        {
+            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class WarehouseData : EntityData<Warehouse>
+    public class WarehouseData : EntityData<Warehouse>
     {
         public Warehouse Get(int warehouseId)
         {
