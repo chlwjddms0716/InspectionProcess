@@ -119,11 +119,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisposalManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DisposalManagementForm.Designer.cs">
+      <DependentUpon>DisposalManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\facilityManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\facilityManagementForm.Designer.cs">
       <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KeepingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KeepingManagementForm.Designer.cs">
+      <DependentUpon>KeepingManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -137,11 +155,23 @@
     <Compile Include="Forms\MDITest.Designer.cs">
       <DependentUpon>MDITest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProductManagamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductManagamentForm.Designer.cs">
+      <DependentUpon>ProductManagamentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\QualityManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\QualityManagementForm.Designer.cs">
       <DependentUpon>QualityManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RealTimeStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RealTimeStatusForm.Designer.cs">
+      <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\testForm.cs">
       <SubType>Form</SubType>
@@ -160,8 +190,17 @@
     <EmbeddedResource Include="BaseForms\ChildRootForm.resx">
       <DependentUpon>ChildRootForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DisposalManagementForm.resx">
+      <DependentUpon>DisposalManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\facilityManagementForm.resx">
       <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KeepingManagementForm.resx">
+      <DependentUpon>KeepingManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -169,8 +208,14 @@
     <EmbeddedResource Include="Forms\MDITest.resx">
       <DependentUpon>MDITest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductManagamentForm.resx">
+      <DependentUpon>ProductManagamentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\QualityManagementForm.resx">
       <DependentUpon>QualityManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealTimeStatusForm.resx">
+      <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TestForm2.resx">
       <DependentUpon>TestForm2.cs</DependentUpon>

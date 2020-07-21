@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,11 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class QualityManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class DisposalManagementForm : XtraForm
     {
-        public QualityManagementForm()
+        public DisposalManagementForm()
         {
             InitializeComponent();
-        }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
