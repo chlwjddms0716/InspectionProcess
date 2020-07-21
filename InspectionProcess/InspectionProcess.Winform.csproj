@@ -149,12 +149,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MDITest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MDITest.Designer.cs">
-      <DependentUpon>MDITest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ProductManagamentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MDITest.resx">
-      <DependentUpon>MDITest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductManagamentForm.resx">
       <DependentUpon>ProductManagamentForm.cs</DependentUpon>
@@ -263,6 +254,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warehouse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temperature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humidity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temperature2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIF.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
