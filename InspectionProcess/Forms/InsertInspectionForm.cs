@@ -12,35 +12,39 @@ using System.Windows.Forms;
 namespace InspectionProcess.Forms
 {
     public partial class InsertInspectionForm : ChildRootForm
-    { 
-       private Inspection _Inspection;
-    
+    {
+        private Inspection _Inspection;
+
+
         public InsertInspectionForm()
         {
             InitializeComponent();
         }
 
-    public InsertInspectionForm(Inspection inspection) : this()
-    {
-        _Inspection = inspection;
-    }
-
-
-    private void InsertInspectionForm_Load(object sender, EventArgs e)
+        public InsertInspectionForm(Inspection inspection) : this()
         {
-            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
-            bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
-
+            _Inspection = inspection;
         }
 
 
-        private void btnInsert_Click(object sender, EventArgs e)
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
-            _inspection = new Inspection();
+            Close();
+        }
+
+        private void InsertInspectionForm_Load_1(object sender, EventArgs e)
+        {
+            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
+            bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
+        }
+
+        private void btnInsert_Click_1(object sender, EventArgs e)
+        {
+
             WriteToEntity();
             try
             {
-                DataRepository.Inspection.Insert(_inspection);
+                DataRepository.Inspection.Insert(_Inspection);
             }
             catch (Exception ex)
             {
@@ -50,9 +54,10 @@ namespace InspectionProcess.Forms
             Close();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void WriteToEntity()
         {
-            Close();
+            _Inspection.InspectionId = (int)cbbInspectionId.SelectedValue;
+            //_Inspection.WarehouseId = (int)cbbWarehouseName.SelectedValue;
         }
     }
 }

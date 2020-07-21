@@ -1,5 +1,5 @@
-﻿using InspectionProcess.Data;
-using System;
+﻿using System;
+using InspectionProcess.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,30 +11,31 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class InsertProductForm : Form
+    public partial class InsertProductForm : ChildRootForm
     {
-        private Product _Product;
+        private Product _product;
+        private object cbbMerchandiseId;
+
         public InsertProductForm()
         {
             InitializeComponent();
         }
 
 
-        public InsertProductForm(Product product) : this()
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            _product = product;
+            Close();
         }
+
 
         private void InsertProductForm_Load(object sender, EventArgs e)
         {
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-           
+            bdsProductionTeamId.DataSource = DataRepository.Product.GetAll();
         }
-
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            _product = new Product();
             WriteToEntity();
             try
             {
@@ -48,10 +49,12 @@ namespace InspectionProcess.Forms
             Close();
         }
 
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void WriteToEntity()
         {
-            Close();
+            _product.MerchandiseId = (int)cbbMerchandise.SelectedValue;
+            _product.FinishTime = DateTime.Parse(txeFinishTime.Text);
+            _product.ProductionTeam = (int)cbbProductionTeamId.SelectedValue;
         }
     }
 }
+

@@ -19,6 +19,12 @@ namespace InspectionProcess.Data
             return context;
         }
 
+        public List<T> GetAll()
+        {
+            InspectionProcessEntities context = CreateContext();
+            return context.Set<T>().ToList();
+        }
+
 
         public int GetCount()
         {

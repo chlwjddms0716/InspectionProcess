@@ -36,5 +36,10 @@ namespace InspectionProcess.Data
 
             return query.FirstOrDefault();
         }
+
+        public void Insert(object product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
