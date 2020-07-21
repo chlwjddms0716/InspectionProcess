@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class KeepingData
+    class KeepingData : EntityData<Keeping>
     {
+   
     }
 }
