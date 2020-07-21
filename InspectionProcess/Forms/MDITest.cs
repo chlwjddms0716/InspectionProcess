@@ -108,7 +108,7 @@ namespace InspectionProcess.Forms
         {
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm.GetType() == typeof(testForm))
+                if (frm.GetType() == typeof(AddProductForm))
                 {
                     frm.Activate();
                     frm.BringToFront();
@@ -116,7 +116,7 @@ namespace InspectionProcess.Forms
                 }
             }
 
-            testForm Form = new testForm();
+            AddProductForm Form = new AddProductForm();
             Form.MdiParent = this;
             Form.WindowState = FormWindowState.Maximized;
             Form.Show();

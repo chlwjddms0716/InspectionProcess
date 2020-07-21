@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data.Entity
 {
-    class Team
+    public partial class Team
     {
     }
 }

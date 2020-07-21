@@ -173,12 +173,6 @@
     <Compile Include="Forms\RealTimeStatusForm.Designer.cs">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\testForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\testForm.Designer.cs">
-      <DependentUpon>testForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TestForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +227,9 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Inspection.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Merchandise.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Product.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Team.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
