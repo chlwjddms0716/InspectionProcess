@@ -90,11 +90,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddProduct.cs">
+    <Compile Include="Forms\facilityManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddProduct.Designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <Compile Include="Forms\facilityManagementForm.Designer.cs">
+      <DependentUpon>facilityManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="BaseForms\ChildRootForm.resx">
       <DependentUpon>ChildRootForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddProduct.resx">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\facilityManagementForm.resx">
+      <DependentUpon>facilityManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -149,6 +149,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Inspection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
