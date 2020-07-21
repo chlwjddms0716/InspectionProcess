@@ -68,12 +68,12 @@ namespace InspectionProcess.Forms
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+           // statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,5 +104,41 @@ namespace InspectionProcess.Forms
             }
         }
 
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(testForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
+
+            testForm Form = new testForm();
+            Form.MdiParent = this;
+            Form.WindowState = FormWindowState.Maximized;
+            Form.Show();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(TestForm2))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
+
+            TestForm2 Form = new TestForm2();
+            Form.MdiParent = this;
+            Form.WindowState = FormWindowState.Maximized;
+            Form.Show();
+        }
     }
-}
+    }
+
