@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace InspectionProcess
 {
-    public partial class RootForm : XtraForm
+    public partial class RootForm : ChildRootForm
     {
         public RootForm()
         {
