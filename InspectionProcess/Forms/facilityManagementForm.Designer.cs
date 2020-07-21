@@ -149,11 +149,13 @@
             // 날짜
             // 
             this.날짜.Caption = "날짜";
+            this.날짜.DisplayFormat.FormatString = "d";
+            this.날짜.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.날짜.FieldName = "StartTime";
             this.날짜.MinWidth = 25;
             this.날짜.Name = "날짜";
             this.날짜.Visible = true;
-            this.날짜.VisibleIndex = 3;
+            this.날짜.VisibleIndex = 0;
             this.날짜.Width = 94;
             // 
             // 검사Id
@@ -163,27 +165,32 @@
             this.검사Id.MinWidth = 25;
             this.검사Id.Name = "검사Id";
             this.검사Id.Visible = true;
-            this.검사Id.VisibleIndex = 0;
+            this.검사Id.VisibleIndex = 1;
             this.검사Id.Width = 94;
             // 
             // 가동시작시간
             // 
             this.가동시작시간.Caption = "가동시작시간";
+            this.가동시작시간.DisplayFormat.FormatString = "hh:mm:ss";
+            this.가동시작시간.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.가동시작시간.FieldName = "StartTime";
             this.가동시작시간.MinWidth = 25;
             this.가동시작시간.Name = "가동시작시간";
+            this.가동시작시간.OptionsColumn.ReadOnly = true;
             this.가동시작시간.Visible = true;
-            this.가동시작시간.VisibleIndex = 1;
+            this.가동시작시간.VisibleIndex = 2;
             this.가동시작시간.Width = 94;
             // 
             // 가동종료시간
             // 
             this.가동종료시간.Caption = "가동종료시간";
+            this.가동종료시간.DisplayFormat.FormatString = "hh:mm:ss";
+            this.가동종료시간.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.가동종료시간.FieldName = "FinishTime";
             this.가동종료시간.MinWidth = 25;
             this.가동종료시간.Name = "가동종료시간";
             this.가동종료시간.Visible = true;
-            this.가동종료시간.VisibleIndex = 2;
+            this.가동종료시간.VisibleIndex = 3;
             this.가동종료시간.Width = 94;
             // 
             // Root
@@ -253,14 +260,14 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // facilityManagementForm
+            // FacilityManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "facilityManagementForm";
+            this.Name = "FacilityManagementForm";
             this.Text = "설비관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
