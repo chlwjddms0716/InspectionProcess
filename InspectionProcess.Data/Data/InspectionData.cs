@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class InspectionData : EntityData<Inspection>
+    public class InspectionData : EntityData<Inspection>
     {
         public Inspection Get(int inspectionId)
         {
@@ -34,6 +34,11 @@ namespace InspectionProcess.Data
                         select x.InspectionId;
 
             return query.FirstOrDefault();
+        }
+
+        public object GetAllbyDate(DateTime dateTime1, DateTime dateTime2)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InspectionProcess.Data
 {
-    class MerchandiseData : EntityData<Merchandise>
+    public class MerchandiseData : EntityData<Merchandise>
     {
         public Merchandise Get(int merchandiseId)
         {

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class QualityManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class RealTimeStatusForm : DevExpress.XtraEditors.XtraForm
     {
-        public QualityManagementForm()
+        public RealTimeStatusForm()
         {
             InitializeComponent();
-        }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
