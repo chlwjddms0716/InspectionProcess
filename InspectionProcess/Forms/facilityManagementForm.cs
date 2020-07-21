@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class facilityManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class FacilityManagementForm : DevExpress.XtraEditors.XtraForm
     {
-        public facilityManagementForm()
+        public FacilityManagementForm()
         {
             InitializeComponent();
         }

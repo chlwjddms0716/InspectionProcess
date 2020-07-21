@@ -61,10 +61,34 @@
           <Key>
             <PropertyRef Name="WarehouseId" />
           </Key>
-          <Property Name="WarehouseId" Type="int" Nullable="false" />
+          <Property Name="WarehouseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Inspection_Team">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="InspectionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Merchandise">
+          <End Role="Merchandise" Type="Self.Merchandise" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchandise">
+              <PropertyRef Name="MerchandiseId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="MerchandiseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_검사결과_검수작업">
           <End Role="Inspection" Type="Self.Inspection" Multiplicity="1" />
           <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
@@ -86,42 +110,6 @@
             </Principal>
             <Dependent Role="InspectionResult">
               <PropertyRef Name="ProductId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_검수_근무조">
-          <End Role="Team" Type="Self.Team" Multiplicity="1" />
-          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Team">
-              <PropertyRef Name="TeamId" />
-            </Principal>
-            <Dependent Role="Inspection">
-              <PropertyRef Name="InspectionTeam" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_생산_근무조">
-          <End Role="Team" Type="Self.Team" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Team">
-              <PropertyRef Name="TeamId" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="ProductionTeam" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_생산품_상품">
-          <End Role="Merchandise" Type="Self.Merchandise" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Merchandise">
-              <PropertyRef Name="MerchandiseId" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="MerchandiseId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -157,6 +145,14 @@
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Warehouse" EntityType="Self.Warehouse" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Inspection_Team" Association="Self.FK_Inspection_Team">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Inspection" EntitySet="Inspection" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Merchandise" Association="Self.FK_Product_Merchandise">
+            <End Role="Merchandise" EntitySet="Merchandise" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
           <AssociationSet Name="FK_검사결과_검수작업" Association="Self.FK_검사결과_검수작업">
             <End Role="Inspection" EntitySet="Inspection" />
             <End Role="InspectionResult" EntitySet="InspectionResult" />
@@ -164,18 +160,6 @@
           <AssociationSet Name="FK_검사결과_생산품" Association="Self.FK_검사결과_생산품">
             <End Role="Product" EntitySet="Product" />
             <End Role="InspectionResult" EntitySet="InspectionResult" />
-          </AssociationSet>
-          <AssociationSet Name="FK_검수_근무조" Association="Self.FK_검수_근무조">
-            <End Role="Team" EntitySet="Team" />
-            <End Role="Inspection" EntitySet="Inspection" />
-          </AssociationSet>
-          <AssociationSet Name="FK_생산_근무조" Association="Self.FK_생산_근무조">
-            <End Role="Team" EntitySet="Team" />
-            <End Role="Product" EntitySet="Product" />
-          </AssociationSet>
-          <AssociationSet Name="FK_생산품_상품" Association="Self.FK_생산품_상품">
-            <End Role="Merchandise" EntitySet="Merchandise" />
-            <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_입고_검사결과1" Association="Self.FK_입고_검사결과1">
             <End Role="InspectionResult" EntitySet="InspectionResult" />
@@ -198,13 +182,13 @@
           <EntitySet Name="Products" EntityType="InspectionProcessModel.Product" />
           <EntitySet Name="Teams" EntityType="InspectionProcessModel.Team" />
           <EntitySet Name="Warehouses" EntityType="InspectionProcessModel.Warehouse" />
+          <AssociationSet Name="FK_Inspection_Team" Association="InspectionProcessModel.FK_Inspection_Team">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
           <AssociationSet Name="FK_검사결과_검수작업" Association="InspectionProcessModel.FK_검사결과_검수작업">
             <End Role="Inspection" EntitySet="Inspections" />
             <End Role="InspectionResult" EntitySet="InspectionResults" />
-          </AssociationSet>
-          <AssociationSet Name="FK_검수_근무조" Association="InspectionProcessModel.FK_검수_근무조">
-            <End Role="Team" EntitySet="Teams" />
-            <End Role="Inspection" EntitySet="Inspections" />
           </AssociationSet>
           <AssociationSet Name="FK_검사결과_생산품" Association="InspectionProcessModel.FK_검사결과_생산품">
             <End Role="Product" EntitySet="Products" />
@@ -218,12 +202,8 @@
             <End Role="Warehouse" EntitySet="Warehouses" />
             <End Role="Keeping" EntitySet="Keepings" />
           </AssociationSet>
-          <AssociationSet Name="FK_생산품_상품" Association="InspectionProcessModel.FK_생산품_상품">
+          <AssociationSet Name="FK_Product_Merchandise" Association="InspectionProcessModel.FK_Product_Merchandise">
             <End Role="Merchandise" EntitySet="Merchandises" />
-            <End Role="Product" EntitySet="Products" />
-          </AssociationSet>
-          <AssociationSet Name="FK_생산_근무조" Association="InspectionProcessModel.FK_생산_근무조">
-            <End Role="Team" EntitySet="Teams" />
             <End Role="Product" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
@@ -235,8 +215,8 @@
           <Property Name="InspectionTeam" Type="Int32" Nullable="false" />
           <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="FinishTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Team" Relationship="InspectionProcessModel.FK_Inspection_Team" FromRole="Inspection" ToRole="Team" />
           <NavigationProperty Name="InspectionResults" Relationship="InspectionProcessModel.FK_검사결과_검수작업" FromRole="Inspection" ToRole="InspectionResult" />
-          <NavigationProperty Name="Team" Relationship="InspectionProcessModel.FK_검수_근무조" FromRole="Inspection" ToRole="Team" />
         </EntityType>
         <EntityType Name="InspectionResult">
           <Key>
@@ -269,7 +249,7 @@
           </Key>
           <Property Name="MerchandiseId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Products" Relationship="InspectionProcessModel.FK_생산품_상품" FromRole="Merchandise" ToRole="Product" />
+          <NavigationProperty Name="Products" Relationship="InspectionProcessModel.FK_Product_Merchandise" FromRole="Merchandise" ToRole="Product" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -280,8 +260,7 @@
           <Property Name="FinishTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="MerchandiseId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="InspectionResults" Relationship="InspectionProcessModel.FK_검사결과_생산품" FromRole="Product" ToRole="InspectionResult" />
-          <NavigationProperty Name="Merchandise" Relationship="InspectionProcessModel.FK_생산품_상품" FromRole="Product" ToRole="Merchandise" />
-          <NavigationProperty Name="Team" Relationship="InspectionProcessModel.FK_생산_근무조" FromRole="Product" ToRole="Team" />
+          <NavigationProperty Name="Merchandise" Relationship="InspectionProcessModel.FK_Product_Merchandise" FromRole="Product" ToRole="Merchandise" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -289,18 +268,29 @@
           </Key>
           <Property Name="TeamId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Inspections" Relationship="InspectionProcessModel.FK_검수_근무조" FromRole="Team" ToRole="Inspection" />
-          <NavigationProperty Name="Products" Relationship="InspectionProcessModel.FK_생산_근무조" FromRole="Team" ToRole="Product" />
+          <NavigationProperty Name="Inspections" Relationship="InspectionProcessModel.FK_Inspection_Team" FromRole="Team" ToRole="Inspection" />
         </EntityType>
         <EntityType Name="Warehouse">
           <Key>
             <PropertyRef Name="WarehouseId" />
           </Key>
-          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Keepings" Relationship="InspectionProcessModel.FK_입고_창고" FromRole="Warehouse" ToRole="Keeping" />
         </EntityType>
+        <Association Name="FK_Inspection_Team">
+          <End Type="InspectionProcessModel.Team" Role="Team" Multiplicity="1" />
+          <End Type="InspectionProcessModel.Inspection" Role="Inspection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamId" />
+            </Principal>
+            <Dependent Role="Inspection">
+              <PropertyRef Name="InspectionTeam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_검사결과_검수작업">
           <End Type="InspectionProcessModel.Inspection" Role="Inspection" Multiplicity="1" />
           <End Type="InspectionProcessModel.InspectionResult" Role="InspectionResult" Multiplicity="*" />
@@ -310,18 +300,6 @@
             </Principal>
             <Dependent Role="InspectionResult">
               <PropertyRef Name="InspectionId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_검수_근무조">
-          <End Type="InspectionProcessModel.Team" Role="Team" Multiplicity="1" />
-          <End Type="InspectionProcessModel.Inspection" Role="Inspection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Team">
-              <PropertyRef Name="TeamId" />
-            </Principal>
-            <Dependent Role="Inspection">
-              <PropertyRef Name="InspectionTeam" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -361,7 +339,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_생산품_상품">
+        <Association Name="FK_Product_Merchandise">
           <End Type="InspectionProcessModel.Merchandise" Role="Merchandise" Multiplicity="1" />
           <End Type="InspectionProcessModel.Product" Role="Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -373,19 +351,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_생산_근무조">
-          <End Type="InspectionProcessModel.Team" Role="Team" Multiplicity="1" />
-          <End Type="InspectionProcessModel.Product" Role="Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Team">
-              <PropertyRef Name="TeamId" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="ProductionTeam" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

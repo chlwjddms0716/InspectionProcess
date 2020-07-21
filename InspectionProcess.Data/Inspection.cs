@@ -25,8 +25,8 @@ namespace InspectionProcess.Data
         public System.DateTime StartTime { get; set; }
         public Nullable<System.DateTime> FinishTime { get; set; }
     
+        public virtual Team Team { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InspectionResult> InspectionResults { get; set; }
-        public virtual Team Team { get; set; }
     }
 }

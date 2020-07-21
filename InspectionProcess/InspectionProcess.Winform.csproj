@@ -141,11 +141,11 @@
     <Compile Include="Forms\DisposalManagementForm.Designer.cs">
       <DependentUpon>DisposalManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\facilityManagementForm.cs">
+    <Compile Include="Forms\FacilityManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\facilityManagementForm.Designer.cs">
-      <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    <Compile Include="Forms\FacilityManagementForm.Designer.cs">
+      <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InsertProductForm.cs">
       <SubType>Form</SubType>
@@ -165,12 +165,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MDITest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MDITest.Designer.cs">
-      <DependentUpon>MDITest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ProductManagamentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,18 +183,6 @@
     <Compile Include="Forms\RealTimeStatusForm.Designer.cs">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\testForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\testForm.Designer.cs">
-      <DependentUpon>testForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TestForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TestForm2.Designer.cs">
-      <DependentUpon>TestForm2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForms\ChildRootForm.resx">
@@ -212,8 +194,8 @@
     <EmbeddedResource Include="Forms\DisposalManagementForm.resx">
       <DependentUpon>DisposalManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\facilityManagementForm.resx">
-      <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FacilityManagementForm.resx">
+      <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InsertInspectionForm.resx">
       <DependentUpon>InsertInspectionForm.cs</DependentUpon>
@@ -227,9 +209,6 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MDITest.resx">
-      <DependentUpon>MDITest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductManagamentForm.resx">
       <DependentUpon>ProductManagamentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,9 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RealTimeStatusForm.resx">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TestForm2.resx">
-      <DependentUpon>TestForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -301,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\temperature2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIF.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

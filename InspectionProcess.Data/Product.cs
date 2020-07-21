@@ -28,6 +28,5 @@ namespace InspectionProcess.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InspectionResult> InspectionResults { get; set; }
         public virtual Merchandise Merchandise { get; set; }
-        public virtual Team Team { get; set; }
     }
 }

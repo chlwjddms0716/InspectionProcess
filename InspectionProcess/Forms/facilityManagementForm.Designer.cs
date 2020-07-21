@@ -1,6 +1,6 @@
 ﻿namespace InspectionProcess.Forms
 {
-    partial class facilityManagementForm
+    partial class FacilityManagementForm
     {
         /// <summary>
         /// Required designer variable.
