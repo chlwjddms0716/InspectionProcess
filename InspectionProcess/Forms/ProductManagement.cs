@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class AddProduct : XtraForm
+    public partial class ProductManagement : XtraForm
     {
-        public AddProduct()
+        public ProductManagement()
         {
             InitializeComponent();
         }
