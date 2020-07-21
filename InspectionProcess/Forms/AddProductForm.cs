@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using InspectionProcess.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,5 +18,12 @@ namespace InspectionProcess.Forms
         {
             InitializeComponent();
         }
+
+        private void AddProductForm_Load(object sender, EventArgs e)
+        {
+            bdsProduct.DataSource = DataRepository.Product.Get(1);
+            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
+        }
+
     }
 }
