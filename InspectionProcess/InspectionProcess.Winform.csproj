@@ -131,11 +131,11 @@
     <Compile Include="Forms\DisposalManagementForm.Designer.cs">
       <DependentUpon>DisposalManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\facilityManagementForm.cs">
+    <Compile Include="Forms\FacilityManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\facilityManagementForm.Designer.cs">
-      <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    <Compile Include="Forms\FacilityManagementForm.Designer.cs">
+      <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KeepingManagementForm.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="Forms\DisposalManagementForm.resx">
       <DependentUpon>DisposalManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\facilityManagementForm.resx">
-      <DependentUpon>facilityManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FacilityManagementForm.resx">
+      <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeepingManagementForm.resx">
       <DependentUpon>KeepingManagementForm.cs</DependentUpon>

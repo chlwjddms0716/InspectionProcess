@@ -278,7 +278,7 @@
             this.ClientSize = new System.Drawing.Size(978, 551);
             this.Controls.Add(this.layoutControl1);
             this.Name = "AddProductForm";
-            this.Text = "AddProductForm";
+            this.Text = "생산관리";
             this.Load += new System.EventHandler(this.AddProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

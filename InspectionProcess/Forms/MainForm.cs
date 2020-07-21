@@ -106,37 +106,128 @@ namespace InspectionProcess.Forms
 
         private void btnProduce_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(AddProductForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.MdiParent = this;
+            addProductForm.WindowState = FormWindowState.Maximized;
+            addProductForm.Show();
         }
 
         private void btnWorking_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(ProductManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            ProductManagementForm productManagamentForm = new ProductManagementForm();
+            productManagamentForm.MdiParent = this;
+            productManagamentForm.WindowState = FormWindowState.Maximized;
+            productManagamentForm.Show();
         }
 
         private void btnNormal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(QualityManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            QualityManagementForm qualityManagementForm = new QualityManagementForm();
+            qualityManagementForm.MdiParent = this;
+            qualityManagementForm.WindowState = FormWindowState.Maximized;
+            qualityManagementForm.Show();
         }
 
         private void btnKeep_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(KeepingManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            KeepingManagementForm keepingManagementForm = new KeepingManagementForm();
+            keepingManagementForm.MdiParent = this;
+            keepingManagementForm.WindowState = FormWindowState.Maximized;
+            keepingManagementForm.Show();
         }
 
         private void btnDump_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(DisposalManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            DisposalManagementForm disposalManagementForm = new DisposalManagementForm();
+            disposalManagementForm.MdiParent = this;
+            disposalManagementForm.WindowState = FormWindowState.Maximized;
+            disposalManagementForm.Show();
         }
 
         private void btnMachine_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(FacilityManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            FacilityManagementForm facilityManagementForm = new FacilityManagementForm();
+            facilityManagementForm.MdiParent = this;
+            facilityManagementForm.WindowState = FormWindowState.Maximized;
+            facilityManagementForm.Show();
         }
 
         private void btnStatus_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(RealTimeStatusForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
 
+            RealTimeStatusForm realTimeStatusForm = new RealTimeStatusForm();
+            realTimeStatusForm.MdiParent = this;
+            realTimeStatusForm.WindowState = FormWindowState.Maximized;
+            realTimeStatusForm.Show();
         }
     }
 }
