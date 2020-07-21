@@ -8,5 +8,6 @@ namespace InspectionProcess.Data.Entity
 {
     public partial class Keeping
     {
+        public string WarehouseName { get; set; }
     }
 }

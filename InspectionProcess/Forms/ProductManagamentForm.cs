@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using InspectionProcess.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,26 @@ namespace InspectionProcess.Forms
         public ProductManagementForm()
         {
             InitializeComponent();
+        }
+
+        private void ProductManagementForm_Load(object sender, EventArgs e)
+        {
+            bdsProductId.DataSource = DataRepository.Product.GetAll();
+            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
+            cbbMerchandiseName.SelectedItem = null;
+            cbbProductionId.SelectedItem = null;
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            bdsProduct.DataSource = DataRepository.Product.Search((int)cbbProductionId.SelectedValue,(int)cbbMerchandiseName.SelectedValue, null);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbbMerchandiseName.SelectedItem = null;
+            cbbProductionId.SelectedItem = null;
         }
     }
 }
