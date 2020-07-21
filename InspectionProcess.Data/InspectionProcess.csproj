@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataRepository.cs" />
+    <Compile Include="Data\EntityData.cs" />
     <Compile Include="Data\InspectionData.cs" />
     <Compile Include="Data\InspectionResultData.cs" />
     <Compile Include="Data\KeepingData.cs" />
