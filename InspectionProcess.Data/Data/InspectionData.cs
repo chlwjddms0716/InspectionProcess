@@ -36,15 +36,9 @@ namespace InspectionProcess.Data
             return query.FirstOrDefault();
         }
 
-        public object GetAllbyDate()
+        public object GetAllbyDate(DateTime dateTime1, DateTime dateTime2)
         {
-            InspectionProcessEntities context = CreateContext();
-
-            var query = from x in context.Inspections
-                        orderby x.InspectionId descending
-                        select x.InspectionId;
-
-            return query.FirstOrDefault();
+            throw new NotImplementedException();
         }
     }
 }
