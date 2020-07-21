@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.cbeTeam = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbeProduct = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txeInspectionid = new DevExpress.XtraEditors.TextEdit();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsInspectionResult = new System.Windows.Forms.BindingSource(this.components);
@@ -52,9 +52,9 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeTeam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeProduct.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeInspectionid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsInspectionResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -70,9 +70,9 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.comboBoxEdit2);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.cbeTeam);
+            this.layoutControl1.Controls.Add(this.cbeProduct);
+            this.layoutControl1.Controls.Add(this.txeInspectionid);
             this.layoutControl1.Controls.Add(this.btnLoad);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,33 +84,33 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // comboBoxEdit2
+            // cbeTeam
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(69, 88);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbeTeam.Location = new System.Drawing.Point(69, 88);
+            this.cbeTeam.Name = "cbeTeam";
+            this.cbeTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(548, 24);
-            this.comboBoxEdit2.StyleController = this.layoutControl1;
-            this.comboBoxEdit2.TabIndex = 24;
+            this.cbeTeam.Size = new System.Drawing.Size(548, 24);
+            this.cbeTeam.StyleController = this.layoutControl1;
+            this.cbeTeam.TabIndex = 24;
             // 
-            // comboBoxEdit1
+            // cbeProduct
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(69, 60);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbeProduct.Location = new System.Drawing.Point(69, 60);
+            this.cbeProduct.Name = "cbeProduct";
+            this.cbeProduct.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(548, 24);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            this.comboBoxEdit1.TabIndex = 23;
+            this.cbeProduct.Size = new System.Drawing.Size(548, 24);
+            this.cbeProduct.StyleController = this.layoutControl1;
+            this.cbeProduct.TabIndex = 23;
             // 
-            // textEdit1
+            // txeInspectionid
             // 
-            this.textEdit1.Location = new System.Drawing.Point(69, 32);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(548, 24);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 22;
+            this.txeInspectionid.Location = new System.Drawing.Point(69, 32);
+            this.txeInspectionid.Name = "txeInspectionid";
+            this.txeInspectionid.Size = new System.Drawing.Size(548, 24);
+            this.txeInspectionid.StyleController = this.layoutControl1;
+            this.txeInspectionid.TabIndex = 22;
             // 
             // btnLoad
             // 
@@ -239,7 +239,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit1;
+            this.layoutControlItem3.Control = this.txeInspectionid;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 20);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(609, 28);
@@ -248,7 +248,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.comboBoxEdit1;
+            this.layoutControlItem4.Control = this.cbeProduct;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(609, 28);
@@ -257,7 +257,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.comboBoxEdit2;
+            this.layoutControlItem5.Control = this.cbeTeam;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 76);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(609, 28);
@@ -291,9 +291,9 @@
             this.Text = "품질관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeTeam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeProduct.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeInspectionid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsInspectionResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -324,10 +324,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNormalNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colDefectiveNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colCount;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txeInspectionid;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeTeam;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeProduct;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
