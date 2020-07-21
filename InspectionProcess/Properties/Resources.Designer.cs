@@ -63,9 +63,99 @@ namespace InspectionProcess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap humidity {
+        public static System.Drawing.Bitmap _ {
             get {
-                object obj = ResourceManager.GetObject("humidity", resourceCulture);
+                object obj = ResourceManager.GetObject("-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap GIF {
+            get {
+                object obj = ResourceManager.GetObject("GIF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Hum {
+            get {
+                object obj = ResourceManager.GetObject("Hum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iconfinder_Muslim_Mosque_18_2044979 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Muslim_Mosque-18_2044979", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_123343692 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_123343692", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_123343794 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_123343794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_124223133 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_124223133", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_124804897 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_124804897", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_125016507 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_125016507", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200721_125136783 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200721_125136783", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
