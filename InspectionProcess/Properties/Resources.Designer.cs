@@ -163,6 +163,16 @@ namespace InspectionProcess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap KakaoTalk_20200722_115827447 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20200722_115827447", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Search2 {
             get {
                 object obj = ResourceManager.GetObject("Search2", resourceCulture);

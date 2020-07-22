@@ -20,11 +20,7 @@ namespace InspectionProcess.Forms
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
- 
-           
-                bdsInspectionResult.DataSource = DataRepository.InspectionResult.SearchByQuality(Convert.ToInt32(txeInspectionid.Text), Convert.ToInt32(txeProductId.Text), (int?)lkuInspectionTeamName.EditValue);
-           
-
+            inspectionResultBindingSource.DataSource = DataRepository.InspectionResult.SearchByQuality((int?)lkuInspectionID.EditValue, (int?)lkuProductId.EditValue, (int?)lkuInspectionTeamName.EditValue);
         }
 
         
@@ -32,6 +28,13 @@ namespace InspectionProcess.Forms
         private void QualityManagementForm_Load(object sender, EventArgs e)
         {
             teamBindingSource.DataSource = DataRepository.Team.GetAll();
+            inspectionBindingSource.DataSource = DataRepository.Inspection.GetAll();
+            productBindingSource.DataSource = DataRepository.Product.GetAll();
+        }
+
+        private void btnReInspection_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
