@@ -177,6 +177,12 @@
     <Compile Include="Forms\QualityManagementForm.Designer.cs">
       <DependentUpon>QualityManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RealTimeStatusForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RealTimeStatusForm2.Designer.cs">
+      <DependentUpon>RealTimeStatusForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RealTimeStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     <EmbeddedResource Include="Forms\QualityManagementForm.resx">
       <DependentUpon>QualityManagementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealTimeStatusForm2.resx">
+      <DependentUpon>RealTimeStatusForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RealTimeStatusForm.resx">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,8 @@
     <None Include="Properties\DataSources\InspectionProcess.Data.Product.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Warehouse1.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Merchandise1.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

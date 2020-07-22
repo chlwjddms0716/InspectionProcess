@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraBars.Ribbon;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,15 +17,9 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        private void labelControl5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void RealTimeStatusForm_Load(object sender, EventArgs e)
-        {
-
-
+            
         }
     }
 }

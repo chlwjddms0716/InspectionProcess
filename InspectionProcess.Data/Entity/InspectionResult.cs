@@ -8,5 +8,8 @@ namespace InspectionProcess.Data
 {
     public partial class InspectionResult
     {
+        public string InspectionTeamName { get; set; }
+        public string MerchandiseName { get; set; }
+   
     }
 }
