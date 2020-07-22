@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnAction = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.btnInsert);
+            this.layoutControl1.Controls.Add(this.btnAction);
             this.layoutControl1.Controls.Add(this.btnClose);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -56,6 +56,27 @@
             this.layoutControl1.Size = new System.Drawing.Size(513, 266);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnAction
+            // 
+            this.btnAction.Location = new System.Drawing.Point(301, 227);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAction.Name = "btnAction";
+            this.btnAction.Size = new System.Drawing.Size(98, 27);
+            this.btnAction.StyleController = this.layoutControl1;
+            this.btnAction.TabIndex = 6;
+            this.btnAction.Text = "등록(&I)";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(403, 227);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(98, 27);
+            this.btnClose.StyleController = this.layoutControl1;
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "닫기(&C)";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Root
             // 
@@ -69,6 +90,24 @@
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(513, 266);
             this.Root.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btnClose;
+            this.layoutControlItem2.Location = new System.Drawing.Point(391, 215);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(102, 31);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.btnAction;
+            this.layoutControlItem3.Location = new System.Drawing.Point(289, 215);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(102, 31);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
@@ -86,59 +125,23 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(493, 215);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.btnClose;
-            this.layoutControlItem2.Location = new System.Drawing.Point(391, 215);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(102, 31);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(403, 227);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(98, 27);
-            this.btnClose.StyleController = this.layoutControl1;
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "닫기(&C)";
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.btnInsert;
-            this.layoutControlItem3.Location = new System.Drawing.Point(289, 215);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(102, 31);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.Location = new System.Drawing.Point(301, 227);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(98, 27);
-            this.btnInsert.StyleController = this.layoutControl1;
-            this.btnInsert.TabIndex = 6;
-            this.btnInsert.Text = "등록(&I)";
-            // 
             // ChildRootForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 266);
             this.Controls.Add(this.layoutControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ChildRootForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChildRootForm";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,7 +152,7 @@
         protected DevExpress.XtraLayout.LayoutControlGroup Root;
         protected DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         protected DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        protected DevExpress.XtraEditors.SimpleButton btnInsert;
+        protected DevExpress.XtraEditors.SimpleButton btnAction;
         protected DevExpress.XtraEditors.SimpleButton btnClose;
         protected DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         protected DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;

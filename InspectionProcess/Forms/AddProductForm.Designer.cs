@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cbbTeam = new System.Windows.Forms.ComboBox();
             this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.cbbMerchandiseName = new System.Windows.Forms.ComboBox();
@@ -50,6 +51,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
@@ -65,10 +68,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.cbbTeam);
             this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.gridControl1);
@@ -81,6 +86,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(978, 551);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(803, 84);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(163, 27);
+            this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.TabIndex = 11;
+            this.simpleButton1.Text = "검색조건 초기화(&R)";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // cbbTeam
             // 
@@ -132,11 +147,13 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colProductId,
             this.colMerchandiseName,
             this.colProductionTeam,
             this.colFinishTime});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colMerchandiseName
             // 
@@ -144,8 +161,8 @@
             this.colMerchandiseName.MinWidth = 25;
             this.colMerchandiseName.Name = "colMerchandiseName";
             this.colMerchandiseName.Visible = true;
-            this.colMerchandiseName.VisibleIndex = 0;
-            this.colMerchandiseName.Width = 94;
+            this.colMerchandiseName.VisibleIndex = 1;
+            this.colMerchandiseName.Width = 237;
             // 
             // colProductionTeam
             // 
@@ -153,8 +170,8 @@
             this.colProductionTeam.MinWidth = 25;
             this.colProductionTeam.Name = "colProductionTeam";
             this.colProductionTeam.Visible = true;
-            this.colProductionTeam.VisibleIndex = 1;
-            this.colProductionTeam.Width = 94;
+            this.colProductionTeam.VisibleIndex = 2;
+            this.colProductionTeam.Width = 237;
             // 
             // colFinishTime
             // 
@@ -162,8 +179,8 @@
             this.colFinishTime.MinWidth = 25;
             this.colFinishTime.Name = "colFinishTime";
             this.colFinishTime.Visible = true;
-            this.colFinishTime.VisibleIndex = 2;
-            this.colFinishTime.Width = 94;
+            this.colFinishTime.VisibleIndex = 3;
+            this.colFinishTime.Width = 238;
             // 
             // btnInsert
             // 
@@ -197,7 +214,8 @@
             this.emptySpaceItem3,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(978, 551);
             this.Root.TextVisible = false;
@@ -233,7 +251,7 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(161, 72);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(797, 31);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(630, 31);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -263,6 +281,24 @@
             this.layoutControlItem1.Text = "생산조";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
             // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.simpleButton1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(791, 72);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(167, 31);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // colProductId
+            // 
+            this.colProductId.FieldName = "ProductId";
+            this.colProductId.MinWidth = 25;
+            this.colProductId.Name = "colProductId";
+            this.colProductId.Visible = true;
+            this.colProductId.VisibleIndex = 0;
+            this.colProductId.Width = 212;
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -287,6 +323,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,5 +351,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMerchandiseName;
         private DevExpress.XtraGrid.Columns.GridColumn colProductionTeam;
         private DevExpress.XtraGrid.Columns.GridColumn colFinishTime;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductId;
     }
 }

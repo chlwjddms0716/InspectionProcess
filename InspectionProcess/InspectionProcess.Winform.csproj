@@ -189,6 +189,12 @@
     <Compile Include="Forms\RealTimeStatusForm.Designer.cs">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UpdateForms\UpdateProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateForms\UpdateProductForm.Designer.cs">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\DeleteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,6 +234,9 @@
     <EmbeddedResource Include="Forms\RealTimeStatusForm.resx">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateForms\UpdateProductForm.resx">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -242,9 +251,9 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Inspection.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.InspectionData.datasource" />
+    <None Include="Properties\DataSources\InspectionProcess.Data.InspectionResult1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Keeping1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Product.datasource" />
-    <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Warehouse1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\Settings.settings">
@@ -292,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20200722_115827447.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

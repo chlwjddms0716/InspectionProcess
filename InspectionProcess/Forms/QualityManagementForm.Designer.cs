@@ -30,19 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lkuProductId = new DevExpress.XtraEditors.LookUpEdit();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lkuInspectionID = new DevExpress.XtraEditors.LookUpEdit();
+            this.inspectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnReInspection = new DevExpress.XtraEditors.SimpleButton();
             this.lkuInspectionTeamName = new DevExpress.XtraEditors.LookUpEdit();
             this.teamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.inspectionResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colInspectionId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNormalNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDefectiveNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -50,15 +55,18 @@
             this.lblInspectionTeam = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lkuInspectionID = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lkuProductId = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inspectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionTeamName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inspectionResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -67,9 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblInspectionTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +96,44 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // lkuProductId
+            // 
+            this.lkuProductId.Location = new System.Drawing.Point(85, 40);
+            this.lkuProductId.Name = "lkuProductId";
+            this.lkuProductId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuProductId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "")});
+            this.lkuProductId.Properties.DataSource = this.productBindingSource;
+            this.lkuProductId.Properties.DisplayMember = "ProductId";
+            this.lkuProductId.Properties.ValueMember = "ProductId";
+            this.lkuProductId.Size = new System.Drawing.Size(532, 24);
+            this.lkuProductId.StyleController = this.layoutControl1;
+            this.lkuProductId.TabIndex = 30;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(InspectionProcess.Data.Product);
+            // 
+            // lkuInspectionID
+            // 
+            this.lkuInspectionID.Location = new System.Drawing.Point(85, 12);
+            this.lkuInspectionID.Name = "lkuInspectionID";
+            this.lkuInspectionID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuInspectionID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InspectionId", "")});
+            this.lkuInspectionID.Properties.DataSource = this.inspectionBindingSource;
+            this.lkuInspectionID.Properties.DisplayMember = "InspectionId";
+            this.lkuInspectionID.Properties.ValueMember = "InspectionId";
+            this.lkuInspectionID.Size = new System.Drawing.Size(532, 24);
+            this.lkuInspectionID.StyleController = this.layoutControl1;
+            this.lkuInspectionID.TabIndex = 29;
+            // 
+            // inspectionBindingSource
+            // 
+            this.inspectionBindingSource.DataSource = typeof(InspectionProcess.Data.Inspection);
+            // 
             // btnReInspection
             // 
             this.btnReInspection.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,6 +144,7 @@
             this.btnReInspection.StyleController = this.layoutControl1;
             this.btnReInspection.TabIndex = 27;
             this.btnReInspection.Text = "재검사";
+            this.btnReInspection.Click += new System.EventHandler(this.btnReInspection_Click);
             // 
             // lkuInspectionTeamName
             // 
@@ -136,6 +181,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.inspectionResultBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(12, 96);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -144,18 +190,23 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // inspectionResultBindingSource
+            // 
+            this.inspectionResultBindingSource.DataSource = typeof(InspectionProcess.Data.InspectionResult);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colInspectionId,
             this.colProductId,
+            this.gridColumn2,
+            this.colCount,
             this.colNormalNumber,
             this.colDefectiveNumber,
-            this.colCount,
-            this.gridColumn1,
-            this.gridColumn2});
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colInspectionId
@@ -178,6 +229,26 @@
             this.colProductId.VisibleIndex = 1;
             this.colProductId.Width = 94;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "상품명";
+            this.gridColumn2.FieldName = "MerchandiseName";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 94;
+            // 
+            // colCount
+            // 
+            this.colCount.Caption = "검사횟수";
+            this.colCount.FieldName = "Count";
+            this.colCount.MinWidth = 25;
+            this.colCount.Name = "colCount";
+            this.colCount.Visible = true;
+            this.colCount.VisibleIndex = 3;
+            this.colCount.Width = 94;
+            // 
             // colNormalNumber
             // 
             this.colNormalNumber.Caption = "양품개수";
@@ -185,7 +256,7 @@
             this.colNormalNumber.MinWidth = 25;
             this.colNormalNumber.Name = "colNormalNumber";
             this.colNormalNumber.Visible = true;
-            this.colNormalNumber.VisibleIndex = 3;
+            this.colNormalNumber.VisibleIndex = 4;
             this.colNormalNumber.Width = 94;
             // 
             // colDefectiveNumber
@@ -195,18 +266,8 @@
             this.colDefectiveNumber.MinWidth = 25;
             this.colDefectiveNumber.Name = "colDefectiveNumber";
             this.colDefectiveNumber.Visible = true;
-            this.colDefectiveNumber.VisibleIndex = 4;
+            this.colDefectiveNumber.VisibleIndex = 5;
             this.colDefectiveNumber.Width = 94;
-            // 
-            // colCount
-            // 
-            this.colCount.Caption = "검사횟수";
-            this.colCount.FieldName = "Count";
-            this.colCount.MinWidth = 25;
-            this.colCount.Name = "colCount";
-            this.colCount.Visible = true;
-            this.colCount.VisibleIndex = 2;
-            this.colCount.Width = 94;
             // 
             // gridColumn1
             // 
@@ -215,18 +276,8 @@
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.VisibleIndex = 6;
             this.gridColumn1.Width = 94;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "상품명";
-            this.gridColumn2.FieldName = "MerchandiseName";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 6;
-            this.gridColumn2.Width = 94;
             // 
             // Root
             // 
@@ -297,16 +348,6 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(575, 38);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lkuInspectionID
-            // 
-            this.lkuInspectionID.Location = new System.Drawing.Point(85, 12);
-            this.lkuInspectionID.Name = "lkuInspectionID";
-            this.lkuInspectionID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkuInspectionID.Size = new System.Drawing.Size(532, 24);
-            this.lkuInspectionID.StyleController = this.layoutControl1;
-            this.lkuInspectionID.TabIndex = 29;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.lkuInspectionID;
@@ -315,16 +356,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(609, 28);
             this.layoutControlItem6.Text = "검사ID :";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(70, 18);
-            // 
-            // lkuProductId
-            // 
-            this.lkuProductId.Location = new System.Drawing.Point(85, 40);
-            this.lkuProductId.Name = "lkuProductId";
-            this.lkuProductId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkuProductId.Size = new System.Drawing.Size(532, 24);
-            this.lkuProductId.StyleController = this.layoutControl1;
-            this.lkuProductId.TabIndex = 30;
             // 
             // layoutControlItem7
             // 
@@ -341,15 +372,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QualityManagementForm";
             this.Text = "품질관리";
             this.Load += new System.EventHandler(this.QualityManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inspectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionTeamName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inspectionResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -358,9 +395,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblInspectionTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuInspectionID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
@@ -393,5 +428,8 @@
         private DevExpress.XtraEditors.LookUpEdit lkuInspectionID;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private System.Windows.Forms.BindingSource inspectionResultBindingSource;
+        private System.Windows.Forms.BindingSource inspectionBindingSource;
+        private System.Windows.Forms.BindingSource productBindingSource;
     }
 }
