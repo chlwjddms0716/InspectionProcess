@@ -40,32 +40,14 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutInspection(int id, Inspection inspection)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != inspection.InspectionId)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(inspection).State = EntityState.Modified;
-
             try
             {
-                db.SaveChanges();
+                DataRepository.Inspection.Update(inspection);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!InspectionExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+
+                return BadRequest();
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -75,27 +57,13 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(Inspection))]
         public IHttpActionResult PostInspection(Inspection inspection)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Inspections.Add(inspection);
-
             try
             {
-                db.SaveChanges();
+                DataRepository.Inspection.Insert(inspection);
             }
-            catch (DbUpdateException)
-            {
-                if (InspectionExists(inspection.InspectionId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
+            catch (Exception ex) { 
+
+                return BadRequest();
             }
 
             return CreatedAtRoute("DefaultApi", new { id = inspection.InspectionId }, inspection);
@@ -105,14 +73,20 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(Inspection))]
         public IHttpActionResult DeleteInspection(int id)
         {
-            Inspection inspection = db.Inspections.Find(id);
-            if (inspection == null)
-            {
-                return NotFound();
-            }
+            Inspection inspection = DataRepository.Inspection.Get(id);
 
-            db.Inspections.Remove(inspection);
-            db.SaveChanges();
+            if (inspection == null)
+                return NotFound();
+
+            try
+            {
+                DataRepository.Inspection.Delete(inspection);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest();
+            }
 
             return Ok(inspection);
         }

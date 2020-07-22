@@ -44,10 +44,9 @@ namespace InspectionProcess.Data
 
             var query = from x in context.Inspections
                         orderby x.InspectionId descending
-                        where (x.FinishTime == null && x.StartTime >= startDate) ||
+                        where (x.FinishTime == null || x.FinishTime != null && x.StartTime >= startDate) ||
                                 (x.FinishTime <= finishDate && x.StartTime >= startDate)
                         select x;
-
             return query.ToList();
         }
     }
