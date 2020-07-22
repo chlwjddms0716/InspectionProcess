@@ -40,7 +40,6 @@
             this.colProductionTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFinishTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMerchandise = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -134,8 +133,7 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colProductionTeam,
             this.colFinishTime,
-            this.colMerchandise,
-            this.colTeam});
+            this.colMerchandise});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -165,15 +163,6 @@
             this.colMerchandise.Visible = true;
             this.colMerchandise.VisibleIndex = 2;
             this.colMerchandise.Width = 94;
-            // 
-            // colTeam
-            // 
-            this.colTeam.FieldName = "Team";
-            this.colTeam.MinWidth = 25;
-            this.colTeam.Name = "colTeam";
-            this.colTeam.Visible = true;
-            this.colTeam.VisibleIndex = 3;
-            this.colTeam.Width = 94;
             // 
             // simpleButton2
             // 
@@ -319,7 +308,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colProductionTeam;
         private DevExpress.XtraGrid.Columns.GridColumn colFinishTime;
         private DevExpress.XtraGrid.Columns.GridColumn colMerchandise;
-        private DevExpress.XtraGrid.Columns.GridColumn colTeam;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource bdsTeam;
