@@ -36,5 +36,13 @@ namespace InspectionProcess.Forms
         {
 
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            lkuInspectionID.EditValue = null;
+            lkuProductId.EditValue = null;
+            lkuInspectionTeamName.EditValue = null;
+            //하이
+        }
     }
 }

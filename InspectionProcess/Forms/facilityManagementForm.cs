@@ -23,6 +23,10 @@ namespace InspectionProcess.Forms
             bdsInspection.DataSource = DataRepository.Inspection.GetAllbyDate(dteStartDate.DateTime.Date, dteFinishDate.DateTime.Date);
         }
 
-       
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dteStartDate.EditValue = null;
+            dteFinishDate.EditValue = null;
+        }
     }
 }
