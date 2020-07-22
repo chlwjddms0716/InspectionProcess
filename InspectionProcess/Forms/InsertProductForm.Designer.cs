@@ -154,7 +154,7 @@
             this.layoutControlItem4.Control = this.cbbProductionTeamId;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 86);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(461, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(461, 153);
             this.layoutControlItem4.Text = "생산조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
             // 

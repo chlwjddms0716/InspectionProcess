@@ -37,7 +37,7 @@ namespace InspectionProcess.Data
             return query.FirstOrDefault();
         }
 
-        public List<InspectionResult> SearchByQuality(int? inspectionId, int? productId, int? InspectionTeamId)
+        public List<InspectionResult> SearchByQuality(int? inspectionId, int? productId, int? inspectionTeamId)
         {
             InspectionProcessEntities context = CreateContext();
 
@@ -53,7 +53,9 @@ namespace InspectionProcess.Data
                 query = query.Where(x => x.InspectionResult.Inspection.InspectionId == inspectionId);
             if (productId.HasValue)
                 query = query.Where(x => x.InspectionResult.ProductId == productId);
-
+            if (inspectionTeamId.HasValue)
+                query = query.Where(x => x.InspectionResult.Inspection.InspectionTeam == inspectionTeamId);
+            
 
             var list = query.ToList();
 
