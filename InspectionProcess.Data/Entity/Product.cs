@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InspectionProcess.Data.Entity
+namespace InspectionProcess.Data
 {
     public partial class Product
     {
+        public string MerchandiseName { get; set; }
     }
 }

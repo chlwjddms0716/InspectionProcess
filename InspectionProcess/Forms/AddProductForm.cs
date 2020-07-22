@@ -21,9 +21,17 @@ namespace InspectionProcess.Forms
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
-            bdsProduct.DataSource = DataRepository.Product.Get(1);
+            //bdsProduct.DataSource = DataRepository.Product.GetAll();
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
+            bdsTeam.DataSource = DataRepository.Team.GetAll();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int merchandiseId = (int)cbbMerchandiseName.SelectedValue;
+            int teamId = (int)cbbTeam.SelectedValue;
+
+            bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
+        }
     }
 }

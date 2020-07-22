@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,9 +38,17 @@ namespace InspectionProcess.Data
             return query.FirstOrDefault();
         }
 
-        public object GetAllbyDate(DateTime dateTime1, DateTime dateTime2)
+        public List<Inspection> GetAllbyDate(DateTime startDate, DateTime finishDate)
         {
-            throw new NotImplementedException();
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Inspections
+                        orderby x.InspectionId descending
+                        where (x.FinishTime == null && x.StartTime >= startDate) ||
+                                (x.FinishTime <= finishDate && x.StartTime >= startDate)
+                        select x;
+
+            return query.ToList();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace InspectionProcess.Data
             return context.Set<T>().Count();
         }
 
-        public void Insert(T entity)
+        public virtual void Insert(T entity)
         {
             InspectionProcessEntities context = CreateContext();
 
