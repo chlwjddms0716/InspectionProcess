@@ -59,5 +59,16 @@ namespace InspectionProcess.Forms
             
             form.ShowDialog();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Product product = bdsProduct.Current as Product;
+            if (product == null)
+                return;
+            if (Helpers.DeleteHelper.SureToDelete() == false)
+                return;
+            DataRepository.Product.Delete(product);
+            bdsProduct.Remove(product);
+        }
     }
 }
