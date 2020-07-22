@@ -57,14 +57,20 @@
             // 
             // progressBarControl1
             // 
-            this.progressBarControl1.Location = new System.Drawing.Point(176, 601);
+            this.progressBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBarControl1.Location = new System.Drawing.Point(12, 593);
             this.progressBarControl1.Name = "progressBarControl1";
             this.progressBarControl1.Size = new System.Drawing.Size(549, 22);
             this.progressBarControl1.TabIndex = 12;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(274, 133);
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Location = new System.Drawing.Point(27, 81);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(35, 18);
             this.labelControl1.TabIndex = 13;
@@ -72,7 +78,10 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(668, 133);
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Location = new System.Drawing.Point(256, 81);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 18);
             this.labelControl2.TabIndex = 14;
@@ -80,7 +89,10 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(546, 133);
+            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl3.Location = new System.Drawing.Point(184, 81);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(35, 18);
             this.labelControl3.TabIndex = 15;
@@ -88,7 +100,10 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(412, 133);
+            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl4.Location = new System.Drawing.Point(102, 81);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(35, 18);
             this.labelControl4.TabIndex = 16;
@@ -96,9 +111,12 @@
             // 
             // labelControl5
             // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(412, 336);
+            this.labelControl5.Location = new System.Drawing.Point(12, 346);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(176, 34);
             this.labelControl5.TabIndex = 17;
@@ -108,7 +126,8 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(441, 65);
+            this.labelControl6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl6.Location = new System.Drawing.Point(0, 0);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(104, 34);
             this.labelControl6.TabIndex = 18;
@@ -116,13 +135,17 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(888, 473);
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textEdit1.Location = new System.Drawing.Point(659, 466);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(125, 24);
             this.textEdit1.TabIndex = 19;
             // 
             // btnCCTV
             // 
+            this.btnCCTV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCCTV.ImageOptions.Image = global::InspectionProcess.Properties.Resources.iconfinder_Muslim_Mosque_18_2044979;
             this.btnCCTV.Location = new System.Drawing.Point(943, 646);
             this.btnCCTV.Name = "btnCCTV";
@@ -132,8 +155,11 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_125136783;
-            this.pictureBox7.Location = new System.Drawing.Point(668, 157);
+            this.pictureBox7.Location = new System.Drawing.Point(246, 124);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(72, 87);
             this.pictureBox7.TabIndex = 11;
@@ -141,8 +167,11 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_123343794;
-            this.pictureBox6.Location = new System.Drawing.Point(412, 157);
+            this.pictureBox6.Location = new System.Drawing.Point(90, 124);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(72, 87);
             this.pictureBox6.TabIndex = 10;
@@ -150,8 +179,11 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_123343692;
-            this.pictureBox4.Location = new System.Drawing.Point(546, 157);
+            this.pictureBox4.Location = new System.Drawing.Point(168, 124);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(72, 87);
             this.pictureBox4.TabIndex = 9;
@@ -159,8 +191,11 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_125016507;
-            this.pictureBox5.Location = new System.Drawing.Point(274, 157);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 124);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(72, 87);
             this.pictureBox5.TabIndex = 8;
@@ -168,6 +203,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::InspectionProcess.Properties.Resources.Hum;
             this.pictureBox3.Location = new System.Drawing.Point(1021, 12);
             this.pictureBox3.Name = "pictureBox3";
@@ -177,6 +213,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::InspectionProcess.Properties.Resources.temperature2;
             this.pictureBox2.Location = new System.Drawing.Point(932, 12);
             this.pictureBox2.Name = "pictureBox2";
@@ -186,8 +223,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::InspectionProcess.Properties.Resources.GIF;
-            this.pictureBox1.Location = new System.Drawing.Point(176, 402);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 404);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(641, 165);
             this.pictureBox1.TabIndex = 4;
@@ -217,7 +257,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RealTimeStatusForm";
             this.Text = "실시간 상태";
-   
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
