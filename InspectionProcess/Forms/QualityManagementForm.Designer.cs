@@ -37,11 +37,12 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsInspectionResult = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colInspectionId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNormalNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDefectiveNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.검사ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.생산품ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.양품개수 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.불량개수 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.검사횟수 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.검사조 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -144,64 +145,75 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colInspectionId,
-            this.colProductId,
-            this.colNormalNumber,
-            this.colDefectiveNumber,
-            this.colCount});
+            this.검사ID,
+            this.생산품ID,
+            this.양품개수,
+            this.불량개수,
+            this.검사횟수,
+            this.검사조});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // colInspectionId
+            // 검사ID
             // 
-            this.colInspectionId.Caption = "검사ID";
-            this.colInspectionId.FieldName = "InspectionId";
-            this.colInspectionId.MinWidth = 25;
-            this.colInspectionId.Name = "colInspectionId";
-            this.colInspectionId.Visible = true;
-            this.colInspectionId.VisibleIndex = 0;
-            this.colInspectionId.Width = 94;
+            this.검사ID.Caption = "검사ID";
+            this.검사ID.FieldName = "InspectionId";
+            this.검사ID.MinWidth = 25;
+            this.검사ID.Name = "검사ID";
+            this.검사ID.Visible = true;
+            this.검사ID.VisibleIndex = 1;
+            this.검사ID.Width = 94;
             // 
-            // colProductId
+            // 생산품ID
             // 
-            this.colProductId.Caption = "생산품ID";
-            this.colProductId.FieldName = "ProductId";
-            this.colProductId.MinWidth = 25;
-            this.colProductId.Name = "colProductId";
-            this.colProductId.Visible = true;
-            this.colProductId.VisibleIndex = 1;
-            this.colProductId.Width = 94;
+            this.생산품ID.Caption = "생산품ID";
+            this.생산품ID.FieldName = "ProductId";
+            this.생산품ID.MinWidth = 25;
+            this.생산품ID.Name = "생산품ID";
+            this.생산품ID.Visible = true;
+            this.생산품ID.VisibleIndex = 2;
+            this.생산품ID.Width = 94;
             // 
-            // colNormalNumber
+            // 양품개수
             // 
-            this.colNormalNumber.Caption = "양품개수";
-            this.colNormalNumber.FieldName = "NormalNumber";
-            this.colNormalNumber.MinWidth = 25;
-            this.colNormalNumber.Name = "colNormalNumber";
-            this.colNormalNumber.Visible = true;
-            this.colNormalNumber.VisibleIndex = 3;
-            this.colNormalNumber.Width = 94;
+            this.양품개수.Caption = "양품개수";
+            this.양품개수.FieldName = "NormalNumber";
+            this.양품개수.MinWidth = 25;
+            this.양품개수.Name = "양품개수";
+            this.양품개수.Visible = true;
+            this.양품개수.VisibleIndex = 4;
+            this.양품개수.Width = 94;
             // 
-            // colDefectiveNumber
+            // 불량개수
             // 
-            this.colDefectiveNumber.Caption = "불량품개수";
-            this.colDefectiveNumber.FieldName = "DefectiveNumber";
-            this.colDefectiveNumber.MinWidth = 25;
-            this.colDefectiveNumber.Name = "colDefectiveNumber";
-            this.colDefectiveNumber.Visible = true;
-            this.colDefectiveNumber.VisibleIndex = 4;
-            this.colDefectiveNumber.Width = 94;
+            this.불량개수.Caption = "불량개수";
+            this.불량개수.FieldName = "DefectiveNumber";
+            this.불량개수.MinWidth = 25;
+            this.불량개수.Name = "불량개수";
+            this.불량개수.Visible = true;
+            this.불량개수.VisibleIndex = 5;
+            this.불량개수.Width = 94;
             // 
-            // colCount
+            // 검사횟수
             // 
-            this.colCount.Caption = "검사횟수";
-            this.colCount.FieldName = "Count";
-            this.colCount.MinWidth = 25;
-            this.colCount.Name = "colCount";
-            this.colCount.Visible = true;
-            this.colCount.VisibleIndex = 2;
-            this.colCount.Width = 94;
+            this.검사횟수.Caption = "검사횟수";
+            this.검사횟수.FieldName = "Count";
+            this.검사횟수.MinWidth = 25;
+            this.검사횟수.Name = "검사횟수";
+            this.검사횟수.Visible = true;
+            this.검사횟수.VisibleIndex = 3;
+            this.검사횟수.Width = 94;
+            // 
+            // 검사조
+            // 
+            this.검사조.Caption = "검사조";
+            this.검사조.FieldName = "Inspection.InspectionTeam";
+            this.검사조.MinWidth = 25;
+            this.검사조.Name = "검사조";
+            this.검사조.Visible = true;
+            this.검사조.VisibleIndex = 0;
+            this.검사조.Width = 94;
             // 
             // Root
             // 
@@ -319,11 +331,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.BindingSource bdsInspectionResult;
-        private DevExpress.XtraGrid.Columns.GridColumn colInspectionId;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductId;
-        private DevExpress.XtraGrid.Columns.GridColumn colNormalNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colDefectiveNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colCount;
+        private DevExpress.XtraGrid.Columns.GridColumn 검사ID;
+        private DevExpress.XtraGrid.Columns.GridColumn 생산품ID;
+        private DevExpress.XtraGrid.Columns.GridColumn 양품개수;
+        private DevExpress.XtraGrid.Columns.GridColumn 불량개수;
+        private DevExpress.XtraGrid.Columns.GridColumn 검사횟수;
         private DevExpress.XtraEditors.TextEdit txeInspectionid;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.ComboBoxEdit cbeTeam;
@@ -332,5 +344,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn 검사조;
     }
 }

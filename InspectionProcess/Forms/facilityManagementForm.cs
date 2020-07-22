@@ -20,7 +20,7 @@ namespace InspectionProcess.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            bdsInspection.DataSource = DataRepository.Inspection.GetAllbyDate(dteStartDate.DateTime, dteFinishDate.DateTime);
+            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
         }
     }
 }
