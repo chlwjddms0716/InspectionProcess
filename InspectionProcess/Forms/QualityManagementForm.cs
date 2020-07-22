@@ -30,6 +30,8 @@ namespace InspectionProcess.Forms
             teamBindingSource.DataSource = DataRepository.Team.GetAll();
             inspectionBindingSource.DataSource = DataRepository.Inspection.GetAll();
             productBindingSource.DataSource = DataRepository.Product.GetAll();
+
+            //TODO : 양품개수가 10개 일 때, 검사 횟수가 3번이면 창고.count에 들어가게 해야 함
         }
 
         private void btnReInspection_Click(object sender, EventArgs e)
