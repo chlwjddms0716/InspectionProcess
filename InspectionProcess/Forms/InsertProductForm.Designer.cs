@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.txeFinishTime = new DevExpress.XtraEditors.TextEdit();
             this.cbbMerchandise = new System.Windows.Forms.ComboBox();
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.cbbProductionTeamId = new System.Windows.Forms.ComboBox();
-            this.bdsProductionTeamId = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsProductionTeamId = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -45,11 +45,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeFinishTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -123,10 +123,6 @@
             this.cbbMerchandise.TabIndex = 5;
             this.cbbMerchandise.ValueMember = "MerchandiseId";
             // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cbbMerchandise;
@@ -160,18 +156,22 @@
             this.cbbProductionTeamId.TabIndex = 8;
             this.cbbProductionTeamId.ValueMember = "ProductionTeam";
             // 
-            // bdsProductionTeamId
-            // 
-            this.bdsProductionTeamId.DataSource = typeof(InspectionProcess.Data.Product);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.cbbProductionTeamId;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(461, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(461, 181);
             this.layoutControlItem4.Text = "생산조ID";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
+            // 
+            // bdsProductionTeamId
+            // 
+            this.bdsProductionTeamId.DataSource = typeof(InspectionProcess.Data.Product);
+            // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
             // InsertProductForm
             // 
@@ -189,11 +189,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeFinishTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             this.ResumeLayout(false);
 
         }
