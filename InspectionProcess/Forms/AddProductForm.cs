@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using InspectionProcess.Data;
+using InspectionProcess.Forms.UpdateForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,15 +22,18 @@ namespace InspectionProcess.Forms
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
+
             //bdsProduct.DataSource = DataRepository.Product.GetAll();
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
             bdsTeam.DataSource = DataRepository.Team.GetAll();
+            cbbMerchandiseName.SelectedItem = null;
+            cbbTeam.SelectedItem = null;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int merchandiseId = (int)cbbMerchandiseName.SelectedValue;
-            int teamId = (int)cbbTeam.SelectedValue;
+            int? merchandiseId = (int?)cbbMerchandiseName.SelectedValue;
+            int? teamId = (int?)cbbTeam.SelectedValue;
 
             bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
         }
@@ -37,6 +41,23 @@ namespace InspectionProcess.Forms
         private void btnInsert_Click(object sender, EventArgs e)
         {
             InsertProductForm form = new InsertProductForm();
+            form.ShowDialog();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            cbbMerchandiseName.SelectedItem = null;
+            cbbTeam.SelectedItem = null;
+        }
+
+        //TODO : 수정이벤트 작성
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Product product = bdsProduct.Current as Product;
+            if (product == null)
+                return;
+            UpdateProductForm form = new UpdateProductForm(product);
+            
             form.ShowDialog();
         }
     }

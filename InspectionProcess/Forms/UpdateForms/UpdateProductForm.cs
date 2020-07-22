@@ -1,5 +1,5 @@
-﻿using System;
-using InspectionProcess.Data;
+﻿using InspectionProcess.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,61 +9,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InspectionProcess.Forms
+namespace InspectionProcess.Forms.UpdateForms
 {
-    public partial class InsertProductForm : ChildRootForm
+    public partial class UpdateProductForm : ChildRootForm
     {
         private Product _product;
-        private object cbbMerchandiseId;
-
-        public InsertProductForm()
+        public UpdateProductForm()
         {
             InitializeComponent();
         }
-
-
-        private void btnClose_Click(object sender, EventArgs e)
+        public UpdateProductForm(Product product) : this()
         {
-            Close();
+            _product = product;
         }
 
-
-        private void InsertProductForm_Load(object sender, EventArgs e)
+        private void UpdateProduct_Load(object sender, EventArgs e)
         {
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-            bdsProductionTeamId.DataSource = DataRepository.Product.GetAll();
             bdsTeam.DataSource = DataRepository.Team.GetAll();
+
+            txeProductId.Text = _product.ProductId.ToString();
+            cbbMerchandiseName.SelectedItem = _product.MerchandiseId;
+            cbbTeamName.SelectedItem = _product.ProductionTeam;
+            dteFinishDate.EditValue = _product.FinishTime.Date;
+            teFinishTime.EditValue = _product.FinishTime.TimeOfDay;
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
+        private void btnAction_Click(object sender, EventArgs e)
         {
-            _product = new Product();
             WriteToEntity();
             try
             {
-                DataRepository.Product.Insert(_product);
+                DataRepository.Product.Update(_product);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("등록되었습니다.");
+            MessageBox.Show("수정되었습니다.");
             Close();
         }
 
         private void WriteToEntity()
         {
-            _product.ProductId = DataRepository.Product.GetMaxId() + 1;
-
-            _product.MerchandiseId = (int)cbbMerchandise.SelectedValue;
-
+            _product.MerchandiseId = (int)cbbMerchandiseName.SelectedValue;
+            _product.ProductionTeam = (int)cbbTeamName.SelectedValue;
             _product.FinishTime = (DateTime)dteFinishDate.EditValue;
+            
             _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);
             _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
             _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
-
-            _product.ProductionTeam = (int)cbbProductionTeamId.SelectedValue;
         }
     }
 }
-
