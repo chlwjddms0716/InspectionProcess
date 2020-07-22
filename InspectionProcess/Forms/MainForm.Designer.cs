@@ -70,7 +70,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1056, 197);
+            this.ribbonControl1.Size = new System.Drawing.Size(960, 197);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnProduce
@@ -178,11 +178,11 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 646);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 782);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1056, 30);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(960, 30);
             // 
             // ribbonPage2
             // 
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 676);
+            this.ClientSize = new System.Drawing.Size(960, 812);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;

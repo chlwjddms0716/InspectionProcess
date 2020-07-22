@@ -26,6 +26,17 @@ namespace InspectionProcess.Data
             Delete(inspectionResult);
         }
 
+        public int GetMaxId()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.InspectionResults
+                        orderby x.InspectionResultId descending
+                        select x.InspectionResultId;
+
+            return query.FirstOrDefault();
+        }
+
         public List<InspectionResult> SearchByQuality(int? inspectionId, int? productId, int? InspectionTeamId)
         {
             InspectionProcessEntities context = CreateContext();
@@ -42,9 +53,9 @@ namespace InspectionProcess.Data
                 query = query.Where(x => x.InspectionResult.Inspection.InspectionId == inspectionId);
             if (productId.HasValue)
                 query = query.Where(x => x.InspectionResult.ProductId == productId);
-            
 
-                var list = query.ToList();
+
+            var list = query.ToList();
 
             foreach (var x in list)
             {
@@ -53,17 +64,6 @@ namespace InspectionProcess.Data
             }
 
             return list.ConvertAll(x => x.InspectionResult);
-        }
-
-        public int GetMaxId()
-        {
-            InspectionProcessEntities context = CreateContext();
-
-            var query = from x in context.InspectionResults
-                        orderby x.InspectionResultId descending
-                        select x.InspectionResultId;
-
-            return query.FirstOrDefault();
         }
     }
 }
