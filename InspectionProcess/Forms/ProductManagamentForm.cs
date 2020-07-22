@@ -30,13 +30,23 @@ namespace InspectionProcess.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            bdsProduct.DataSource = DataRepository.Product.Search((int)cbbProductionId.SelectedValue,(int)cbbMerchandiseName.SelectedValue, null);
+            bdsProduct.DataSource = DataRepository.Product.Search((int?)cbbProductionId.SelectedValue,(int?)cbbMerchandiseName.SelectedValue, null);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             cbbMerchandiseName.SelectedItem = null;
             cbbProductionId.SelectedItem = null;
+        }
+
+        private void btnInstruction_Click(object sender, EventArgs e)
+        {
+            Product product = bdsProduct.Current as Product;
+            if (product == null)
+                return;
+            InsertInspectionForm form = new InsertInspectionForm(product);
+            form.ShowDialog();
+            
         }
     }
 }

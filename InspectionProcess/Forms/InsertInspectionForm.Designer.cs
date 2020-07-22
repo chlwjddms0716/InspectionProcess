@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.cbbInspectionId = new System.Windows.Forms.ComboBox();
+            this.cbbTeamName = new System.Windows.Forms.ComboBox();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.cbbWarehouseName = new System.Windows.Forms.ComboBox();
+            this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bdsInspection = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -42,19 +42,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsInspection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.cbbInspectionId);
+            this.layoutControl1.Controls.Add(this.cbbTeamName);
             this.layoutControl1.Controls.Add(this.cbbWarehouseName);
             this.layoutControl1.Size = new System.Drawing.Size(552, 247);
             this.layoutControl1.Controls.SetChildIndex(this.cbbWarehouseName, 0);
-            this.layoutControl1.Controls.SetChildIndex(this.cbbInspectionId, 0);
+            this.layoutControl1.Controls.SetChildIndex(this.cbbTeamName, 0);
             this.layoutControl1.Controls.SetChildIndex(this.btnClose, 0);
             this.layoutControl1.Controls.SetChildIndex(this.btnAction, 0);
             // 
@@ -75,7 +75,7 @@
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 196);
             this.emptySpaceItem2.Size = new System.Drawing.Size(312, 31);
             // 
-            // btnInsert
+            // btnAction
             // 
             this.btnAction.Location = new System.Drawing.Point(324, 208);
             this.btnAction.Size = new System.Drawing.Size(105, 27);
@@ -97,38 +97,48 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(312, 196);
             this.layoutControlItem3.Size = new System.Drawing.Size(109, 31);
             // 
-            // cbbInspectionId
+            // cbbTeamName
             // 
-            this.cbbInspectionId.DataSource = this.bdsInspection;
-            this.cbbInspectionId.DisplayMember = "InspectionTeam";
-            this.cbbInspectionId.FormattingEnabled = true;
-            this.cbbInspectionId.Location = new System.Drawing.Point(79, 12);
-            this.cbbInspectionId.Name = "cbbInspectionId";
-            this.cbbInspectionId.Size = new System.Drawing.Size(461, 26);
-            this.cbbInspectionId.TabIndex = 5;
-            this.cbbInspectionId.ValueMember = "InspectionTeam";
+            this.cbbTeamName.DataSource = this.bdsTeam;
+            this.cbbTeamName.DisplayMember = "Name";
+            this.cbbTeamName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTeamName.FormattingEnabled = true;
+            this.cbbTeamName.Location = new System.Drawing.Point(63, 12);
+            this.cbbTeamName.Name = "cbbTeamName";
+            this.cbbTeamName.Size = new System.Drawing.Size(477, 26);
+            this.cbbTeamName.TabIndex = 5;
+            this.cbbTeamName.ValueMember = "TeamId";
+            // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
             // 
             // cbbWarehouseName
             // 
             this.cbbWarehouseName.DataSource = this.bdsWarehouse;
             this.cbbWarehouseName.DisplayMember = "Name";
+            this.cbbWarehouseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbWarehouseName.FormattingEnabled = true;
-            this.cbbWarehouseName.Location = new System.Drawing.Point(79, 42);
+            this.cbbWarehouseName.Location = new System.Drawing.Point(63, 42);
             this.cbbWarehouseName.Name = "cbbWarehouseName";
-            this.cbbWarehouseName.Size = new System.Drawing.Size(461, 26);
+            this.cbbWarehouseName.Size = new System.Drawing.Size(477, 26);
             this.cbbWarehouseName.TabIndex = 5;
             this.cbbWarehouseName.ValueMember = "WarehouseId";
             // 
+            // bdsWarehouse
+            // 
+            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
+            // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.cbbInspectionId;
+            this.layoutControlItem1.Control = this.cbbTeamName;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "검사조ID";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(532, 30);
-            this.layoutControlItem1.Text = "검사조ID";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 18);
+            this.layoutControlItem1.Text = "검사조";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
             // 
             // layoutControlItem4
             // 
@@ -137,17 +147,9 @@
             this.layoutControlItem4.CustomizationFormText = "창고명";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(532, 197);
+            this.layoutControlItem4.Size = new System.Drawing.Size(532, 30);
             this.layoutControlItem4.Text = "창고명";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(55, 18);
-            // 
-            // bdsInspection
-            // 
-            this.bdsInspection.DataSource = typeof(InspectionProcess.Data.Inspection);
-            // 
-            // bdsWarehouse
-            // 
-            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(39, 18);
             // 
             // InsertInspectionForm
             // 
@@ -155,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 247);
             this.Name = "InsertInspectionForm";
-            this.Text = "II";
+            this.Text = "작업지시";
             this.Load += new System.EventHandler(this.InsertInspectionForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -164,21 +166,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsInspection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbbInspectionId;
+        private System.Windows.Forms.ComboBox cbbTeamName;
         private System.Windows.Forms.ComboBox cbbWarehouseName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private System.Windows.Forms.BindingSource bdsInspection;
         private System.Windows.Forms.BindingSource bdsWarehouse;
+        private System.Windows.Forms.BindingSource bdsTeam;
     }
 }

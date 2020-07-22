@@ -50,7 +50,6 @@ namespace InspectionProcess.Forms
             cbbTeam.SelectedItem = null;
         }
 
-        //TODO : 수정이벤트 작성
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             Product product = bdsProduct.Current as Product;

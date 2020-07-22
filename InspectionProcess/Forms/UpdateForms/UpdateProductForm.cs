@@ -31,8 +31,8 @@ namespace InspectionProcess.Forms.UpdateForms
             txeProductId.Text = _product.ProductId.ToString();
             cbbMerchandiseName.SelectedItem = _product.MerchandiseId;
             cbbTeamName.SelectedItem = _product.ProductionTeam;
-            dteFinishDate.EditValue = _product.FinishTime.Date;
-            teFinishTime.EditValue = _product.FinishTime.TimeOfDay;
+            dteFinishDate.EditValue = _product.FinishTime;
+            teFinishTime.EditValue = _product.FinishTime;
         }
 
         private void btnAction_Click(object sender, EventArgs e)
@@ -55,10 +55,10 @@ namespace InspectionProcess.Forms.UpdateForms
             _product.MerchandiseId = (int)cbbMerchandiseName.SelectedValue;
             _product.ProductionTeam = (int)cbbTeamName.SelectedValue;
             _product.FinishTime = (DateTime)dteFinishDate.EditValue;
-            
-            _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);
-            _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
-            _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
+
+            _product.FinishTime = _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);
+            _product.FinishTime = _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
+            _product.FinishTime = _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
         }
     }
 }
