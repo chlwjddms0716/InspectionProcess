@@ -20,10 +20,10 @@ namespace InspectionProcess.Forms
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
- 
-           
-                bdsInspectionResult.DataSource = DataRepository.InspectionResult.SearchByQuality(Convert.ToInt32(txeInspectionid.Text), Convert.ToInt32(txeProductId.Text), (int?)lkuInspectionTeamName.EditValue);
-           
+
+
+            //bdsInspectionResult.DataSource = DataRepository.InspectionResult.SearchByQuality(Convert.ToInt32(txeInspectionid.Text), Convert.ToInt32(txeProductId.Text), (int?)lkuInspectionTeamName.EditValue);
+
 
         }
 

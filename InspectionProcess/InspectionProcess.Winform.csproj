@@ -243,11 +243,9 @@
     <None Include="Properties\DataSources\InspectionProcess.Data.Inspection.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.InspectionData.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Keeping1.datasource" />
-    <None Include="Properties\DataSources\InspectionProcess.Data.Merchandise1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Product.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Warehouse1.datasource" />
-    <None Include="Properties\DataSources\InspectionProcess.Data.Merchandise1.datasource" />
     <None Include="Properties\DataSources\InspectionProcess.Data.Team1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
