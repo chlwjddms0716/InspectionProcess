@@ -37,7 +37,10 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.colMerchandiseName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductionTeam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFinishTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -47,9 +50,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colMerchandiseName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductionTeam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFinishTime = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
@@ -72,7 +72,7 @@
             this.layoutControl1.Controls.Add(this.cbbTeam);
             this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
+            this.layoutControl1.Controls.Add(this.btnInsert);
             this.layoutControl1.Controls.Add(this.btnSearch);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -138,14 +138,42 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // simpleButton2
+            // colMerchandiseName
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(12, 84);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(157, 27);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "등록(&I)";
+            this.colMerchandiseName.FieldName = "MerchandiseName";
+            this.colMerchandiseName.MinWidth = 25;
+            this.colMerchandiseName.Name = "colMerchandiseName";
+            this.colMerchandiseName.Visible = true;
+            this.colMerchandiseName.VisibleIndex = 0;
+            this.colMerchandiseName.Width = 94;
+            // 
+            // colProductionTeam
+            // 
+            this.colProductionTeam.FieldName = "ProductionTeam";
+            this.colProductionTeam.MinWidth = 25;
+            this.colProductionTeam.Name = "colProductionTeam";
+            this.colProductionTeam.Visible = true;
+            this.colProductionTeam.VisibleIndex = 1;
+            this.colProductionTeam.Width = 94;
+            // 
+            // colFinishTime
+            // 
+            this.colFinishTime.FieldName = "FinishTime";
+            this.colFinishTime.MinWidth = 25;
+            this.colFinishTime.Name = "colFinishTime";
+            this.colFinishTime.Visible = true;
+            this.colFinishTime.VisibleIndex = 2;
+            this.colFinishTime.Width = 94;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(12, 84);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(157, 27);
+            this.btnInsert.StyleController = this.layoutControl1;
+            this.btnInsert.TabIndex = 7;
+            this.btnInsert.Text = "등록(&I)";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnSearch
             // 
@@ -193,7 +221,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.simpleButton2;
+            this.layoutControlItem4.Control = this.btnInsert;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(161, 31);
@@ -235,33 +263,6 @@
             this.layoutControlItem1.Text = "생산조";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
             // 
-            // colMerchandiseName
-            // 
-            this.colMerchandiseName.FieldName = "MerchandiseName";
-            this.colMerchandiseName.MinWidth = 25;
-            this.colMerchandiseName.Name = "colMerchandiseName";
-            this.colMerchandiseName.Visible = true;
-            this.colMerchandiseName.VisibleIndex = 0;
-            this.colMerchandiseName.Width = 94;
-            // 
-            // colProductionTeam
-            // 
-            this.colProductionTeam.FieldName = "ProductionTeam";
-            this.colProductionTeam.MinWidth = 25;
-            this.colProductionTeam.Name = "colProductionTeam";
-            this.colProductionTeam.Visible = true;
-            this.colProductionTeam.VisibleIndex = 1;
-            this.colProductionTeam.Width = 94;
-            // 
-            // colFinishTime
-            // 
-            this.colFinishTime.FieldName = "FinishTime";
-            this.colFinishTime.MinWidth = 25;
-            this.colFinishTime.Name = "colFinishTime";
-            this.colFinishTime.Visible = true;
-            this.colFinishTime.VisibleIndex = 2;
-            this.colFinishTime.Width = 94;
-            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -296,7 +297,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnInsert;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;

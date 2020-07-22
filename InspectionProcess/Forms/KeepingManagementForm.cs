@@ -20,17 +20,17 @@ namespace InspectionProcess.Forms
         }
 
         private void KeepingManagementForm_Load(object sender, EventArgs e)
-        {
+        {         
             cbbWarehouse.DataSource = DataRepository.Warehouse.GetAll();
             cbbMerchandiseName.DataSource = DataRepository.Merchandise.GetAll();
-            cbbMerchandiseName.SelectedValue = null;
-            cbbWarehouse.SelectedValue = null;
+            cbbMerchandiseName.SelectedItem = null;
+            cbbWarehouse.SelectedItem = null;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //bdsKeeping.DataSource = DataRepository.Keeping.Search();
-            //cbbMerchandiseName.SelectedValue;
+            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouse.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+            
         }
     }
 }
