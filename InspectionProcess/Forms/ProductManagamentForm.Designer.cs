@@ -95,6 +95,7 @@
             this.btnInstruction.StyleController = this.layoutControl1;
             this.btnInstruction.TabIndex = 11;
             this.btnInstruction.Text = "작업지시";
+            this.btnInstruction.Click += new System.EventHandler(this.btnInstruction_Click);
             // 
             // btnReset
             // 

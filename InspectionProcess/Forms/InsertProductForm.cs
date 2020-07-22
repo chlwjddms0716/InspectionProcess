@@ -58,9 +58,10 @@ namespace InspectionProcess.Forms
             _product.MerchandiseId = (int)cbbMerchandise.SelectedValue;
 
             _product.FinishTime = (DateTime)dteFinishDate.EditValue;
-            _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);
-            _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
-            _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
+
+            _product.FinishTime = _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);
+            _product.FinishTime = _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
+            _product.FinishTime = _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
 
             _product.ProductionTeam = (int)cbbProductionTeamId.SelectedValue;
         }

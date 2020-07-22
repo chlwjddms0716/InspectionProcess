@@ -13,17 +13,18 @@ namespace InspectionProcess.Forms
 {
     public partial class InsertInspectionForm : ChildRootForm
     {
-        private Inspection _Inspection;
-
+        private InspectionResult _inspectionResult;
+        private Inspection _inspection;
+        private Product _product;
 
         public InsertInspectionForm()
         {
             InitializeComponent();
         }
 
-        public InsertInspectionForm(Inspection inspection) : this()
+        public InsertInspectionForm(Product product) : this()
         {
-            _Inspection = inspection;
+            _product = product;
         }
 
 
@@ -34,29 +35,43 @@ namespace InspectionProcess.Forms
 
         private void InsertInspectionForm_Load_1(object sender, EventArgs e)
         {
-            bdsInspection.DataSource = DataRepository.Inspection.GetAll();
+            bdsTeam.DataSource = DataRepository.Team.GetAll();
             bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
         }
 
         private void btnInsert_Click_1(object sender, EventArgs e)
         {
-
+            _inspectionResult = new InspectionResult();
+            _inspection = new Inspection();
             WriteToEntity();
             try
             {
-                DataRepository.Inspection.Insert(_Inspection);
+                DataRepository.Inspection.Insert(_inspection);
+                DataRepository.InspectionResult.Insert(_inspectionResult);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
+            MessageBox.Show("작업시시 했습니다.");
             Close();
         }
 
         private void WriteToEntity()
         {
-            _Inspection.InspectionId = (int)cbbInspectionId.SelectedValue;
+            _inspection.InspectionId = DataRepository.Inspection.GetMaxId() + 1;
+            _inspection.InspectionTeam = (int)cbbTeamName.SelectedValue;
+            _inspection.StartTime = DateTime.Now;
+            _inspection.FinishTime = null;
+
+            _inspectionResult.InspectionResultId = DataRepository.InspectionResult.GetMaxId() + 1;
+            _inspectionResult.InspectionId = _inspection.InspectionId;
+            _inspectionResult.ProductId = _product.ProductId;
+            _inspectionResult.Count = 0;
+            _inspectionResult.NormalNumber = 0;
+            _inspectionResult.DefectiveNumber = 0;
+
+            //_inspectionResult.InspectionId = (int)cbbTeamName.SelectedValue;
             //_Inspection.WarehouseId = (int)cbbWarehouseName.SelectedValue;
         }
     }
