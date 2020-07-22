@@ -42,6 +42,7 @@ namespace InspectionProcess.Forms
             lkuInspectionID.EditValue = null;
             lkuProductId.EditValue = null;
             lkuInspectionTeamName.EditValue = null;
+            //하이
         }
     }
 }
