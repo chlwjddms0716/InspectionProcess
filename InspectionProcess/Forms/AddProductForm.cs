@@ -33,5 +33,11 @@ namespace InspectionProcess.Forms
 
             bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            InsertProductForm form = new InsertProductForm();
+            form.ShowDialog();
+        }
     }
 }

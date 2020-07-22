@@ -32,6 +32,7 @@ namespace InspectionProcess.Forms
         {
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
             bdsProductionTeamId.DataSource = DataRepository.Product.GetAll();
+            bdsTeam.DataSource = DataRepository.Team.GetAll();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -52,7 +53,8 @@ namespace InspectionProcess.Forms
         private void WriteToEntity()
         {
             _product.MerchandiseId = (int)cbbMerchandise.SelectedValue;
-            _product.FinishTime = DateTime.Parse(txeFinishTime.Text);
+            _product.FinishTime = (DateTime)dteFinishDate.EditValue;
+            //_product.FinishTime =  (DateTime)teFinishTime.EditValue;
             _product.ProductionTeam = (int)cbbProductionTeamId.SelectedValue;
         }
     }

@@ -30,7 +30,7 @@ namespace InspectionProcess.Data
             var context = CreateContext();
 
             var query = from x in context.Keepings
-                        select new { Keeping = x, WarehouseName = x.Warehouse.Name };
+                        select new { Keeping = x, WarehouseName = x.Warehouse.Name, Count = x.Warehouse.Count };
 
             if (warehouseId.HasValue)
                 query = query.Where(x => x.Keeping.WarehouseId == warehouseId);
@@ -45,9 +45,8 @@ namespace InspectionProcess.Data
 
             foreach (var x in items)
             {
-                //x.Keeping.wa = x.MerchandiseName;
-                //x.Product.TeamName = x.productionTeam;
-
+                x.Keeping.WarehouseName = x.WarehouseName;
+                x.Keeping.Count = x.Count;
             }
 
             return items.ConvertAll(x => x.Keeping);
