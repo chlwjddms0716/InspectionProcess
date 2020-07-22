@@ -38,6 +38,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMerchandiseName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductionTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFinishTime = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +53,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
@@ -154,6 +154,15 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // colProductId
+            // 
+            this.colProductId.FieldName = "ProductId";
+            this.colProductId.MinWidth = 25;
+            this.colProductId.Name = "colProductId";
+            this.colProductId.Visible = true;
+            this.colProductId.VisibleIndex = 0;
+            this.colProductId.Width = 212;
             // 
             // colMerchandiseName
             // 
@@ -289,15 +298,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(167, 31);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // colProductId
-            // 
-            this.colProductId.FieldName = "ProductId";
-            this.colProductId.MinWidth = 25;
-            this.colProductId.Name = "colProductId";
-            this.colProductId.Visible = true;
-            this.colProductId.VisibleIndex = 0;
-            this.colProductId.Width = 212;
             // 
             // AddProductForm
             // 

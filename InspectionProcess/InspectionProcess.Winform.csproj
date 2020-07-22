@@ -202,6 +202,7 @@
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DeleteHelper.cs" />
+    <Compile Include="Helpers\WarehouseId.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForms\ChildRootForm.resx">

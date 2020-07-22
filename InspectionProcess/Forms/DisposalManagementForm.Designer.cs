@@ -42,6 +42,7 @@
             this.colWarehouseName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKeepingDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dteKeepTo = new DevExpress.XtraEditors.DateEdit();
             this.dteKeepFrom = new DevExpress.XtraEditors.DateEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -167,7 +168,8 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colWarehouseName,
             this.colCount,
-            this.colKeepingDate});
+            this.colKeepingDate,
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -177,7 +179,7 @@
             this.colWarehouseName.MinWidth = 25;
             this.colWarehouseName.Name = "colWarehouseName";
             this.colWarehouseName.Visible = true;
-            this.colWarehouseName.VisibleIndex = 0;
+            this.colWarehouseName.VisibleIndex = 1;
             this.colWarehouseName.Width = 94;
             // 
             // colCount
@@ -186,7 +188,7 @@
             this.colCount.MinWidth = 25;
             this.colCount.Name = "colCount";
             this.colCount.Visible = true;
-            this.colCount.VisibleIndex = 1;
+            this.colCount.VisibleIndex = 2;
             this.colCount.Width = 94;
             // 
             // colKeepingDate
@@ -195,8 +197,18 @@
             this.colKeepingDate.MinWidth = 25;
             this.colKeepingDate.Name = "colKeepingDate";
             this.colKeepingDate.Visible = true;
-            this.colKeepingDate.VisibleIndex = 2;
+            this.colKeepingDate.VisibleIndex = 3;
             this.colKeepingDate.Width = 94;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "검사ID";
+            this.gridColumn1.FieldName = "KeepInspectionId";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
             // 
             // dteKeepTo
             // 
@@ -382,5 +394,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

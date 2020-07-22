@@ -16,10 +16,11 @@ namespace InspectionProcess.Forms
         private InspectionResult _inspectionResult;
         private Inspection _inspection;
         private Product _product;
-
+        
+       
         public InsertInspectionForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         public InsertInspectionForm(Product product) : this()
@@ -41,6 +42,7 @@ namespace InspectionProcess.Forms
 
         private void btnInsert_Click_1(object sender, EventArgs e)
         {
+            //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
             _inspectionResult = new InspectionResult();
             _inspection = new Inspection();
             WriteToEntity();

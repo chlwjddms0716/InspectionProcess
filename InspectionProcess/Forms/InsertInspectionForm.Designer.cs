@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.cbbTeamName = new System.Windows.Forms.ComboBox();
             this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbWarehouseName = new System.Windows.Forms.ComboBox();
             this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -45,15 +43,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.cbbTeamName);
-            this.layoutControl1.Controls.Add(this.cbbWarehouseName);
             this.layoutControl1.Size = new System.Drawing.Size(552, 247);
-            this.layoutControl1.Controls.SetChildIndex(this.cbbWarehouseName, 0);
             this.layoutControl1.Controls.SetChildIndex(this.cbbTeamName, 0);
             this.layoutControl1.Controls.SetChildIndex(this.btnClose, 0);
             this.layoutControl1.Controls.SetChildIndex(this.btnAction, 0);
@@ -61,14 +56,13 @@
             // Root
             // 
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem4});
+            this.layoutControlItem1});
             this.Root.Size = new System.Drawing.Size(552, 247);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 60);
-            this.emptySpaceItem1.Size = new System.Drawing.Size(532, 136);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 30);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(532, 166);
             // 
             // emptySpaceItem2
             // 
@@ -113,18 +107,6 @@
             // 
             this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
             // 
-            // cbbWarehouseName
-            // 
-            this.cbbWarehouseName.DataSource = this.bdsWarehouse;
-            this.cbbWarehouseName.DisplayMember = "Name";
-            this.cbbWarehouseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbWarehouseName.FormattingEnabled = true;
-            this.cbbWarehouseName.Location = new System.Drawing.Point(63, 42);
-            this.cbbWarehouseName.Name = "cbbWarehouseName";
-            this.cbbWarehouseName.Size = new System.Drawing.Size(477, 26);
-            this.cbbWarehouseName.TabIndex = 5;
-            this.cbbWarehouseName.ValueMember = "WarehouseId";
-            // 
             // bdsWarehouse
             // 
             this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
@@ -139,17 +121,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(532, 30);
             this.layoutControlItem1.Text = "검사조";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.cbbWarehouseName;
-            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem4.CustomizationFormText = "창고명";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 30);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(532, 30);
-            this.layoutControlItem4.Text = "창고명";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(39, 18);
             // 
             // InsertInspectionForm
             // 
@@ -169,7 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,9 +147,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbbTeamName;
-        private System.Windows.Forms.ComboBox cbbWarehouseName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource bdsWarehouse;
         private System.Windows.Forms.BindingSource bdsTeam;
     }

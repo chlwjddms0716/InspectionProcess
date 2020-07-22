@@ -92,7 +92,7 @@
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 208);
             this.emptySpaceItem2.Size = new System.Drawing.Size(274, 31);
             // 
-            // btnInsert
+            // btnAction
             // 
             this.btnAction.Location = new System.Drawing.Point(286, 220);
             this.btnAction.Size = new System.Drawing.Size(89, 27);

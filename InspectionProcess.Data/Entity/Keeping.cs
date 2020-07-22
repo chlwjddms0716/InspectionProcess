@@ -10,5 +10,7 @@ namespace InspectionProcess.Data
     {
         public string WarehouseName { get; set; }
         public int Count { get; set; }
+
+        public int KeepInspectionId { get; set; }
     }
 }

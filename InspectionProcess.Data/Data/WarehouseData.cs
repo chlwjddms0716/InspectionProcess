@@ -16,6 +16,17 @@ namespace InspectionProcess.Data
             return context.Warehouses.FirstOrDefault(a => a.WarehouseId == warehouseId);
         }
 
+        public List<Warehouse> GetbyDump()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId > 3
+                        select x;
+
+            return query.ToList();
+        }
+
         public void Delete(int warehouseId)
         {
             Warehouse warehouse = Get(warehouseId);

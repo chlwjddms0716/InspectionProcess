@@ -22,14 +22,14 @@ namespace InspectionProcess.Forms
         private void DisposalManagementForm_Load(object sender, EventArgs e)
         {
             bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-            bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
+            bdsWarehouse.DataSource = DataRepository.Warehouse.GetbyDump();
             cbbMerchandise.SelectedItem = null;
             cbbWarehouseName.SelectedItem = null;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouseName.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+            bdsKeeping.DataSource = DataRepository.Keeping.Searchby((int?)cbbWarehouseName.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
         }
 
         private void btnDisposal_Click(object sender, EventArgs e)
