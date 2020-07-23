@@ -339,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "DisposalManagementForm";
             this.Text = "폐기관리";
             this.Load += new System.EventHandler(this.DisposalManagementForm_Load);

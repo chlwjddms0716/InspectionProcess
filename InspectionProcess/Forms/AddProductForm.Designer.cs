@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cbbTeam = new System.Windows.Forms.ComboBox();
             this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -90,6 +90,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(978, 551);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(173, 84);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(155, 27);
+            this.btnDelete.StyleController = this.layoutControl1;
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "삭제(&D)";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // simpleButton1
             // 
@@ -304,16 +314,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(173, 84);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(155, 27);
-            this.btnDelete.StyleController = this.layoutControl1;
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "삭제(&D)";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnDelete;
@@ -329,6 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 551);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "AddProductForm";
             this.Text = "생산관리";
             this.Load += new System.EventHandler(this.AddProductForm_Load);
