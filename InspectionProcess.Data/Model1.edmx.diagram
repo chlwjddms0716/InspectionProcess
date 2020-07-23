@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="InspectionProcessModel.Warehouse" Width="1.5" PointX="5.25" PointY="5.5" />
         <AssociationConnector Association="InspectionProcessModel.FK_Inspection_Team" />
         <AssociationConnector Association="InspectionProcessModel.FK_검사결과_검수작업" />
-        <AssociationConnector Association="InspectionProcessModel.FK_검사결과_생산품" />
+        <AssociationConnector Association="InspectionProcessModel.FK_InspectionResult_Product" />
         <AssociationConnector Association="InspectionProcessModel.FK_입고_검사결과1" />
         <AssociationConnector Association="InspectionProcessModel.FK_입고_창고" />
         <AssociationConnector Association="InspectionProcessModel.FK_Product_Merchandise" />
