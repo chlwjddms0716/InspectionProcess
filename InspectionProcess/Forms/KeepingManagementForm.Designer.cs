@@ -46,12 +46,13 @@
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnReset = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
@@ -65,16 +66,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnReset);
             this.layoutControl1.Controls.Add(this.cbbWarehouse);
             this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.dteKeepTo);
@@ -95,9 +97,9 @@
             this.cbbWarehouse.DisplayMember = "Name";
             this.cbbWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbWarehouse.FormattingEnabled = true;
-            this.cbbWarehouse.Location = new System.Drawing.Point(313, 12);
+            this.cbbWarehouse.Location = new System.Drawing.Point(384, 12);
             this.cbbWarehouse.Name = "cbbWarehouse";
-            this.cbbWarehouse.Size = new System.Drawing.Size(232, 26);
+            this.cbbWarehouse.Size = new System.Drawing.Size(239, 26);
             this.cbbWarehouse.TabIndex = 14;
             this.cbbWarehouse.ValueMember = "WarehouseId";
             // 
@@ -113,7 +115,7 @@
             this.cbbMerchandiseName.FormattingEnabled = true;
             this.cbbMerchandiseName.Location = new System.Drawing.Point(67, 12);
             this.cbbMerchandiseName.Name = "cbbMerchandiseName";
-            this.cbbMerchandiseName.Size = new System.Drawing.Size(187, 26);
+            this.cbbMerchandiseName.Size = new System.Drawing.Size(258, 26);
             this.cbbMerchandiseName.TabIndex = 13;
             this.cbbMerchandiseName.ValueMember = "MerchandiseId";
             // 
@@ -124,23 +126,23 @@
             // dteKeepTo
             // 
             this.dteKeepTo.EditValue = null;
-            this.dteKeepTo.Location = new System.Drawing.Point(313, 42);
+            this.dteKeepTo.Location = new System.Drawing.Point(384, 42);
             this.dteKeepTo.Name = "dteKeepTo";
             this.dteKeepTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepTo.Size = new System.Drawing.Size(232, 24);
+            this.dteKeepTo.Size = new System.Drawing.Size(239, 24);
             this.dteKeepTo.StyleController = this.layoutControl1;
             this.dteKeepTo.TabIndex = 12;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsKeeping;
-            this.gridControl1.Location = new System.Drawing.Point(12, 84);
+            this.gridControl1.Location = new System.Drawing.Point(12, 115);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 354);
+            this.gridControl1.Size = new System.Drawing.Size(776, 323);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -205,16 +207,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepFrom.Size = new System.Drawing.Size(187, 24);
+            this.dteKeepFrom.Size = new System.Drawing.Size(258, 24);
             this.dteKeepFrom.StyleController = this.layoutControl1;
             this.dteKeepFrom.TabIndex = 9;
             // 
             // btnSearch
             // 
-            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.Search2;
-            this.btnSearch.Location = new System.Drawing.Point(658, 12);
+            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
+            this.btnSearch.Location = new System.Drawing.Point(627, 12);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(130, 68);
+            this.btnSearch.Size = new System.Drawing.Size(161, 68);
             this.btnSearch.StyleController = this.layoutControl1;
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "검색(&S)";
@@ -226,12 +228,12 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
-            this.emptySpaceItem2,
             this.layoutControlItem6,
             this.layoutControlItem5,
             this.layoutControlItem4,
             this.layoutControlItem1,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(800, 450);
             this.Root.TextVisible = false;
@@ -239,44 +241,36 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnSearch;
-            this.layoutControlItem3.Location = new System.Drawing.Point(646, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(615, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(134, 72);
+            this.layoutControlItem3.Size = new System.Drawing.Size(165, 72);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(537, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(109, 72);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.dteKeepFrom;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(246, 42);
+            this.layoutControlItem6.Size = new System.Drawing.Size(317, 73);
             this.layoutControlItem6.Text = "입고날짜";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.gridControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 103);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(780, 358);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 327);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.dteKeepTo;
-            this.layoutControlItem4.Location = new System.Drawing.Point(246, 30);
+            this.layoutControlItem4.Location = new System.Drawing.Point(317, 30);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(291, 42);
+            this.layoutControlItem4.Size = new System.Drawing.Size(298, 73);
             this.layoutControlItem4.Text = "~";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -285,18 +279,37 @@
             this.layoutControlItem1.Control = this.cbbMerchandiseName;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(246, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(317, 30);
             this.layoutControlItem1.Text = "상품명";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cbbWarehouse;
-            this.layoutControlItem7.Location = new System.Drawing.Point(246, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(317, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(291, 30);
+            this.layoutControlItem7.Size = new System.Drawing.Size(298, 30);
             this.layoutControlItem7.Text = "창고명";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(52, 18);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(627, 84);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(161, 27);
+            this.btnReset.StyleController = this.layoutControl1;
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "검색조건 초기화(&R)";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btnReset;
+            this.layoutControlItem2.Location = new System.Drawing.Point(615, 72);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(165, 31);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // KeepingManagementForm
             // 
@@ -321,12 +334,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,7 +353,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.ComboBox cbbWarehouse;
@@ -356,5 +368,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCount;
         private DevExpress.XtraGrid.Columns.GridColumn colKeepingDate;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.SimpleButton btnReset;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

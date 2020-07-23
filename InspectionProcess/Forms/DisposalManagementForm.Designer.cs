@@ -139,7 +139,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.Search2;
+            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
             this.btnSearch.Location = new System.Drawing.Point(627, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(161, 68);
