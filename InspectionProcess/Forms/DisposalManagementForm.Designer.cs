@@ -139,7 +139,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.Search2;
+            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
             this.btnSearch.Location = new System.Drawing.Point(627, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(161, 68);
@@ -339,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "DisposalManagementForm";
             this.Text = "폐기관리";
             this.Load += new System.EventHandler(this.DisposalManagementForm_Load);

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.lkuProductId = new DevExpress.XtraEditors.LookUpEdit();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lkuInspectionID = new DevExpress.XtraEditors.LookUpEdit();
@@ -56,7 +57,6 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -97,6 +97,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(608, 84);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(180, 27);
+            this.btnReset.StyleController = this.layoutControl1;
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "검색조건 초기화(&R)";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lkuProductId
             // 
@@ -169,7 +179,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.Appearance.Options.UseFont = true;
             this.btnLoad.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
             this.btnLoad.Location = new System.Drawing.Point(608, 12);
@@ -359,16 +369,6 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(596, 28);
             this.layoutControlItem7.Text = "생산품ID : ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(70, 18);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(608, 84);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(180, 27);
-            this.btnReset.StyleController = this.layoutControl1;
-            this.btnReset.TabIndex = 11;
-            this.btnReset.Text = "검색조건 초기화(&R)";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // layoutControlItem3
             // 

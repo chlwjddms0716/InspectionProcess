@@ -32,5 +32,13 @@ namespace InspectionProcess.Forms
             bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouse.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
             
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbbMerchandiseName.SelectedItem = null;
+            cbbWarehouse.SelectedItem = null;
+            dteKeepFrom.EditValue = null;
+            dteKeepTo.EditValue = null;
+        }
     }
 }

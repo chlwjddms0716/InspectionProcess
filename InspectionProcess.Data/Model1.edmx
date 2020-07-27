@@ -77,6 +77,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_InspectionResult_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="InspectionResult">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Product_Merchandise">
           <End Role="Merchandise" Type="Self.Merchandise" Multiplicity="1" />
           <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -98,18 +110,6 @@
             </Principal>
             <Dependent Role="InspectionResult">
               <PropertyRef Name="InspectionId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_검사결과_생산품">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="InspectionResult" Type="Self.InspectionResult" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductId" />
-            </Principal>
-            <Dependent Role="InspectionResult">
-              <PropertyRef Name="ProductId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -149,16 +149,16 @@
             <End Role="Team" EntitySet="Team" />
             <End Role="Inspection" EntitySet="Inspection" />
           </AssociationSet>
+          <AssociationSet Name="FK_InspectionResult_Product" Association="Self.FK_InspectionResult_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="InspectionResult" EntitySet="InspectionResult" />
+          </AssociationSet>
           <AssociationSet Name="FK_Product_Merchandise" Association="Self.FK_Product_Merchandise">
             <End Role="Merchandise" EntitySet="Merchandise" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>
           <AssociationSet Name="FK_검사결과_검수작업" Association="Self.FK_검사결과_검수작업">
             <End Role="Inspection" EntitySet="Inspection" />
-            <End Role="InspectionResult" EntitySet="InspectionResult" />
-          </AssociationSet>
-          <AssociationSet Name="FK_검사결과_생산품" Association="Self.FK_검사결과_생산품">
-            <End Role="Product" EntitySet="Product" />
             <End Role="InspectionResult" EntitySet="InspectionResult" />
           </AssociationSet>
           <AssociationSet Name="FK_입고_검사결과1" Association="Self.FK_입고_검사결과1">
@@ -190,7 +190,7 @@
             <End Role="Inspection" EntitySet="Inspections" />
             <End Role="InspectionResult" EntitySet="InspectionResults" />
           </AssociationSet>
-          <AssociationSet Name="FK_검사결과_생산품" Association="InspectionProcessModel.FK_검사결과_생산품">
+          <AssociationSet Name="FK_InspectionResult_Product" Association="InspectionProcessModel.FK_InspectionResult_Product">
             <End Role="Product" EntitySet="Products" />
             <End Role="InspectionResult" EntitySet="InspectionResults" />
           </AssociationSet>
@@ -229,7 +229,7 @@
           <Property Name="NormalNumber" Type="Int32" Nullable="false" />
           <Property Name="DefectiveNumber" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Inspection" Relationship="InspectionProcessModel.FK_검사결과_검수작업" FromRole="InspectionResult" ToRole="Inspection" />
-          <NavigationProperty Name="Product" Relationship="InspectionProcessModel.FK_검사결과_생산품" FromRole="InspectionResult" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="InspectionProcessModel.FK_InspectionResult_Product" FromRole="InspectionResult" ToRole="Product" />
           <NavigationProperty Name="Keepings" Relationship="InspectionProcessModel.FK_입고_검사결과1" FromRole="InspectionResult" ToRole="Keeping" />
         </EntityType>
         <EntityType Name="Keeping">
@@ -259,7 +259,7 @@
           <Property Name="ProductionTeam" Type="Int32" Nullable="false" />
           <Property Name="FinishTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="MerchandiseId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="InspectionResults" Relationship="InspectionProcessModel.FK_검사결과_생산품" FromRole="Product" ToRole="InspectionResult" />
+          <NavigationProperty Name="InspectionResults" Relationship="InspectionProcessModel.FK_InspectionResult_Product" FromRole="Product" ToRole="InspectionResult" />
           <NavigationProperty Name="Merchandise" Relationship="InspectionProcessModel.FK_Product_Merchandise" FromRole="Product" ToRole="Merchandise" />
         </EntityType>
         <EntityType Name="Team">
@@ -303,7 +303,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_검사결과_생산품">
+        <Association Name="FK_InspectionResult_Product">
           <End Type="InspectionProcessModel.Product" Role="Product" Multiplicity="1" />
           <End Type="InspectionProcessModel.InspectionResult" Role="InspectionResult" Multiplicity="*" />
           <ReferentialConstraint>

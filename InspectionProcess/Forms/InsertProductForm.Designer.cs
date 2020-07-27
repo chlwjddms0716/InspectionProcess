@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbbMerchandise = new System.Windows.Forms.ComboBox();
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.cbbProductionTeamId = new System.Windows.Forms.ComboBox();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.teFinishTime = new DevExpress.XtraEditors.TimeEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dteFinishDate = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.bdsProductionTeamId = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -47,15 +47,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +126,10 @@
             this.cbbMerchandise.TabIndex = 5;
             this.cbbMerchandise.ValueMember = "MerchandiseId";
             // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cbbMerchandise;
@@ -149,12 +153,16 @@
             this.cbbProductionTeamId.TabIndex = 8;
             this.cbbProductionTeamId.ValueMember = "TeamId";
             // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.cbbProductionTeamId;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 86);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(461, 153);
+            this.layoutControlItem4.Size = new System.Drawing.Size(461, 30);
             this.layoutControlItem4.Text = "생산조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
             // 
@@ -200,14 +208,6 @@
             this.layoutControlItem7.Text = "생산완료일";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(78, 18);
             // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
-            // 
             // bdsProductionTeamId
             // 
             this.bdsProductionTeamId.DataSource = typeof(InspectionProcess.Data.Product);
@@ -217,6 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 259);
+            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "InsertProductForm";
             this.Text = "생산등록";
             this.Load += new System.EventHandler(this.InsertProductForm_Load);
@@ -227,15 +228,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProductionTeamId)).EndInit();
             this.ResumeLayout(false);
 

@@ -9,5 +9,7 @@ namespace InspectionProcess.Data
     public partial class Product
     {
         public string MerchandiseName { get; set; }
+        
+        public string InspectionTeam { get; set; }
     }
 }

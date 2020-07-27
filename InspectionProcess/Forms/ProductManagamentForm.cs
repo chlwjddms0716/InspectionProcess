@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
+    // 검사조 추가
     public partial class ProductManagementForm : XtraForm
     {
         public ProductManagementForm()

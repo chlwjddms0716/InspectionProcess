@@ -43,7 +43,7 @@ namespace InspectionProcess.Data
             var context = CreateContext();
 
              var query = from x in context.Products
-                        select new { Product = x,  MerchandiseName = x.Merchandise.Name/*, TeamName = x.Team.Name*/};
+                        select new { Product = x,  MerchandiseName = x.Merchandise.Name/*, InspectionTeam = x.InspectionTeam */};
 
             if (productionId.HasValue)
                 query = query.Where(x => x.Product.ProductId == productionId);
