@@ -44,6 +44,7 @@ namespace InspectionProcess.Forms
         {
             _product = new Product();
             WriteToEntity();
+
             try
             {
                 DataRepository.Product.Insert(_product);
