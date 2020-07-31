@@ -16,6 +16,11 @@ namespace InspectionProcess.Data
             return context.Warehouses.FirstOrDefault(a => a.WarehouseId == warehouseId);
         }
 
+        public Task<List<Warehouse>> GetbyDumpAsync()
+        {
+            return Task.Factory.StartNew(() => GetbyDump());
+        }
+
         public List<Warehouse> GetbyDump()
         {
             InspectionProcessEntities context = CreateContext();

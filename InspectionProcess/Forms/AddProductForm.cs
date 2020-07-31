@@ -20,15 +20,16 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-        private void AddProductForm_Load(object sender, EventArgs e)
+        protected async override void OnShown(EventArgs e)
         {
-
+            base.OnShown(e);
             //bdsProduct.DataSource = DataRepository.Product.GetAll();
-            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-            bdsTeam.DataSource = DataRepository.Team.GetAll();
+            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
+            bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
             cbbMerchandiseName.SelectedItem = null;
             cbbTeam.SelectedItem = null;
         }
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {

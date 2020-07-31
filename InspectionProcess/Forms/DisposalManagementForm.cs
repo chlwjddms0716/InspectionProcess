@@ -19,12 +19,19 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-        private void DisposalManagementForm_Load(object sender, EventArgs e)
+        protected async override void OnShown(EventArgs e)
         {
-            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-            bdsWarehouse.DataSource = DataRepository.Warehouse.GetbyDump();
+            base.OnShown(e);
+            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
+            bdsWarehouse.DataSource = await DataRepository.Warehouse.GetbyDumpAsync();
             cbbMerchandise.SelectedItem = null;
             cbbWarehouseName.SelectedItem = null;
+        }
+
+
+        private void DisposalManagementForm_Load(object sender, EventArgs e)
+        {
+           
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
