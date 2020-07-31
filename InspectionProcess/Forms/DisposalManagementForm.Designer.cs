@@ -341,7 +341,7 @@
             this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "DisposalManagementForm";
             this.Text = "폐기관리";
-            this.Load += new System.EventHandler(this.DisposalManagementForm_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();

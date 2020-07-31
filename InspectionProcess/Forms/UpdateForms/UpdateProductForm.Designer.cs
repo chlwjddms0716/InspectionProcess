@@ -217,7 +217,7 @@
             this.layoutControlItem7.Control = this.teFinishTime;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 116);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(487, 170);
+            this.layoutControlItem7.Size = new System.Drawing.Size(487, 28);
             this.layoutControlItem7.Text = "생산완료시간";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(78, 18);
             // 

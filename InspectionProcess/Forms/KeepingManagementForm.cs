@@ -25,7 +25,7 @@ namespace InspectionProcess.Forms
 
             //TODO : Asynchrous Method로 변경
             cbbWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
-            cbbMerchandiseName.DataSource = DataRepository.Merchandise.GetAll();
+            cbbMerchandiseName.DataSource = await DataRepository.Merchandise.GetAllAsync();
             cbbMerchandiseName.SelectedItem = null;
             cbbWarehouse.SelectedItem = null;
         }

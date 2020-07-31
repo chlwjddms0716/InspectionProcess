@@ -273,7 +273,7 @@
             this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "ProductManagementForm";
             this.Text = "작업관리";
-            this.Load += new System.EventHandler(this.ProductManagementForm_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
