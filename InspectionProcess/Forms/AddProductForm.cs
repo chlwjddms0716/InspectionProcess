@@ -26,8 +26,7 @@ namespace InspectionProcess.Forms
             //bdsProduct.DataSource = DataRepository.Product.GetAll();
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
-            cbbMerchandiseName.SelectedItem = null;
-            cbbTeam.SelectedItem = null;
+  
         }
 
 

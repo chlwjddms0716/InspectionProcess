@@ -24,8 +24,7 @@ namespace InspectionProcess.Forms
             base.OnShown(e);
             bdsProductId.DataSource = await DataRepository.Product.GetAllAsync();
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
-            cbbMerchandiseName.SelectedItem = null;
-            cbbProductionId.SelectedItem = null;
+
         }
 
 
@@ -41,13 +40,13 @@ namespace InspectionProcess.Forms
 
         private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            cbbMerchandiseName.SelectedItem = null;
-            cbbProductionId.SelectedItem = null;
+            lkuMerchandiseName.EditValue = null;
+            lkuProductionId.EditValue = null;
         }
 
         private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
-            bdsProduct.DataSource = DataRepository.Product.Search((int?)cbbProductionId.SelectedValue, (int?)cbbMerchandiseName.SelectedValue, null);
+            bdsProduct.DataSource = DataRepository.Product.Search((int?)lkuProductionId.EditValue, (int?)lkuMerchandiseName.EditValue, null);
         }
     }
 }

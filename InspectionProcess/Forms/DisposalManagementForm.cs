@@ -24,14 +24,9 @@ namespace InspectionProcess.Forms
             base.OnShown(e);
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             bdsWarehouse.DataSource = await DataRepository.Warehouse.GetbyDumpAsync();
-            cbbMerchandise.SelectedItem = null;
-            cbbWarehouseName.SelectedItem = null;
+          
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnDisposal_Click(object sender, EventArgs e)
         {
@@ -54,8 +49,8 @@ namespace InspectionProcess.Forms
 
         private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            cbbMerchandise.SelectedItem = null;
-            cbbWarehouseName.SelectedItem = null;
+            lkuMerchandise.EditValue = null;
+            lkuWarehouseName.EditValue = null;
 
             dteKeepFrom.EditValue = null;
             dteKeepTo.EditValue = null;
@@ -63,7 +58,9 @@ namespace InspectionProcess.Forms
 
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
-            bdsKeeping.DataSource = DataRepository.Keeping.Searchby((int?)cbbWarehouseName.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+            bdsKeeping.DataSource = DataRepository.Keeping.Searchby((int?)lkuWarehouseName.EditValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
         }
+
+      
     }
 }
