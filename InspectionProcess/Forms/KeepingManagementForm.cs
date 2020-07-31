@@ -30,16 +30,7 @@ namespace InspectionProcess.Forms
             cbbWarehouse.SelectedItem = null;
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {

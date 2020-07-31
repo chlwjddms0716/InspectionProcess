@@ -27,10 +27,6 @@ namespace InspectionProcess.Forms
             cbbWarehouseName.SelectedItem = null;
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnDisposal_Click(object sender, EventArgs e)
         {
