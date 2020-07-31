@@ -27,18 +27,7 @@ namespace InspectionProcess.Forms
             cbbMerchandiseName.SelectedItem = null;
             cbbProductionId.SelectedItem = null;
 
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            bdsProduct.DataSource = DataRepository.Product.Search((int?)cbbProductionId.SelectedValue,(int?)cbbMerchandiseName.SelectedValue, null);
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            cbbMerchandiseName.SelectedItem = null;
-            cbbProductionId.SelectedItem = null;
-        }
+        }  
 
         private void btnInstruction_Click(object sender, EventArgs e)
         {
@@ -48,6 +37,17 @@ namespace InspectionProcess.Forms
             InsertInspectionForm form = new InsertInspectionForm(product);
             form.ShowDialog();
             
+        }
+
+        private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
+        {
+            cbbMerchandiseName.SelectedItem = null;
+            cbbProductionId.SelectedItem = null;
+        }
+
+        private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
+        {
+            bdsProduct.DataSource = DataRepository.Product.Search((int?)cbbProductionId.SelectedValue, (int?)cbbMerchandiseName.SelectedValue, null);
         }
     }
 }

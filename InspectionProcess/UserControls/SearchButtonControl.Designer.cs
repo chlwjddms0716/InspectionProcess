@@ -35,9 +35,9 @@
             // btnReset
             // 
             this.btnReset.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnReset.Location = new System.Drawing.Point(0, 260);
+            this.btnReset.Location = new System.Drawing.Point(0, 67);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(453, 27);
+            this.btnReset.Size = new System.Drawing.Size(120, 26);
             this.btnReset.TabIndex = 16;
             this.btnReset.Text = "검색조건 초기화(&R)";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -45,10 +45,9 @@
             // btnSearch
             // 
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
             this.btnSearch.Location = new System.Drawing.Point(0, 0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(453, 260);
+            this.btnSearch.Size = new System.Drawing.Size(120, 67);
             this.btnSearch.TabIndex = 17;
             this.btnSearch.Text = "검색(&S)";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -60,7 +59,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnReset);
             this.Name = "SearchButtonControl";
-            this.Size = new System.Drawing.Size(453, 287);
+            this.Size = new System.Drawing.Size(120, 93);
             this.ResumeLayout(false);
 
         }

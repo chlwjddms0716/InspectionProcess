@@ -82,17 +82,18 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1067, 123, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(800, 450);
+            this.layoutControl1.Size = new System.Drawing.Size(885, 577);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // uscSearch
             // 
-            this.uscSearch.Location = new System.Drawing.Point(329, 12);
-            this.uscSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uscSearch.Location = new System.Drawing.Point(724, 12);
+            this.uscSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.uscSearch.Name = "uscSearch";
-            this.uscSearch.Size = new System.Drawing.Size(100, 54);
+            this.uscSearch.Size = new System.Drawing.Size(149, 54);
             this.uscSearch.TabIndex = 15;
             this.uscSearch.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.uscSearch_SearchButtonClicked);
             this.uscSearch.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.uscSearch_ResetButtonClicked);
@@ -103,9 +104,9 @@
             this.cbbWarehouse.DisplayMember = "Name";
             this.cbbWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbWarehouse.FormattingEnabled = true;
-            this.cbbWarehouse.Location = new System.Drawing.Point(488, 12);
+            this.cbbWarehouse.Location = new System.Drawing.Point(278, 12);
             this.cbbWarehouse.Name = "cbbWarehouse";
-            this.cbbWarehouse.Size = new System.Drawing.Size(300, 26);
+            this.cbbWarehouse.Size = new System.Drawing.Size(442, 26);
             this.cbbWarehouse.TabIndex = 14;
             this.cbbWarehouse.ValueMember = "WarehouseId";
             // 
@@ -121,7 +122,7 @@
             this.cbbMerchandiseName.FormattingEnabled = true;
             this.cbbMerchandiseName.Location = new System.Drawing.Point(67, 12);
             this.cbbMerchandiseName.Name = "cbbMerchandiseName";
-            this.cbbMerchandiseName.Size = new System.Drawing.Size(258, 26);
+            this.cbbMerchandiseName.Size = new System.Drawing.Size(152, 26);
             this.cbbMerchandiseName.TabIndex = 13;
             this.cbbMerchandiseName.ValueMember = "MerchandiseId";
             // 
@@ -132,13 +133,13 @@
             // dteKeepTo
             // 
             this.dteKeepTo.EditValue = null;
-            this.dteKeepTo.Location = new System.Drawing.Point(488, 42);
+            this.dteKeepTo.Location = new System.Drawing.Point(278, 42);
             this.dteKeepTo.Name = "dteKeepTo";
             this.dteKeepTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepTo.Size = new System.Drawing.Size(300, 24);
+            this.dteKeepTo.Size = new System.Drawing.Size(442, 24);
             this.dteKeepTo.StyleController = this.layoutControl1;
             this.dteKeepTo.TabIndex = 12;
             // 
@@ -148,7 +149,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 70);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 368);
+            this.gridControl1.Size = new System.Drawing.Size(861, 495);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -213,7 +214,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepFrom.Size = new System.Drawing.Size(258, 24);
+            this.dteKeepFrom.Size = new System.Drawing.Size(152, 24);
             this.dteKeepFrom.StyleController = this.layoutControl1;
             this.dteKeepFrom.TabIndex = 9;
             // 
@@ -229,7 +230,7 @@
             this.layoutControlItem7,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 450);
+            this.Root.Size = new System.Drawing.Size(885, 577);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem6
@@ -237,7 +238,7 @@
             this.layoutControlItem6.Control = this.dteKeepFrom;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(317, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(211, 28);
             this.layoutControlItem6.Text = "입고날짜";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -246,16 +247,16 @@
             this.layoutControlItem5.Control = this.gridControl1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(780, 372);
+            this.layoutControlItem5.Size = new System.Drawing.Size(865, 499);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.dteKeepTo;
-            this.layoutControlItem4.Location = new System.Drawing.Point(421, 30);
+            this.layoutControlItem4.Location = new System.Drawing.Point(211, 30);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(359, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(501, 28);
             this.layoutControlItem4.Text = "~";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(52, 18);
             // 
@@ -264,25 +265,25 @@
             this.layoutControlItem1.Control = this.cbbMerchandiseName;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(317, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(211, 30);
             this.layoutControlItem1.Text = "상품명";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.cbbWarehouse;
-            this.layoutControlItem7.Location = new System.Drawing.Point(421, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(211, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(359, 30);
+            this.layoutControlItem7.Size = new System.Drawing.Size(501, 30);
             this.layoutControlItem7.Text = "창고명";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.uscSearch;
-            this.layoutControlItem2.Location = new System.Drawing.Point(317, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(712, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(104, 58);
+            this.layoutControlItem2.Size = new System.Drawing.Size(153, 58);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -290,7 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(885, 577);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "KeepingManagementForm";
