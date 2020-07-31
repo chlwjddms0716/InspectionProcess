@@ -29,7 +29,7 @@ namespace InspectionProcess.Forms
 
         protected async override void OnShown(EventArgs e)
         {
-            base.OnShown(e);
+            //base.OnShown(e);
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             bdsProductionTeamId.DataSource = await DataRepository.Product.GetAllAsync();
             bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
