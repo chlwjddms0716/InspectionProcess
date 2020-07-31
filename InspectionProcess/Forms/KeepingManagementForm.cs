@@ -24,34 +24,26 @@ namespace InspectionProcess.Forms
             base.OnShown(e);
 
             //TODO : Asynchrous Method로 변경
-            cbbWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
-            cbbMerchandiseName.DataSource = await DataRepository.Merchandise.GetAllAsync();
-            cbbMerchandiseName.SelectedItem = null;
-            cbbWarehouse.SelectedItem = null;
+            bdsWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
+            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
+           
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            
-        }
+
+      
 
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
           
-            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouse.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)lkuWarehouse.EditValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
         }
 
         private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
             //TODO : LookUpEdit로 변경
-            cbbMerchandiseName.SelectedItem = null;
-            cbbWarehouse.SelectedItem = null;
+            lkuMerchandiseName.EditValue = null;
+            lkuWarehouse.EditValue = null;
             dteKeepFrom.EditValue = null;
             dteKeepTo.EditValue = null;
         }

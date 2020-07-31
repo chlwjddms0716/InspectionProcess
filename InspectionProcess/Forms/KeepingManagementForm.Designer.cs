@@ -30,11 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lkuMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
             this.uscSearch = new InspectionProcess.UserControls.SearchButtonControl();
-            this.cbbWarehouse = new System.Windows.Forms.ComboBox();
             this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbMerchandiseName = new System.Windows.Forms.ComboBox();
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.dteKeepTo = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsKeeping = new System.Windows.Forms.BindingSource(this.components);
@@ -48,13 +46,15 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
+            this.lkuWarehouse = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -66,16 +66,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lkuWarehouse);
+            this.layoutControl1.Controls.Add(this.lkuMerchandiseName);
             this.layoutControl1.Controls.Add(this.uscSearch);
-            this.layoutControl1.Controls.Add(this.cbbWarehouse);
-            this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.dteKeepTo);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.dteKeepFrom);
@@ -88,68 +90,55 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // lkuMerchandiseName
+            // 
+            this.lkuMerchandiseName.Location = new System.Drawing.Point(67, 12);
+            this.lkuMerchandiseName.Name = "lkuMerchandiseName";
+            this.lkuMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name4")});
+            this.lkuMerchandiseName.Properties.DataSource = this.bdsMerchandise;
+            this.lkuMerchandiseName.Properties.DisplayMember = "Name";
+            this.lkuMerchandiseName.Properties.ValueMember = "MerchandiseId";
+            this.lkuMerchandiseName.Size = new System.Drawing.Size(290, 24);
+            this.lkuMerchandiseName.StyleController = this.layoutControl1;
+            this.lkuMerchandiseName.TabIndex = 16;
+            // 
             // uscSearch
             // 
             this.uscSearch.Location = new System.Drawing.Point(724, 12);
             this.uscSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.uscSearch.Name = "uscSearch";
-            this.uscSearch.Size = new System.Drawing.Size(149, 54);
+            this.uscSearch.Size = new System.Drawing.Size(149, 52);
             this.uscSearch.TabIndex = 15;
             this.uscSearch.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.uscSearch_SearchButtonClicked);
             this.uscSearch.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.uscSearch_ResetButtonClicked);
-            // 
-            // cbbWarehouse
-            // 
-            this.cbbWarehouse.DataSource = this.bdsWarehouse;
-            this.cbbWarehouse.DisplayMember = "Name";
-            this.cbbWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbWarehouse.FormattingEnabled = true;
-            this.cbbWarehouse.Location = new System.Drawing.Point(278, 12);
-            this.cbbWarehouse.Name = "cbbWarehouse";
-            this.cbbWarehouse.Size = new System.Drawing.Size(442, 26);
-            this.cbbWarehouse.TabIndex = 14;
-            this.cbbWarehouse.ValueMember = "WarehouseId";
             // 
             // bdsWarehouse
             // 
             this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
             // 
-            // cbbMerchandiseName
-            // 
-            this.cbbMerchandiseName.DataSource = this.bdsMerchandise;
-            this.cbbMerchandiseName.DisplayMember = "Name";
-            this.cbbMerchandiseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMerchandiseName.FormattingEnabled = true;
-            this.cbbMerchandiseName.Location = new System.Drawing.Point(67, 12);
-            this.cbbMerchandiseName.Name = "cbbMerchandiseName";
-            this.cbbMerchandiseName.Size = new System.Drawing.Size(152, 26);
-            this.cbbMerchandiseName.TabIndex = 13;
-            this.cbbMerchandiseName.ValueMember = "MerchandiseId";
-            // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
-            // 
             // dteKeepTo
             // 
             this.dteKeepTo.EditValue = null;
-            this.dteKeepTo.Location = new System.Drawing.Point(278, 42);
+            this.dteKeepTo.Location = new System.Drawing.Point(416, 40);
             this.dteKeepTo.Name = "dteKeepTo";
             this.dteKeepTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepTo.Size = new System.Drawing.Size(442, 24);
+            this.dteKeepTo.Size = new System.Drawing.Size(304, 24);
             this.dteKeepTo.StyleController = this.layoutControl1;
             this.dteKeepTo.TabIndex = 12;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsKeeping;
-            this.gridControl1.Location = new System.Drawing.Point(12, 70);
+            this.gridControl1.Location = new System.Drawing.Point(12, 68);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(861, 495);
+            this.gridControl1.Size = new System.Drawing.Size(861, 497);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -208,13 +197,13 @@
             // dteKeepFrom
             // 
             this.dteKeepFrom.EditValue = null;
-            this.dteKeepFrom.Location = new System.Drawing.Point(67, 42);
+            this.dteKeepFrom.Location = new System.Drawing.Point(67, 40);
             this.dteKeepFrom.Name = "dteKeepFrom";
             this.dteKeepFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteKeepFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteKeepFrom.Size = new System.Drawing.Size(152, 24);
+            this.dteKeepFrom.Size = new System.Drawing.Size(290, 24);
             this.dteKeepFrom.StyleController = this.layoutControl1;
             this.dteKeepFrom.TabIndex = 9;
             // 
@@ -226,9 +215,9 @@
             this.layoutControlItem6,
             this.layoutControlItem5,
             this.layoutControlItem4,
-            this.layoutControlItem1,
-            this.layoutControlItem7,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(885, 577);
             this.Root.TextVisible = false;
@@ -236,56 +225,75 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.dteKeepFrom;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(211, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(349, 28);
             this.layoutControlItem6.Text = "입고날짜";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.gridControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(865, 499);
+            this.layoutControlItem5.Size = new System.Drawing.Size(865, 501);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.dteKeepTo;
-            this.layoutControlItem4.Location = new System.Drawing.Point(211, 30);
+            this.layoutControlItem4.Location = new System.Drawing.Point(349, 28);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(501, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(363, 28);
             this.layoutControlItem4.Text = "~";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(52, 18);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.cbbMerchandiseName;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(211, 30);
-            this.layoutControlItem1.Text = "상품명";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.cbbWarehouse;
-            this.layoutControlItem7.Location = new System.Drawing.Point(211, 0);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(501, 30);
-            this.layoutControlItem7.Text = "창고명";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(52, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.uscSearch;
             this.layoutControlItem2.Location = new System.Drawing.Point(712, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(153, 58);
+            this.layoutControlItem2.Size = new System.Drawing.Size(153, 56);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.lkuMerchandiseName;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(349, 28);
+            this.layoutControlItem3.Text = "상품명";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(52, 18);
+            // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
+            // 
+            // lkuWarehouse
+            // 
+            this.lkuWarehouse.Location = new System.Drawing.Point(416, 12);
+            this.lkuWarehouse.Name = "lkuWarehouse";
+            this.lkuWarehouse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuWarehouse.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name5")});
+            this.lkuWarehouse.Properties.DataSource = this.bdsWarehouse;
+            this.lkuWarehouse.Properties.DisplayMember = "Name";
+            this.lkuWarehouse.Properties.ValueMember = "WarehouseId";
+            this.lkuWarehouse.Size = new System.Drawing.Size(304, 24);
+            this.lkuWarehouse.StyleController = this.layoutControl1;
+            this.lkuWarehouse.TabIndex = 17;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.lkuWarehouse;
+            this.layoutControlItem1.Location = new System.Drawing.Point(349, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(363, 28);
+            this.layoutControlItem1.Text = "창고명";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 18);
             // 
             // KeepingManagementForm
             // 
@@ -298,8 +306,8 @@
             this.Text = "입고관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -311,9 +319,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,14 +337,10 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private System.Windows.Forms.ComboBox cbbWarehouse;
         private System.Windows.Forms.BindingSource bdsWarehouse;
-        private System.Windows.Forms.ComboBox cbbMerchandiseName;
         private System.Windows.Forms.BindingSource bdsMerchandise;
         private DevExpress.XtraEditors.DateEdit dteKeepTo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private System.Windows.Forms.BindingSource bdsKeeping;
         private DevExpress.XtraGrid.Columns.GridColumn colWarehouseName;
         private DevExpress.XtraGrid.Columns.GridColumn colCount;
@@ -342,5 +348,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private UserControls.SearchButtonControl uscSearch;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.LookUpEdit lkuMerchandiseName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.LookUpEdit lkuWarehouse;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

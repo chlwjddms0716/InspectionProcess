@@ -38,6 +38,11 @@ namespace InspectionProcess.Forms
 
         }
 
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+           
+            //하이
+        }
 
         private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
