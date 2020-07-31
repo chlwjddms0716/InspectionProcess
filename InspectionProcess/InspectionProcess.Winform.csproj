@@ -114,28 +114,16 @@
     <Compile Include="BaseForms\ChildRootForm.Designer.cs">
       <DependentUpon>ChildRootForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseForms\RootForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForms\RootForm.Designer.cs">
-      <DependentUpon>RootForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InsertForms\TestForm.cs">
+    <Compile Include="Forms\InsertForms\InsertInspectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InsertForms\TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\InsertInspectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\InsertInspectionForm.Designer.cs">
+    <Compile Include="Forms\InsertForms\InsertInspectionForm.Designer.cs">
       <DependentUpon>InsertInspectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddProductForm.cs">
@@ -156,10 +144,10 @@
     <Compile Include="Forms\FacilityManagementForm.Designer.cs">
       <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InsertProductForm.cs">
+    <Compile Include="Forms\InsertForms\InsertProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InsertProductForm.Designer.cs">
+    <Compile Include="Forms\InsertForms\InsertProductForm.Designer.cs">
       <DependentUpon>InsertProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KeepingManagementForm.cs">
@@ -232,13 +220,10 @@
     <EmbeddedResource Include="Forms\FacilityManagementForm.resx">
       <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InsertForms\TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InsertInspectionForm.resx">
+    <EmbeddedResource Include="Forms\InsertForms\InsertInspectionForm.resx">
       <DependentUpon>InsertInspectionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InsertProductForm.resx">
+    <EmbeddedResource Include="Forms\InsertForms\InsertProductForm.resx">
       <DependentUpon>InsertProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeepingManagementForm.resx">
