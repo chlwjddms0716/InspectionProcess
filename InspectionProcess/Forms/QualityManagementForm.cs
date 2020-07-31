@@ -17,13 +17,7 @@ namespace InspectionProcess.Forms
         {
             InitializeComponent();
         }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-            inspectionResultBindingSource.DataSource = DataRepository.InspectionResult.SearchByQuality((int?)lkuInspectionID.EditValue, (int?)lkuProductId.EditValue, (int?)lkuInspectionTeamName.EditValue);
-        }
-
-        
+       
 
         private void QualityManagementForm_Load(object sender, EventArgs e)
         {
@@ -46,17 +40,22 @@ namespace InspectionProcess.Forms
         
         }
 
-        private void btnReInspection_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-
+           
+            //하이
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
             lkuInspectionID.EditValue = null;
             lkuProductId.EditValue = null;
             lkuInspectionTeamName.EditValue = null;
-            //하이
+        }
+
+        private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
+        {
+            inspectionResultBindingSource.DataSource = DataRepository.InspectionResult.SearchByQuality((int?)lkuInspectionID.EditValue, (int?)lkuProductId.EditValue, (int?)lkuInspectionTeamName.EditValue);
         }
     }
 }

@@ -43,6 +43,12 @@ namespace InspectionProcess.Forms
 
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
+          
+            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouse.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+        }
+
+        private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
+        {
             //TODO : LookUpEdit로 변경
             cbbMerchandiseName.SelectedItem = null;
             cbbWarehouse.SelectedItem = null;
@@ -50,9 +56,6 @@ namespace InspectionProcess.Forms
             dteKeepTo.EditValue = null;
         }
 
-        private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
-        {
-            bdsKeeping.DataSource = DataRepository.Keeping.Search((int?)cbbWarehouse.SelectedValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
-        }
+     
     }
 }
