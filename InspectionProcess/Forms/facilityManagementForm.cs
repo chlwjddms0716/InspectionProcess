@@ -18,15 +18,16 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            bdsInspection.DataSource = DataRepository.Inspection.GetAllbyDate(dteStartDate.DateTime.Date, dteFinishDate.DateTime.Date);
-        }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
             dteStartDate.EditValue = null;
             dteFinishDate.EditValue = null;
+        }
+
+        private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
+        {
+            bdsInspection.DataSource = DataRepository.Inspection.GetAllbyDate(dteStartDate.DateTime.Date, dteFinishDate.DateTime.Date);
         }
     }
 }

@@ -31,25 +31,12 @@ namespace InspectionProcess.Forms
         }
 
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            int? merchandiseId = (int?)cbbMerchandiseName.SelectedValue;
-            int? teamId = (int?)cbbTeam.SelectedValue;
-
-            bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
-        }
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
             InsertProductForm form = new InsertProductForm();
             form.ShowDialog();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            cbbMerchandiseName.SelectedItem = null;
-            cbbTeam.SelectedItem = null;
-        }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -70,6 +57,20 @@ namespace InspectionProcess.Forms
                 return;
             DataRepository.Product.Delete(product);
             bdsProduct.Remove(product);
+        }
+
+        private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
+        {
+            cbbMerchandiseName.SelectedItem = null;
+            cbbTeam.SelectedItem = null;
+        }
+
+        private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
+        {
+            int? merchandiseId = (int?)cbbMerchandiseName.SelectedValue;
+            int? teamId = (int?)cbbTeam.SelectedValue;
+
+            bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
         }
     }
 }

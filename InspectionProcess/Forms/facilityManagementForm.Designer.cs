@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.uscSearch = new InspectionProcess.UserControls.SearchButtonControl();
             this.dteFinishDate = new DevExpress.XtraEditors.DateEdit();
             this.dteStartDate = new DevExpress.XtraEditors.DateEdit();
             this.grcInspection = new DevExpress.XtraGrid.GridControl();
@@ -46,9 +46,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -64,14 +62,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.btnClear);
-            this.layoutControl1.Controls.Add(this.btnSearch);
+            this.layoutControl1.Controls.Add(this.uscSearch);
             this.layoutControl1.Controls.Add(this.dteFinishDate);
             this.layoutControl1.Controls.Add(this.dteStartDate);
             this.layoutControl1.Controls.Add(this.grcInspection);
@@ -84,52 +80,49 @@
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // btnSearch
+            // uscSearch
             // 
-            this.btnSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Appearance.Options.UseFont = true;
-            this.btnSearch.ImageOptions.Image = global::InspectionProcess.Properties.Resources.search3;
-            this.btnSearch.Location = new System.Drawing.Point(642, 12);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(146, 68);
-            this.btnSearch.StyleController = this.layoutControl1;
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "검색(&S)";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.uscSearch.Location = new System.Drawing.Point(667, 12);
+            this.uscSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.uscSearch.Name = "uscSearch";
+            this.uscSearch.Size = new System.Drawing.Size(121, 66);
+            this.uscSearch.TabIndex = 13;
+            this.uscSearch.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.uscSearch_SearchButtonClicked);
+            this.uscSearch.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.uscSearch_ResetButtonClicked);
             // 
             // dteFinishDate
             // 
             this.dteFinishDate.EditValue = null;
-            this.dteFinishDate.Location = new System.Drawing.Point(364, 37);
+            this.dteFinishDate.Location = new System.Drawing.Point(247, 22);
             this.dteFinishDate.Name = "dteFinishDate";
             this.dteFinishDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFinishDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFinishDate.Size = new System.Drawing.Size(274, 24);
+            this.dteFinishDate.Size = new System.Drawing.Size(416, 24);
             this.dteFinishDate.StyleController = this.layoutControl1;
             this.dteFinishDate.TabIndex = 6;
             // 
             // dteStartDate
             // 
             this.dteStartDate.EditValue = null;
-            this.dteStartDate.Location = new System.Drawing.Point(46, 37);
+            this.dteStartDate.Location = new System.Drawing.Point(46, 22);
             this.dteStartDate.Name = "dteStartDate";
             this.dteStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteStartDate.Size = new System.Drawing.Size(280, 24);
+            this.dteStartDate.Size = new System.Drawing.Size(163, 24);
             this.dteStartDate.StyleController = this.layoutControl1;
             this.dteStartDate.TabIndex = 5;
             // 
             // grcInspection
             // 
             this.grcInspection.DataSource = this.bdsInspection;
-            this.grcInspection.Location = new System.Drawing.Point(12, 115);
+            this.grcInspection.Location = new System.Drawing.Point(12, 82);
             this.grcInspection.MainView = this.gridView1;
             this.grcInspection.Name = "grcInspection";
-            this.grcInspection.Size = new System.Drawing.Size(776, 413);
+            this.grcInspection.Size = new System.Drawing.Size(776, 446);
             this.grcInspection.TabIndex = 4;
             this.grcInspection.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -207,8 +200,7 @@
             this.layoutControlItem3,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(800, 540);
             this.Root.TextVisible = false;
@@ -216,36 +208,36 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.grcInspection;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 103);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 417);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 450);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dteStartDate;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 25);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 10);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(318, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(201, 28);
             this.layoutControlItem2.Text = "날짜 ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(31, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dteFinishDate;
-            this.layoutControlItem3.Location = new System.Drawing.Point(318, 25);
+            this.layoutControlItem3.Location = new System.Drawing.Point(201, 10);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(312, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(454, 28);
             this.layoutControlItem3.Text = " ~";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(31, 18);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 53);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 38);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(630, 50);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(655, 32);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -253,36 +245,19 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(630, 25);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(655, 10);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem4
+            // layoutControlItem6
             // 
-            this.layoutControlItem4.Control = this.btnSearch;
-            this.layoutControlItem4.Location = new System.Drawing.Point(630, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(150, 72);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(642, 84);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(146, 27);
-            this.btnClear.StyleController = this.layoutControl1;
-            this.btnClear.TabIndex = 12;
-            this.btnClear.Text = "검색조건 초기화(&R)";
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnClear;
-            this.layoutControlItem5.Location = new System.Drawing.Point(630, 72);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(150, 31);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
+            this.layoutControlItem6.Control = this.uscSearch;
+            this.layoutControlItem6.Location = new System.Drawing.Point(655, 0);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(104, 24);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(125, 70);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // FacilityManagementForm
             // 
@@ -309,8 +284,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,11 +305,9 @@
         private DevExpress.XtraEditors.DateEdit dteStartDate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.SimpleButton btnSearch;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.SimpleButton btnClear;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private UserControls.SearchButtonControl uscSearch;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
