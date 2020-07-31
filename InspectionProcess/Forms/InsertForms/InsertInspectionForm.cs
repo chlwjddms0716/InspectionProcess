@@ -28,16 +28,11 @@ namespace InspectionProcess.Forms
             _product = product;
         }
 
-
-        private void btnClose_Click_1(object sender, EventArgs e)
+        protected async override void OnShown(EventArgs e)
         {
-            Close();
-        }
-
-        private void InsertInspectionForm_Load_1(object sender, EventArgs e)
-        {
-            bdsTeam.DataSource = DataRepository.Team.GetAll();
-            bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
+            base.OnShown(e);
+            bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
+            bdsWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
         }
 
         protected override void btnAction_Click(object sender, EventArgs e)
@@ -63,7 +58,7 @@ namespace InspectionProcess.Forms
         private void WriteToEntity()
         {
             _inspection.InspectionId = DataRepository.Inspection.GetMaxId() + 1;
-            _inspection.InspectionTeam = (int)cbbTeamName.SelectedValue;
+            _inspection.InspectionTeam = (int)lueTeamName.EditValue;
             _inspection.StartTime = DateTime.Now;
             _inspection.FinishTime = null;
 

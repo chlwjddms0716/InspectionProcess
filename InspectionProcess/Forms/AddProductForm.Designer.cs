@@ -32,9 +32,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.searchButtonControl1 = new InspectionProcess.UserControls.SearchButtonControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.cbbTeam = new System.Windows.Forms.ComboBox();
             this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbMerchandiseName = new System.Windows.Forms.ComboBox();
             this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
@@ -48,10 +46,12 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lueMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lueTeam = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
@@ -63,18 +63,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lueTeam);
+            this.layoutControl1.Controls.Add(this.lueMerchandiseName);
             this.layoutControl1.Controls.Add(this.searchButtonControl1);
             this.layoutControl1.Controls.Add(this.btnDelete);
-            this.layoutControl1.Controls.Add(this.cbbTeam);
-            this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.btnInsert);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -90,14 +92,14 @@
             this.searchButtonControl1.Location = new System.Drawing.Point(653, 12);
             this.searchButtonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchButtonControl1.Name = "searchButtonControl1";
-            this.searchButtonControl1.Size = new System.Drawing.Size(131, 87);
+            this.searchButtonControl1.Size = new System.Drawing.Size(131, 83);
             this.searchButtonControl1.TabIndex = 13;
             this.searchButtonControl1.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.searchButtonControl1_SearchButtonClicked);
             this.searchButtonControl1.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.searchButtonControl1_ResetButtonClicked);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(102, 72);
+            this.btnDelete.Location = new System.Drawing.Point(102, 68);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 27);
             this.btnDelete.StyleController = this.layoutControl1;
@@ -105,33 +107,9 @@
             this.btnDelete.Text = "삭제(&D)";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // cbbTeam
-            // 
-            this.cbbTeam.DataSource = this.bdsTeam;
-            this.cbbTeam.DisplayMember = "Name";
-            this.cbbTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTeam.FormattingEnabled = true;
-            this.cbbTeam.Location = new System.Drawing.Point(54, 42);
-            this.cbbTeam.Name = "cbbTeam";
-            this.cbbTeam.Size = new System.Drawing.Size(595, 26);
-            this.cbbTeam.TabIndex = 10;
-            this.cbbTeam.ValueMember = "TeamId";
-            // 
             // bdsTeam
             // 
             this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
-            // cbbMerchandiseName
-            // 
-            this.cbbMerchandiseName.DataSource = this.bdsMerchandise;
-            this.cbbMerchandiseName.DisplayMember = "Name";
-            this.cbbMerchandiseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMerchandiseName.FormattingEnabled = true;
-            this.cbbMerchandiseName.Location = new System.Drawing.Point(54, 12);
-            this.cbbMerchandiseName.Name = "cbbMerchandiseName";
-            this.cbbMerchandiseName.Size = new System.Drawing.Size(595, 26);
-            this.cbbMerchandiseName.TabIndex = 9;
-            this.cbbMerchandiseName.ValueMember = "MerchandiseId";
             // 
             // bdsMerchandise
             // 
@@ -140,10 +118,10 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bdsProduct;
-            this.gridControl1.Location = new System.Drawing.Point(12, 103);
+            this.gridControl1.Location = new System.Drawing.Point(12, 99);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(772, 436);
+            this.gridControl1.Size = new System.Drawing.Size(772, 440);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -201,7 +179,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(12, 72);
+            this.btnInsert.Location = new System.Drawing.Point(12, 68);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(86, 27);
             this.btnInsert.StyleController = this.layoutControl1;
@@ -217,10 +195,10 @@
             this.layoutControlItem4,
             this.emptySpaceItem3,
             this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem1,
             this.layoutControlItem7,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem2,
+            this.layoutControlItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(796, 551);
             this.Root.TextVisible = false;
@@ -228,7 +206,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnInsert;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 60);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(90, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -237,7 +215,7 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(179, 60);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(179, 56);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(462, 31);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -245,34 +223,16 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.gridControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 91);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(776, 440);
+            this.layoutControlItem5.Size = new System.Drawing.Size(776, 444);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.cbbMerchandiseName;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(641, 30);
-            this.layoutControlItem6.Text = "상품명";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.cbbTeam;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 30);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(641, 30);
-            this.layoutControlItem1.Text = "생산조";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnDelete;
-            this.layoutControlItem7.Location = new System.Drawing.Point(90, 60);
+            this.layoutControlItem7.Location = new System.Drawing.Point(90, 56);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(89, 31);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -283,9 +243,56 @@
             this.layoutControlItem8.Control = this.searchButtonControl1;
             this.layoutControlItem8.Location = new System.Drawing.Point(641, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(135, 91);
+            this.layoutControlItem8.Size = new System.Drawing.Size(135, 87);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
+            // 
+            // lueMerchandiseName
+            // 
+            this.lueMerchandiseName.Location = new System.Drawing.Point(54, 12);
+            this.lueMerchandiseName.Name = "lueMerchandiseName";
+            this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MerchandiseId", "Merchandise Id", 111, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
+            this.lueMerchandiseName.Properties.DisplayMember = "Name";
+            this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
+            this.lueMerchandiseName.Size = new System.Drawing.Size(595, 24);
+            this.lueMerchandiseName.StyleController = this.layoutControl1;
+            this.lueMerchandiseName.TabIndex = 14;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.lueMerchandiseName;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(641, 28);
+            this.layoutControlItem2.Text = "상품명";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 18);
+            // 
+            // lueTeam
+            // 
+            this.lueTeam.Location = new System.Drawing.Point(54, 40);
+            this.lueTeam.Name = "lueTeam";
+            this.lueTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueTeam.Properties.DataSource = this.bdsTeam;
+            this.lueTeam.Properties.DisplayMember = "Name";
+            this.lueTeam.Properties.ValueMember = "TeamId";
+            this.lueTeam.Size = new System.Drawing.Size(595, 24);
+            this.lueTeam.StyleController = this.layoutControl1;
+            this.lueTeam.TabIndex = 15;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.lueTeam;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(641, 28);
+            this.layoutControlItem3.Text = "생산조";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(39, 18);
             // 
             // AddProductForm
             // 
@@ -307,10 +314,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,12 +334,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private System.Windows.Forms.ComboBox cbbTeam;
-        private System.Windows.Forms.ComboBox cbbMerchandiseName;
         private System.Windows.Forms.BindingSource bdsMerchandise;
         private System.Windows.Forms.BindingSource bdsProduct;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource bdsTeam;
         private DevExpress.XtraGrid.Columns.GridColumn colMerchandiseName;
         private DevExpress.XtraGrid.Columns.GridColumn colProductionTeam;
@@ -340,5 +345,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private UserControls.SearchButtonControl searchButtonControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.LookUpEdit lueTeam;
+        private DevExpress.XtraEditors.LookUpEdit lueMerchandiseName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

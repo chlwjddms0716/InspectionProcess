@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.txeProductId = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cbbMerchandiseName = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cbbTeamName = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.dteFinishDate = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.teFinishTime = new DevExpress.XtraEditors.TimeEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
+            this.lueMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lueTeamName = new DevExpress.XtraEditors.LookUpEdit();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -50,47 +50,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeProductId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lueTeamName);
+            this.layoutControl1.Controls.Add(this.lueMerchandiseName);
             this.layoutControl1.Controls.Add(this.teFinishTime);
             this.layoutControl1.Controls.Add(this.dteFinishDate);
-            this.layoutControl1.Controls.Add(this.cbbTeamName);
-            this.layoutControl1.Controls.Add(this.cbbMerchandiseName);
             this.layoutControl1.Controls.Add(this.txeProductId);
             this.layoutControl1.Size = new System.Drawing.Size(507, 306);
             this.layoutControl1.Controls.SetChildIndex(this.btnClose, 0);
             this.layoutControl1.Controls.SetChildIndex(this.btnAction, 0);
             this.layoutControl1.Controls.SetChildIndex(this.txeProductId, 0);
-            this.layoutControl1.Controls.SetChildIndex(this.cbbMerchandiseName, 0);
-            this.layoutControl1.Controls.SetChildIndex(this.cbbTeamName, 0);
             this.layoutControl1.Controls.SetChildIndex(this.dteFinishDate, 0);
             this.layoutControl1.Controls.SetChildIndex(this.teFinishTime, 0);
+            this.layoutControl1.Controls.SetChildIndex(this.lueMerchandiseName, 0);
+            this.layoutControl1.Controls.SetChildIndex(this.lueTeamName, 0);
             // 
             // Root
             // 
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem4});
             this.Root.Size = new System.Drawing.Size(507, 306);
             // 
             // emptySpaceItem1
             // 
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 144);
-            this.emptySpaceItem1.Size = new System.Drawing.Size(487, 111);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 140);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(487, 115);
             // 
             // emptySpaceItem2
             // 
@@ -137,52 +139,18 @@
             this.layoutControlItem1.Text = "생산ID";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 18);
             // 
-            // cbbMerchandiseName
+            // bdsMerchandise
             // 
-            this.cbbMerchandiseName.DataSource = this.bdsMerchandise;
-            this.cbbMerchandiseName.DisplayMember = "Name";
-            this.cbbMerchandiseName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMerchandiseName.FormattingEnabled = true;
-            this.cbbMerchandiseName.Location = new System.Drawing.Point(102, 40);
-            this.cbbMerchandiseName.Name = "cbbMerchandiseName";
-            this.cbbMerchandiseName.Size = new System.Drawing.Size(393, 26);
-            this.cbbMerchandiseName.TabIndex = 8;
-            this.cbbMerchandiseName.ValueMember = "MerchandiseId";
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
-            // layoutControlItem4
+            // bdsTeam
             // 
-            this.layoutControlItem4.Control = this.cbbMerchandiseName;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(487, 30);
-            this.layoutControlItem4.Text = "상품명";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
-            // 
-            // cbbTeamName
-            // 
-            this.cbbTeamName.DataSource = this.bdsTeam;
-            this.cbbTeamName.DisplayMember = "Name";
-            this.cbbTeamName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTeamName.FormattingEnabled = true;
-            this.cbbTeamName.Location = new System.Drawing.Point(102, 70);
-            this.cbbTeamName.Name = "cbbTeamName";
-            this.cbbTeamName.Size = new System.Drawing.Size(393, 26);
-            this.cbbTeamName.TabIndex = 9;
-            this.cbbTeamName.ValueMember = "TeamId";
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.cbbTeamName;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 58);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(487, 30);
-            this.layoutControlItem5.Text = "생산조";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(78, 18);
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
             // 
             // dteFinishDate
             // 
             this.dteFinishDate.EditValue = null;
-            this.dteFinishDate.Location = new System.Drawing.Point(102, 100);
+            this.dteFinishDate.Location = new System.Drawing.Point(102, 96);
             this.dteFinishDate.Name = "dteFinishDate";
             this.dteFinishDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -195,7 +163,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.dteFinishDate;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 88);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(487, 28);
             this.layoutControlItem6.Text = "생산완료일";
@@ -204,7 +172,7 @@
             // teFinishTime
             // 
             this.teFinishTime.EditValue = new System.DateTime(2020, 7, 22, 0, 0, 0, 0);
-            this.teFinishTime.Location = new System.Drawing.Point(102, 128);
+            this.teFinishTime.Location = new System.Drawing.Point(102, 124);
             this.teFinishTime.Name = "teFinishTime";
             this.teFinishTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -215,19 +183,58 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.teFinishTime;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 116);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 112);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(487, 28);
             this.layoutControlItem7.Text = "생산완료시간";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(78, 18);
             // 
-            // bdsTeam
+            // lueMerchandiseName
             // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            this.lueMerchandiseName.Location = new System.Drawing.Point(102, 40);
+            this.lueMerchandiseName.Name = "lueMerchandiseName";
+            this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
+            this.lueMerchandiseName.Properties.DisplayMember = "Name";
+            this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
+            this.lueMerchandiseName.Size = new System.Drawing.Size(393, 24);
+            this.lueMerchandiseName.StyleController = this.layoutControl1;
+            this.lueMerchandiseName.TabIndex = 12;
             // 
-            // bdsMerchandise
+            // layoutControlItem8
             // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
+            this.layoutControlItem8.Control = this.lueMerchandiseName;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(487, 28);
+            this.layoutControlItem8.Text = "상품명";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(78, 18);
+            // 
+            // lueTeamName
+            // 
+            this.lueTeamName.Location = new System.Drawing.Point(102, 68);
+            this.lueTeamName.Name = "lueTeamName";
+            this.lueTeamName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueTeamName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TeamId", "Team Id", 69, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lueTeamName.Properties.DataSource = this.bdsTeam;
+            this.lueTeamName.Properties.DisplayMember = "Name";
+            this.lueTeamName.Properties.ValueMember = "TeamId";
+            this.lueTeamName.Size = new System.Drawing.Size(393, 24);
+            this.lueTeamName.StyleController = this.layoutControl1;
+            this.lueTeamName.TabIndex = 13;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.lueTeamName;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(487, 28);
+            this.layoutControlItem4.Text = "생산조";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
             // 
             // UpdateProductForm
             // 
@@ -246,15 +253,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeProductId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFinishDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,15 +272,15 @@
 
         private DevExpress.XtraEditors.TextEdit txeProductId;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private System.Windows.Forms.ComboBox cbbMerchandiseName;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private System.Windows.Forms.ComboBox cbbTeamName;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.TimeEdit teFinishTime;
         private DevExpress.XtraEditors.DateEdit dteFinishDate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private System.Windows.Forms.BindingSource bdsMerchandise;
         private System.Windows.Forms.BindingSource bdsTeam;
+        private DevExpress.XtraEditors.LookUpEdit lueTeamName;
+        private DevExpress.XtraEditors.LookUpEdit lueMerchandiseName;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

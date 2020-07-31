@@ -29,8 +29,8 @@ namespace InspectionProcess.Forms.UpdateForms
             bdsTeam.DataSource = DataRepository.Team.GetAll();
 
             txeProductId.Text = _product.ProductId.ToString();
-            cbbMerchandiseName.SelectedItem = _product.MerchandiseId;
-            cbbTeamName.SelectedItem = _product.ProductionTeam;
+            lueMerchandiseName.EditValue= _product.MerchandiseId;
+            lueTeamName.EditValue = _product.ProductionTeam;
             dteFinishDate.EditValue = _product.FinishTime;
             teFinishTime.EditValue = _product.FinishTime;
         }
@@ -52,8 +52,8 @@ namespace InspectionProcess.Forms.UpdateForms
 
         private void WriteToEntity()
         {
-            _product.MerchandiseId = (int)cbbMerchandiseName.SelectedValue;
-            _product.ProductionTeam = (int)cbbTeamName.SelectedValue;
+            _product.MerchandiseId = (int)lueMerchandiseName.EditValue;
+            _product.ProductionTeam = (int)lueTeamName.EditValue;
             _product.FinishTime = (DateTime)dteFinishDate.EditValue;
 
             _product.FinishTime = _product.FinishTime.AddHours(((DateTime)teFinishTime.EditValue).Hour);

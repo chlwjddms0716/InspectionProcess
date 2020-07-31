@@ -27,12 +27,17 @@ namespace InspectionProcess.Forms
             Close();
         }
 
+        protected async override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
+            bdsProductionTeamId.DataSource = await DataRepository.Product.GetAllAsync();
+            bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
+        }
 
         private void InsertProductForm_Load(object sender, EventArgs e)
         {
-            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
-            bdsProductionTeamId.DataSource = DataRepository.Product.GetAll();
-            bdsTeam.DataSource = DataRepository.Team.GetAll();
+            
         }
 
         protected override void btnAction_Click(object sender, EventArgs e)
@@ -55,7 +60,7 @@ namespace InspectionProcess.Forms
         {
             _product.ProductId = DataRepository.Product.GetMaxId() + 1;
 
-            _product.MerchandiseId = (int)cbbMerchandise.SelectedValue;
+            _product.MerchandiseId = (int)lueMerchandise.EditValue;
 
             _product.FinishTime = (DateTime)dteFinishDate.EditValue;
 
@@ -63,7 +68,7 @@ namespace InspectionProcess.Forms
             _product.FinishTime = _product.FinishTime.AddMinutes(((DateTime)teFinishTime.EditValue).Minute);
             _product.FinishTime = _product.FinishTime.AddSeconds(((DateTime)teFinishTime.EditValue).Second);
 
-            _product.ProductionTeam = (int)cbbProductionTeamId.SelectedValue;
+            _product.ProductionTeam = (int)lueProductionTeamId.EditValue; 
         }
     }
 }

@@ -26,8 +26,8 @@ namespace InspectionProcess.Forms
             //bdsProduct.DataSource = DataRepository.Product.GetAll();
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
-            cbbMerchandiseName.SelectedItem = null;
-            cbbTeam.SelectedItem = null;
+            lueMerchandiseName.EditValue = null;
+            lueTeam.EditValue = null;
         }
 
 
@@ -61,14 +61,14 @@ namespace InspectionProcess.Forms
 
         private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            cbbMerchandiseName.SelectedItem = null;
-            cbbTeam.SelectedItem = null;
+            lueMerchandiseName.EditValue = null;
+            lueTeam.EditValue = null;
         }
 
         private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
-            int? merchandiseId = (int?)cbbMerchandiseName.SelectedValue;
-            int? teamId = (int?)cbbTeam.SelectedValue;
+            int? merchandiseId = (int?)lueMerchandiseName.EditValue;
+            int? teamId = (int?)lueTeam.EditValue;
 
             bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
         }
