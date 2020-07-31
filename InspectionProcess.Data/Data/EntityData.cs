@@ -19,6 +19,11 @@ namespace InspectionProcess.Data
             return context;
         }
 
+        public Task<List<T>> GetAllAsync()
+        {
+            return Task.Factory.StartNew(() => GetAll());
+        }
+
         public List<T> GetAll()
         {
             InspectionProcessEntities context = CreateContext();

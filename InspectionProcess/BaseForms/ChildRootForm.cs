@@ -18,14 +18,20 @@ namespace InspectionProcess
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            Register();
+
+        }
+
+        protected virtual void Register()
+        {
+            throw new NotImplementedException();
         }
     }
 }

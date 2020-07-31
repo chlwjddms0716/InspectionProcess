@@ -10,6 +10,11 @@ namespace InspectionProcess.Data
 {
     public class InspectionData : EntityData<Inspection>
     {
+        public Task<Inspection> GetAsync(int inspectionId)
+        {
+            return Task.Factory.StartNew(() => Get(inspectionId));
+        }
+
         public Inspection Get(int inspectionId)
         {
             InspectionProcessEntities context = CreateContext();

@@ -66,6 +66,7 @@
             this.btnAction.StyleController = this.layoutControl1;
             this.btnAction.TabIndex = 6;
             this.btnAction.Text = "등록(&I)";
+            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // btnClose
             // 
