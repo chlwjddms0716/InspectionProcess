@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lueTeam = new DevExpress.XtraEditors.LookUpEdit();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
+            this.lueMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.searchButtonControl1 = new InspectionProcess.UserControls.SearchButtonControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsProduct = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,13 +50,13 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lueTeam = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).BeginInit();
@@ -65,9 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +86,44 @@
             this.layoutControl1.Size = new System.Drawing.Size(796, 551);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lueTeam
+            // 
+            this.lueTeam.Location = new System.Drawing.Point(54, 40);
+            this.lueTeam.Name = "lueTeam";
+            this.lueTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueTeam.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name4")});
+            this.lueTeam.Properties.DataSource = this.bdsTeam;
+            this.lueTeam.Properties.DisplayMember = "Name";
+            this.lueTeam.Properties.ValueMember = "TeamId";
+            this.lueTeam.Size = new System.Drawing.Size(595, 24);
+            this.lueTeam.StyleController = this.layoutControl1;
+            this.lueTeam.TabIndex = 15;
+            // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            // 
+            // lueMerchandiseName
+            // 
+            this.lueMerchandiseName.Location = new System.Drawing.Point(54, 12);
+            this.lueMerchandiseName.Name = "lueMerchandiseName";
+            this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name3")});
+            this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
+            this.lueMerchandiseName.Properties.DisplayMember = "Name";
+            this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
+            this.lueMerchandiseName.Size = new System.Drawing.Size(595, 24);
+            this.lueMerchandiseName.StyleController = this.layoutControl1;
+            this.lueMerchandiseName.TabIndex = 14;
+            // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
             // searchButtonControl1
             // 
@@ -106,14 +144,6 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "삭제(&D)";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
             // gridControl1
             // 
@@ -247,22 +277,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // lueMerchandiseName
-            // 
-            this.lueMerchandiseName.Location = new System.Drawing.Point(54, 12);
-            this.lueMerchandiseName.Name = "lueMerchandiseName";
-            this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MerchandiseId", "Merchandise Id", 111, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
-            this.lueMerchandiseName.Properties.DisplayMember = "Name";
-            this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
-            this.lueMerchandiseName.Size = new System.Drawing.Size(595, 24);
-            this.lueMerchandiseName.StyleController = this.layoutControl1;
-            this.lueMerchandiseName.TabIndex = 14;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.lueMerchandiseName;
@@ -271,19 +285,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(641, 28);
             this.layoutControlItem2.Text = "상품명";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // lueTeam
-            // 
-            this.lueTeam.Location = new System.Drawing.Point(54, 40);
-            this.lueTeam.Name = "lueTeam";
-            this.lueTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueTeam.Properties.DataSource = this.bdsTeam;
-            this.lueTeam.Properties.DisplayMember = "Name";
-            this.lueTeam.Properties.ValueMember = "TeamId";
-            this.lueTeam.Size = new System.Drawing.Size(595, 24);
-            this.lueTeam.StyleController = this.layoutControl1;
-            this.lueTeam.TabIndex = 15;
             // 
             // layoutControlItem3
             // 
@@ -305,7 +306,9 @@
             this.Text = "생산관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsProduct)).EndInit();
@@ -316,9 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueTeam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
