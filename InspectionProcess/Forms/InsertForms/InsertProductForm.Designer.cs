@@ -98,7 +98,8 @@
             // 
             this.btnAction.Location = new System.Drawing.Point(286, 220);
             this.btnAction.Size = new System.Drawing.Size(89, 27);
-            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
+            //TODO: here
+           // this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // btnClose
             // 

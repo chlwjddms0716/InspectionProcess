@@ -104,7 +104,7 @@
             this.btnAction.Location = new System.Drawing.Point(297, 267);
             this.btnAction.Size = new System.Drawing.Size(97, 27);
             this.btnAction.Text = "수정(&U)";
-            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
+            //this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // btnClose
             // 
