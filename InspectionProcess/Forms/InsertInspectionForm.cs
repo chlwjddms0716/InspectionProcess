@@ -40,7 +40,7 @@ namespace InspectionProcess.Forms
             bdsWarehouse.DataSource = DataRepository.Warehouse.GetAll();
         }
 
-        protected override void Register()
+        protected override void btnAction_Click(object sender, EventArgs e)
         {
             //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
             _inspectionResult = new InspectionResult();
@@ -59,6 +59,7 @@ namespace InspectionProcess.Forms
             Close();
         }
 
+       
         private void WriteToEntity()
         {
             _inspection.InspectionId = DataRepository.Inspection.GetMaxId() + 1;

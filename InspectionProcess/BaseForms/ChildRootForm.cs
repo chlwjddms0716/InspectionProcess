@@ -23,15 +23,15 @@ namespace InspectionProcess
             Close();
         }
 
-        private void btnAction_Click(object sender, EventArgs e)
+        protected virtual void btnAction_Click(object sender, EventArgs e)
         {
-            Register();
-
-        }
-
-        protected virtual void Register()
-        {
+            //Register();
             throw new NotImplementedException();
         }
+
+        //protected virtual void Register()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

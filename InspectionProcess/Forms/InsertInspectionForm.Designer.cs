@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbbTeamName = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -40,8 +40,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,10 @@
             this.cbbTeamName.TabIndex = 5;
             this.cbbTeamName.ValueMember = "TeamId";
             // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cbbTeamName;
@@ -109,13 +113,9 @@
             this.layoutControlItem1.CustomizationFormText = "검사조ID";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(532, 227);
+            this.layoutControlItem1.Size = new System.Drawing.Size(532, 30);
             this.layoutControlItem1.Text = "검사조";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
             // 
             // bdsWarehouse
             // 
@@ -137,8 +137,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             this.ResumeLayout(false);
 

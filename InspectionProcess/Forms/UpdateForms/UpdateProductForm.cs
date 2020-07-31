@@ -35,7 +35,7 @@ namespace InspectionProcess.Forms.UpdateForms
             teFinishTime.EditValue = _product.FinishTime;
         }
 
-        private void btnAction_Click(object sender, EventArgs e)
+        protected override void btnAction_Click(object sender, EventArgs e)
         {
             WriteToEntity();
             try

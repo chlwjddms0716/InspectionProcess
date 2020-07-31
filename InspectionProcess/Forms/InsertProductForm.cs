@@ -35,7 +35,7 @@ namespace InspectionProcess.Forms
             bdsTeam.DataSource = DataRepository.Team.GetAll();
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
+        protected override void btnAction_Click(object sender, EventArgs e)
         {
             _product = new Product();
             WriteToEntity();
