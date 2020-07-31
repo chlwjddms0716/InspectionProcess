@@ -76,16 +76,16 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(707, 353, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(800, 540);
+            this.layoutControl1.Size = new System.Drawing.Size(886, 613);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // uscSearch
             // 
-            this.uscSearch.Location = new System.Drawing.Point(667, 12);
+            this.uscSearch.Location = new System.Drawing.Point(739, 12);
             this.uscSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.uscSearch.Name = "uscSearch";
-            this.uscSearch.Size = new System.Drawing.Size(121, 66);
+            this.uscSearch.Size = new System.Drawing.Size(135, 76);
             this.uscSearch.TabIndex = 13;
             this.uscSearch.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.uscSearch_SearchButtonClicked);
             this.uscSearch.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.uscSearch_ResetButtonClicked);
@@ -93,36 +93,36 @@
             // dteFinishDate
             // 
             this.dteFinishDate.EditValue = null;
-            this.dteFinishDate.Location = new System.Drawing.Point(247, 22);
+            this.dteFinishDate.Location = new System.Drawing.Point(269, 23);
             this.dteFinishDate.Name = "dteFinishDate";
             this.dteFinishDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFinishDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFinishDate.Size = new System.Drawing.Size(416, 24);
+            this.dteFinishDate.Size = new System.Drawing.Size(466, 24);
             this.dteFinishDate.StyleController = this.layoutControl1;
             this.dteFinishDate.TabIndex = 6;
             // 
             // dteStartDate
             // 
             this.dteStartDate.EditValue = null;
-            this.dteStartDate.Location = new System.Drawing.Point(46, 22);
+            this.dteStartDate.Location = new System.Drawing.Point(46, 23);
             this.dteStartDate.Name = "dteStartDate";
             this.dteStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteStartDate.Size = new System.Drawing.Size(163, 24);
+            this.dteStartDate.Size = new System.Drawing.Size(185, 24);
             this.dteStartDate.StyleController = this.layoutControl1;
             this.dteStartDate.TabIndex = 5;
             // 
             // grcInspection
             // 
             this.grcInspection.DataSource = this.bdsInspection;
-            this.grcInspection.Location = new System.Drawing.Point(12, 82);
+            this.grcInspection.Location = new System.Drawing.Point(12, 92);
             this.grcInspection.MainView = this.gridView1;
             this.grcInspection.Name = "grcInspection";
-            this.grcInspection.Size = new System.Drawing.Size(776, 446);
+            this.grcInspection.Size = new System.Drawing.Size(862, 509);
             this.grcInspection.TabIndex = 4;
             this.grcInspection.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -202,42 +202,42 @@
             this.emptySpaceItem3,
             this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 540);
+            this.Root.Size = new System.Drawing.Size(886, 613);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.grcInspection;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 80);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 450);
+            this.layoutControlItem1.Size = new System.Drawing.Size(866, 513);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dteStartDate;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 10);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 11);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(201, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(223, 28);
             this.layoutControlItem2.Text = "날짜 ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(31, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dteFinishDate;
-            this.layoutControlItem3.Location = new System.Drawing.Point(201, 10);
+            this.layoutControlItem3.Location = new System.Drawing.Point(223, 11);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(454, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(504, 28);
             this.layoutControlItem3.Text = " ~";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(31, 18);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 38);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 39);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(655, 32);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(727, 41);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -245,16 +245,16 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(655, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(727, 11);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.uscSearch;
-            this.layoutControlItem6.Location = new System.Drawing.Point(655, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(727, 0);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(125, 70);
+            this.layoutControlItem6.Size = new System.Drawing.Size(139, 80);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
@@ -263,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(886, 613);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

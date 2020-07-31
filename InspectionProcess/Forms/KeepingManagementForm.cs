@@ -32,6 +32,8 @@ namespace InspectionProcess.Forms
 
 
 
+      
+
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
           
