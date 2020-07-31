@@ -19,15 +19,15 @@ namespace InspectionProcess.Forms
         {
             InitializeComponent();
         }
-
-        private void ProductManagementForm_Load(object sender, EventArgs e)
+        protected async override void OnShown(EventArgs e)
         {
-            bdsProductId.DataSource = DataRepository.Product.GetAll();
-            bdsMerchandise.DataSource = DataRepository.Merchandise.GetAll();
+            base.OnShown(e);
+            bdsProductId.DataSource = await DataRepository.Product.GetAllAsync();
+            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             cbbMerchandiseName.SelectedItem = null;
             cbbProductionId.SelectedItem = null;
+        }
 
-        }  
 
         private void btnInstruction_Click(object sender, EventArgs e)
         {

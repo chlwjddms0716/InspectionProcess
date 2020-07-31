@@ -360,7 +360,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QualityManagementForm";
             this.Text = "품질관리";
-            this.Load += new System.EventHandler(this.QualityManagementForm_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).EndInit();
