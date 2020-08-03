@@ -265,7 +265,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 613);
             this.Controls.Add(this.layoutControl1);
-            
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FacilityManagementForm";
             this.Text = "설비관리";

@@ -346,7 +346,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 546);
             this.Controls.Add(this.layoutControl1);
-            
             this.Name = "DisposalManagementForm";
             this.Text = "폐기관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

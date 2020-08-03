@@ -108,7 +108,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForms\ChildRootForm.cs" />
+    <Compile Include="BaseForms\ChildRootForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaseForms\ChildRootForm.Designer.cs">
       <DependentUpon>ChildRootForm.cs</DependentUpon>
     </Compile>
@@ -118,51 +120,75 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InsertForms\InsertInspectionForm.cs" />
+    <Compile Include="Forms\InsertForms\InsertInspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\InsertForms\InsertInspectionForm.Designer.cs">
       <DependentUpon>InsertInspectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddProductForm.cs" />
+    <Compile Include="Forms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DisposalManagementForm.cs" />
+    <Compile Include="Forms\DisposalManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\DisposalManagementForm.Designer.cs">
       <DependentUpon>DisposalManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FacilityManagementForm.cs" />
+    <Compile Include="Forms\FacilityManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FacilityManagementForm.Designer.cs">
       <DependentUpon>FacilityManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InsertForms\InsertProductForm.cs" />
+    <Compile Include="Forms\InsertForms\InsertProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\InsertForms\InsertProductForm.Designer.cs">
       <DependentUpon>InsertProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KeepingManagementForm.cs" />
+    <Compile Include="Forms\KeepingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\KeepingManagementForm.Designer.cs">
       <DependentUpon>KeepingManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainForm.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ProductManagamentForm.cs" />
+    <Compile Include="Forms\ProductManagamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\ProductManagamentForm.Designer.cs">
       <DependentUpon>ProductManagamentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\QualityManagementForm.cs" />
+    <Compile Include="Forms\QualityManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\QualityManagementForm.Designer.cs">
       <DependentUpon>QualityManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RealTimeStatusForm.cs" />
+    <Compile Include="Forms\RealTimeStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RealTimeStatusForm.Designer.cs">
       <DependentUpon>RealTimeStatusForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CCTVForm.cs" />
+    <Compile Include="Forms\CCTVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\CCTVForm.Designer.cs">
       <DependentUpon>CCTVForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UpdateForms\UpdateProductForm.cs" />
+    <Compile Include="Forms\UpdateForms\UpdateProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\UpdateForms\UpdateProductForm.Designer.cs">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>

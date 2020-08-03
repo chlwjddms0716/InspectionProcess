@@ -840,7 +840,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 704);
             this.Controls.Add(this.layoutControl1);
-            
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RealTimeStatusForm";
             this.Text = "실시간상태";

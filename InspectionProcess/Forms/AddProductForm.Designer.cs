@@ -301,7 +301,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 551);
             this.Controls.Add(this.layoutControl1);
-            
             this.Name = "AddProductForm";
             this.Text = "생산관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

@@ -301,7 +301,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 577);
             this.Controls.Add(this.layoutControl1);
-            
             this.Name = "KeepingManagementForm";
             this.Text = "입고관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
