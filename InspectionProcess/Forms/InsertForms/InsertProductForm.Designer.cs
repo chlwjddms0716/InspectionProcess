@@ -224,7 +224,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 259);
-            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
             this.Name = "InsertProductForm";
             this.Text = "생산등록";
             this.Load += new System.EventHandler(this.InsertProductForm_Load);
