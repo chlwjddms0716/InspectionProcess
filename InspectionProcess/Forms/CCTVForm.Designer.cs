@@ -75,7 +75,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.IconOptions.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200722_115827447;
+            
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CCTVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
