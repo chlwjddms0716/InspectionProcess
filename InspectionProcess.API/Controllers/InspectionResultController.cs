@@ -17,16 +17,16 @@ namespace InspectionProcess.API.Controllers
         private InspectionProcessEntities db = new InspectionProcessEntities();
 
         // GET: api/InspectionResult
-        public IQueryable<InspectionResult> GetInspectionResults()
+        public List<InspectionResult> GetInspectionResults()
         {
-            return db.InspectionResults;
+            return DataRepository.InspectionResult.GetAll();
         }
 
         // GET: api/InspectionResult/5
         [ResponseType(typeof(InspectionResult))]
         public IHttpActionResult GetInspectionResult(int id)
         {
-            InspectionResult inspectionResult = db.InspectionResults.Find(id);
+            InspectionResult inspectionResult = DataRepository.InspectionResult.Get(id);
             if (inspectionResult == null)
             {
                 return NotFound();
@@ -39,32 +39,14 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutInspectionResult(int id, InspectionResult inspectionResult)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != inspectionResult.InspectionResultId)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(inspectionResult).State = EntityState.Modified;
-
             try
             {
-                db.SaveChanges();
+                DataRepository.InspectionResult.Update(inspectionResult);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!InspectionResultExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+
+                return BadRequest();
             }
 
             return StatusCode(HttpStatusCode.NoContent);
@@ -74,27 +56,14 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(InspectionResult))]
         public IHttpActionResult PostInspectionResult(InspectionResult inspectionResult)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.InspectionResults.Add(inspectionResult);
-
             try
             {
-                db.SaveChanges();
+                DataRepository.InspectionResult.Insert(inspectionResult);
             }
-            catch (DbUpdateException)
+            catch (Exception ex)
             {
-                if (InspectionResultExists(inspectionResult.InspectionResultId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
+
+                return BadRequest();
             }
 
             return CreatedAtRoute("DefaultApi", new { id = inspectionResult.InspectionResultId }, inspectionResult);
@@ -104,14 +73,20 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(InspectionResult))]
         public IHttpActionResult DeleteInspectionResult(int id)
         {
-            InspectionResult inspectionResult = db.InspectionResults.Find(id);
-            if (inspectionResult == null)
-            {
-                return NotFound();
-            }
+            InspectionResult inspectionResult = DataRepository.InspectionResult.Get(id);
 
-            db.InspectionResults.Remove(inspectionResult);
-            db.SaveChanges();
+            if (inspectionResult == null)
+                return NotFound();
+
+            try
+            {
+                DataRepository.InspectionResult.Delete(inspectionResult);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest();
+            }
 
             return Ok(inspectionResult);
         }
