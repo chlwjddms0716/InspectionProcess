@@ -79,7 +79,6 @@
             // 
             this.btnClose.Location = new System.Drawing.Point(433, 208);
             this.btnClose.Size = new System.Drawing.Size(107, 27);
-
             // 
             // layoutControlItem2
             // 
@@ -101,7 +100,7 @@
             // 
             // lueTeamName
             // 
-            this.lueTeamName.Location = new System.Drawing.Point(63, 12);
+            this.lueTeamName.Location = new System.Drawing.Point(55, 12);
             this.lueTeamName.Name = "lueTeamName";
             this.lueTeamName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -111,7 +110,7 @@
             this.lueTeamName.Properties.DataSource = this.bdsTeam;
             this.lueTeamName.Properties.DisplayMember = "Name";
             this.lueTeamName.Properties.ValueMember = "TeamId";
-            this.lueTeamName.Size = new System.Drawing.Size(477, 24);
+            this.lueTeamName.Size = new System.Drawing.Size(485, 24);
             this.lueTeamName.StyleController = this.layoutControl1;
             this.lueTeamName.TabIndex = 7;
             // 
@@ -131,7 +130,6 @@
             this.ClientSize = new System.Drawing.Size(552, 247);
             this.Name = "InsertInspectionForm";
             this.Text = "작업지시";
-
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

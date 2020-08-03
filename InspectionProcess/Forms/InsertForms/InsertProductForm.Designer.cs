@@ -98,8 +98,6 @@
             // 
             this.btnAction.Location = new System.Drawing.Point(286, 220);
             this.btnAction.Size = new System.Drawing.Size(89, 27);
-            //TODO: here
-           // this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // btnClose
             // 
@@ -128,11 +126,11 @@
             // teFinishTime
             // 
             this.teFinishTime.EditValue = new System.DateTime(2020, 7, 22, 0, 0, 0, 0);
-            this.teFinishTime.Location = new System.Drawing.Point(102, 68);
+            this.teFinishTime.Location = new System.Drawing.Point(94, 68);
             this.teFinishTime.Name = "teFinishTime";
             this.teFinishTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.teFinishTime.Size = new System.Drawing.Size(367, 24);
+            this.teFinishTime.Size = new System.Drawing.Size(375, 24);
             this.teFinishTime.StyleController = this.layoutControl1;
             this.teFinishTime.TabIndex = 9;
             // 
@@ -148,13 +146,13 @@
             // dteFinishDate
             // 
             this.dteFinishDate.EditValue = null;
-            this.dteFinishDate.Location = new System.Drawing.Point(102, 40);
+            this.dteFinishDate.Location = new System.Drawing.Point(94, 40);
             this.dteFinishDate.Name = "dteFinishDate";
             this.dteFinishDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFinishDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFinishDate.Size = new System.Drawing.Size(367, 24);
+            this.dteFinishDate.Size = new System.Drawing.Size(375, 24);
             this.dteFinishDate.StyleController = this.layoutControl1;
             this.dteFinishDate.TabIndex = 10;
             // 
@@ -173,7 +171,7 @@
             // 
             // lueMerchandise
             // 
-            this.lueMerchandise.Location = new System.Drawing.Point(102, 12);
+            this.lueMerchandise.Location = new System.Drawing.Point(94, 12);
             this.lueMerchandise.Name = "lueMerchandise";
             this.lueMerchandise.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -182,7 +180,7 @@
             this.lueMerchandise.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandise.Properties.DisplayMember = "Name";
             this.lueMerchandise.Properties.ValueMember = "MerchandiseId";
-            this.lueMerchandise.Size = new System.Drawing.Size(367, 24);
+            this.lueMerchandise.Size = new System.Drawing.Size(375, 24);
             this.lueMerchandise.StyleController = this.layoutControl1;
             this.lueMerchandise.TabIndex = 11;
             // 
@@ -197,7 +195,7 @@
             // 
             // lueProductionTeamId
             // 
-            this.lueProductionTeamId.Location = new System.Drawing.Point(102, 96);
+            this.lueProductionTeamId.Location = new System.Drawing.Point(94, 96);
             this.lueProductionTeamId.Name = "lueProductionTeamId";
             this.lueProductionTeamId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -206,7 +204,7 @@
             this.lueProductionTeamId.Properties.DataSource = this.bdsTeam;
             this.lueProductionTeamId.Properties.DisplayMember = "Name";
             this.lueProductionTeamId.Properties.ValueMember = "TeamId";
-            this.lueProductionTeamId.Size = new System.Drawing.Size(367, 24);
+            this.lueProductionTeamId.Size = new System.Drawing.Size(375, 24);
             this.lueProductionTeamId.StyleController = this.layoutControl1;
             this.lueProductionTeamId.TabIndex = 12;
             // 
