@@ -71,6 +71,7 @@ namespace InspectionProcess.API.Controllers
             IncreaseWarehouse(_keeping, _dumpKeeping, inspectionResult);
 
             DataRepository.Keeping.Insert(_keeping);
+            DataRepository.Keeping.Insert(_dumpKeeping);
         }
 
         private void IncreaseWarehouse(Keeping keeping, Keeping dumpkeeping, InspectionResult inspectionResult)
