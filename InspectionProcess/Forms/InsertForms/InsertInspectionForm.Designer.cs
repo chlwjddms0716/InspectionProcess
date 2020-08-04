@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             this.lueTeamName = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -40,10 +40,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -90,14 +90,6 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(312, 196);
             this.layoutControlItem3.Size = new System.Drawing.Size(109, 31);
             // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
-            // bdsWarehouse
-            // 
-            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
-            // 
             // lueTeamName
             // 
             this.lueTeamName.Location = new System.Drawing.Point(55, 12);
@@ -119,9 +111,17 @@
             this.layoutControlItem4.Control = this.lueTeamName;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(532, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(532, 227);
             this.layoutControlItem4.Text = "검사조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(39, 18);
+            // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            // 
+            // bdsWarehouse
+            // 
+            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
             // 
             // InsertInspectionForm
             // 
@@ -137,10 +137,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             this.ResumeLayout(false);
 
         }

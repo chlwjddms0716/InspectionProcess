@@ -52,5 +52,60 @@ namespace InspectionProcess.Data
 
             return query.FirstOrDefault();
         }
+
+        public int GetbyCountA()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId == 1
+                        select x.Count;
+
+            return query.FirstOrDefault();
+        }
+
+        public int GetbyCountB()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId == 2
+                        select x.Count;
+
+            return query.FirstOrDefault();
+        }
+
+        public int GetbyCountC()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId == 3
+                        select x.Count;
+
+            return query.FirstOrDefault();
+        }
+
+        public int GetbyCountDumpA()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId == 4
+                        select x.Count;
+
+            return query.FirstOrDefault();
+        }
+
+        public int GetbyCountDumpB()
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        where x.WarehouseId == 5
+                        select x.Count;
+
+            return query.FirstOrDefault();
+        }
     }
 }

@@ -63,9 +63,9 @@ namespace InspectionProcess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _ {
+        public static System.Drawing.Bitmap _0 {
             get {
-                object obj = ResourceManager.GetObject("-", resourceCulture);
+                object obj = ResourceManager.GetObject("0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,26 +96,6 @@ namespace InspectionProcess.Properties {
         public static System.Drawing.Bitmap iconfinder_Muslim_Mosque_18_2044979 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Muslim_Mosque-18_2044979", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KakaoTalk_20200721_123343692 {
-            get {
-                object obj = ResourceManager.GetObject("KakaoTalk_20200721_123343692", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap KakaoTalk_20200721_123343794 {
-            get {
-                object obj = ResourceManager.GetObject("KakaoTalk_20200721_123343794", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +193,19 @@ namespace InspectionProcess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap warehouse {
+        public static System.Drawing.Bitmap warehouse0 {
             get {
-                object obj = ResourceManager.GetObject("warehouse", resourceCulture);
+                object obj = ResourceManager.GetObject("warehouse0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap warehouse1 {
+            get {
+                object obj = ResourceManager.GetObject("warehouse1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +216,16 @@ namespace InspectionProcess.Properties {
         public static System.Drawing.Bitmap warehouse2 {
             get {
                 object obj = ResourceManager.GetObject("warehouse2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap warehouse3 {
+            get {
+                object obj = ResourceManager.GetObject("warehouse3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
