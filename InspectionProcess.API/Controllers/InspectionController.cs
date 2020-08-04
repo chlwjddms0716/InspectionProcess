@@ -40,9 +40,11 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutInspection(int id, Inspection inspection)
         {
+            Inspection _inspection = DataRepository.Inspection.Get(id);
+            _inspection.FinishTime = inspection.FinishTime;
             try
             {
-                DataRepository.Inspection.Update(inspection);
+                DataRepository.Inspection.Update(_inspection);
             }
             catch (Exception ex)
             {
