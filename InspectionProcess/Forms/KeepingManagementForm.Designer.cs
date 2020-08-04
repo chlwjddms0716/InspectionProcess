@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.lkuMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
-            this.uscSearch = new InspectionProcess.UserControls.SearchButtonControl();
+            this.lkuWarehouse = new DevExpress.XtraEditors.LookUpEdit();
             this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
+            this.lkuMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
+            this.uscSearch = new InspectionProcess.UserControls.SearchButtonControl();
             this.dteKeepTo = new DevExpress.XtraEditors.DateEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bdsKeeping = new System.Windows.Forms.BindingSource(this.components);
@@ -48,13 +50,13 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
-            this.lkuWarehouse = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -68,8 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +90,25 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // lkuWarehouse
+            // 
+            this.lkuWarehouse.Location = new System.Drawing.Point(416, 12);
+            this.lkuWarehouse.Name = "lkuWarehouse";
+            this.lkuWarehouse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuWarehouse.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name5")});
+            this.lkuWarehouse.Properties.DataSource = this.bdsWarehouse;
+            this.lkuWarehouse.Properties.DisplayMember = "Name";
+            this.lkuWarehouse.Properties.ValueMember = "WarehouseId";
+            this.lkuWarehouse.Size = new System.Drawing.Size(304, 24);
+            this.lkuWarehouse.StyleController = this.layoutControl1;
+            this.lkuWarehouse.TabIndex = 17;
+            // 
+            // bdsWarehouse
+            // 
+            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
+            // 
             // lkuMerchandiseName
             // 
             this.lkuMerchandiseName.Location = new System.Drawing.Point(67, 12);
@@ -105,6 +124,10 @@
             this.lkuMerchandiseName.StyleController = this.layoutControl1;
             this.lkuMerchandiseName.TabIndex = 16;
             // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
+            // 
             // uscSearch
             // 
             this.uscSearch.Location = new System.Drawing.Point(724, 12);
@@ -114,10 +137,6 @@
             this.uscSearch.TabIndex = 15;
             this.uscSearch.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.uscSearch_SearchButtonClicked);
             this.uscSearch.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.uscSearch_ResetButtonClicked);
-            // 
-            // bdsWarehouse
-            // 
-            this.bdsWarehouse.DataSource = typeof(InspectionProcess.Data.Warehouse);
             // 
             // dteKeepTo
             // 
@@ -156,9 +175,11 @@
             this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colWarehouseName
             // 
+            this.colWarehouseName.Caption = "창고명";
             this.colWarehouseName.FieldName = "WarehouseName";
             this.colWarehouseName.MinWidth = 25;
             this.colWarehouseName.Name = "colWarehouseName";
@@ -168,6 +189,7 @@
             // 
             // colCount
             // 
+            this.colCount.Caption = "갯수";
             this.colCount.FieldName = "Count";
             this.colCount.MinWidth = 25;
             this.colCount.Name = "colCount";
@@ -177,6 +199,7 @@
             // 
             // colKeepingDate
             // 
+            this.colKeepingDate.Caption = "입고날짜";
             this.colKeepingDate.FieldName = "KeepingDate";
             this.colKeepingDate.MinWidth = 25;
             this.colKeepingDate.Name = "colKeepingDate";
@@ -267,25 +290,6 @@
             this.layoutControlItem3.Text = "상품명";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(52, 18);
             // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
-            // 
-            // lkuWarehouse
-            // 
-            this.lkuWarehouse.Location = new System.Drawing.Point(416, 12);
-            this.lkuWarehouse.Name = "lkuWarehouse";
-            this.lkuWarehouse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkuWarehouse.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name5")});
-            this.lkuWarehouse.Properties.DataSource = this.bdsWarehouse;
-            this.lkuWarehouse.Properties.DisplayMember = "Name";
-            this.lkuWarehouse.Properties.ValueMember = "WarehouseId";
-            this.lkuWarehouse.Size = new System.Drawing.Size(304, 24);
-            this.lkuWarehouse.StyleController = this.layoutControl1;
-            this.lkuWarehouse.TabIndex = 17;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.lkuWarehouse;
@@ -305,8 +309,10 @@
             this.Text = "입고관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkuMerchandiseName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteKeepTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -320,8 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkuWarehouse.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
