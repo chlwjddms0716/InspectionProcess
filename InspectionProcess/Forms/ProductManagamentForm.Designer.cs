@@ -90,7 +90,7 @@
             this.lkuProductionId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkuProductionId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "Name1")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "")});
             this.lkuProductionId.Properties.DataSource = this.bdsProductId;
             this.lkuProductionId.Properties.DisplayMember = "ProductId";
             this.lkuProductionId.Properties.NullText = "";
@@ -110,7 +110,7 @@
             this.lkuMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkuMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name2")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lkuMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lkuMerchandiseName.Properties.DisplayMember = "Name";
             this.lkuMerchandiseName.Properties.NullText = "";
@@ -167,6 +167,7 @@
             this.colProductionTeam});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colProductId

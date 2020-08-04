@@ -49,7 +49,7 @@ namespace InspectionProcess.Forms
 
         private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            lkuMerchandise.EditValue = null;
+            
             lkuWarehouseName.EditValue = null;
 
             dteKeepFrom.EditValue = null;

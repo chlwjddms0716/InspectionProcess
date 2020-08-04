@@ -94,7 +94,7 @@
             this.lueTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTeam.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name4")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lueTeam.Properties.DataSource = this.bdsTeam;
             this.lueTeam.Properties.DisplayMember = "Name";
             this.lueTeam.Properties.NullText = "";
@@ -114,7 +114,7 @@
             this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name3")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandiseName.Properties.DisplayMember = "Name";
             this.lueMerchandiseName.Properties.NullText = "";
@@ -171,6 +171,7 @@
             this.colFinishTime});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
