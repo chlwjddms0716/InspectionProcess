@@ -93,6 +93,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "Name1")});
             this.lkuProductionId.Properties.DataSource = this.bdsProductId;
             this.lkuProductionId.Properties.DisplayMember = "ProductId";
+            this.lkuProductionId.Properties.NullText = "";
             this.lkuProductionId.Properties.ValueMember = "ProductId";
             this.lkuProductionId.Size = new System.Drawing.Size(577, 24);
             this.lkuProductionId.StyleController = this.layoutControl1;
@@ -112,6 +113,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name2")});
             this.lkuMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lkuMerchandiseName.Properties.DisplayMember = "Name";
+            this.lkuMerchandiseName.Properties.NullText = "";
             this.lkuMerchandiseName.Properties.ValueMember = "MerchandiseId";
             this.lkuMerchandiseName.Size = new System.Drawing.Size(577, 24);
             this.lkuMerchandiseName.StyleController = this.layoutControl1;

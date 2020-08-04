@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.searchButtonControl1 = new InspectionProcess.UserControls.SearchButtonControl();
             this.lkuProductId = new DevExpress.XtraEditors.LookUpEdit();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lkuInspectionID = new DevExpress.XtraEditors.LookUpEdit();
@@ -54,7 +55,6 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.searchButtonControl1 = new InspectionProcess.UserControls.SearchButtonControl();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -94,6 +94,16 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // searchButtonControl1
+            // 
+            this.searchButtonControl1.Location = new System.Drawing.Point(640, 12);
+            this.searchButtonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchButtonControl1.Name = "searchButtonControl1";
+            this.searchButtonControl1.Size = new System.Drawing.Size(148, 80);
+            this.searchButtonControl1.TabIndex = 31;
+            this.searchButtonControl1.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.searchButtonControl1_SearchButtonClicked);
+            this.searchButtonControl1.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.searchButtonControl1_ResetButtonClicked);
+            // 
             // lkuProductId
             // 
             this.lkuProductId.Location = new System.Drawing.Point(85, 40);
@@ -104,6 +114,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "")});
             this.lkuProductId.Properties.DataSource = this.productBindingSource;
             this.lkuProductId.Properties.DisplayMember = "ProductId";
+            this.lkuProductId.Properties.NullText = "";
             this.lkuProductId.Properties.ValueMember = "ProductId";
             this.lkuProductId.Size = new System.Drawing.Size(551, 24);
             this.lkuProductId.StyleController = this.layoutControl1;
@@ -123,6 +134,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InspectionId", "")});
             this.lkuInspectionID.Properties.DataSource = this.inspectionBindingSource;
             this.lkuInspectionID.Properties.DisplayMember = "InspectionId";
+            this.lkuInspectionID.Properties.NullText = "";
             this.lkuInspectionID.Properties.ValueMember = "InspectionId";
             this.lkuInspectionID.Size = new System.Drawing.Size(551, 24);
             this.lkuInspectionID.StyleController = this.layoutControl1;
@@ -153,6 +165,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lkuInspectionTeamName.Properties.DataSource = this.teamBindingSource;
             this.lkuInspectionTeamName.Properties.DisplayMember = "Name";
+            this.lkuInspectionTeamName.Properties.NullText = "";
             this.lkuInspectionTeamName.Properties.ValueMember = "TeamId";
             this.lkuInspectionTeamName.Size = new System.Drawing.Size(551, 24);
             this.lkuInspectionTeamName.StyleController = this.layoutControl1;
@@ -331,16 +344,6 @@
             this.layoutControlItem7.Text = "생산품ID : ";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(70, 18);
             // 
-            // searchButtonControl1
-            // 
-            this.searchButtonControl1.Location = new System.Drawing.Point(640, 12);
-            this.searchButtonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchButtonControl1.Name = "searchButtonControl1";
-            this.searchButtonControl1.Size = new System.Drawing.Size(148, 80);
-            this.searchButtonControl1.TabIndex = 31;
-            this.searchButtonControl1.SearchButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.SearchButtonClickedEventArgs>(this.searchButtonControl1_SearchButtonClicked);
-            this.searchButtonControl1.ResetButtonClicked += new System.EventHandler<InspectionProcess.UserControls.SearchButtonControl.ResetButtonClickedEventArgs>(this.searchButtonControl1_ResetButtonClicked);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.searchButtonControl1;
@@ -359,7 +362,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QualityManagementForm";
             this.Text = "품질관리";
-
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkuProductId.Properties)).EndInit();
