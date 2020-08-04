@@ -65,5 +65,10 @@ namespace InspectionProcess.Data
             return items.ConvertAll(x => x.Product);
 
         }
+
+        public void Insert(object product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
