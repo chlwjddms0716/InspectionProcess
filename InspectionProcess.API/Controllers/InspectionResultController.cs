@@ -39,9 +39,12 @@ namespace InspectionProcess.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutInspectionResult(int id, InspectionResult inspectionResult)
         {
+            InspectionResult _inspectionResult = DataRepository.InspectionResult.Get(id);
+            _inspectionResult.NormalNumber = inspectionResult.NormalNumber;
+            _inspectionResult.DefectiveNumber = inspectionResult.DefectiveNumber;
             try
             {
-                DataRepository.InspectionResult.Update(inspectionResult);
+                DataRepository.InspectionResult.Update(_inspectionResult);
             }
             catch (Exception ex)
             {
