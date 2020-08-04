@@ -16,8 +16,7 @@ namespace InspectionProcess.Forms
         private InspectionResult _inspectionResult;
         private Inspection _inspection;
         private Product _product;
-        
-       
+
         public InsertInspectionForm()
         {
             InitializeComponent(); 
@@ -35,7 +34,7 @@ namespace InspectionProcess.Forms
             bdsWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
         }
 
-        protected override void btnAction_Click(object sender, EventArgs e)
+        protected override async void btnAction_Click(object sender, EventArgs e)
         {
             //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
             _inspectionResult = new InspectionResult();
@@ -51,6 +50,10 @@ namespace InspectionProcess.Forms
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show("작업시시 했습니다.");
+            
+            await Helpers.SocketHelper.ManageSocketAsync(_inspectionResult.InspectionResultId,
+            _inspection.InspectionId);
+
             Close();
         }
 
