@@ -266,17 +266,17 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.pcbdumpA;
-            this.layoutControlItem8.Location = new System.Drawing.Point(460, 162);
+            this.layoutControlItem8.Location = new System.Drawing.Point(460, 166);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(104, 117);
+            this.layoutControlItem8.Size = new System.Drawing.Size(104, 135);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // pcbdumpA
             // 
-            this.pcbdumpA.Location = new System.Drawing.Point(472, 174);
+            this.pcbdumpA.Location = new System.Drawing.Point(472, 178);
             this.pcbdumpA.Name = "pcbdumpA";
-            this.pcbdumpA.Size = new System.Drawing.Size(100, 113);
+            this.pcbdumpA.Size = new System.Drawing.Size(100, 131);
             this.pcbdumpA.TabIndex = 23;
             this.pcbdumpA.TabStop = false;
             // 
@@ -285,7 +285,7 @@
             this.layoutControlItem2.Control = this.pictureBox2;
             this.layoutControlItem2.Location = new System.Drawing.Point(555, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(104, 102);
+            this.layoutControlItem2.Size = new System.Drawing.Size(104, 106);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -294,7 +294,7 @@
             this.pictureBox2.Image = global::InspectionProcess.Properties.Resources.temperature2;
             this.pictureBox2.Location = new System.Drawing.Point(567, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 98);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 102);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
@@ -303,7 +303,7 @@
             this.layoutControlItem1.Control = this.pictureBox3;
             this.layoutControlItem1.Location = new System.Drawing.Point(659, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(111, 102);
+            this.layoutControlItem1.Size = new System.Drawing.Size(111, 106);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -312,7 +312,7 @@
             this.pictureBox3.Image = global::InspectionProcess.Properties.Resources.Hum;
             this.pictureBox3.Location = new System.Drawing.Point(671, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(107, 98);
+            this.pictureBox3.Size = new System.Drawing.Size(107, 102);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
@@ -321,13 +321,13 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 31);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(555, 71);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(555, 75);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.labelControl1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(52, 140);
+            this.layoutControlItem7.Location = new System.Drawing.Point(52, 144);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(39, 22);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -335,7 +335,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(64, 152);
+            this.labelControl1.Location = new System.Drawing.Point(64, 156);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(35, 18);
             this.labelControl1.StyleController = this.layoutControl1;
@@ -381,7 +381,7 @@
             // 
             // lbldumpB
             // 
-            this.lbldumpB.Location = new System.Drawing.Point(671, 291);
+            this.lbldumpB.Location = new System.Drawing.Point(671, 313);
             this.lbldumpB.Name = "lbldumpB";
             this.lbldumpB.Size = new System.Drawing.Size(28, 18);
             this.lbldumpB.StyleController = this.layoutControl1;
@@ -389,7 +389,7 @@
             // 
             // lbldumpA
             // 
-            this.lbldumpA.Location = new System.Drawing.Point(528, 291);
+            this.lbldumpA.Location = new System.Drawing.Point(528, 313);
             this.lbldumpA.Name = "lbldumpA";
             this.lbldumpA.Size = new System.Drawing.Size(26, 18);
             this.lbldumpA.StyleController = this.layoutControl1;
@@ -397,7 +397,7 @@
             // 
             // lblwarehouseC
             // 
-            this.lblwarehouseC.Location = new System.Drawing.Point(385, 291);
+            this.lblwarehouseC.Location = new System.Drawing.Point(385, 313);
             this.lblwarehouseC.Name = "lblwarehouseC";
             this.lblwarehouseC.Size = new System.Drawing.Size(26, 18);
             this.lblwarehouseC.StyleController = this.layoutControl1;
@@ -405,7 +405,7 @@
             // 
             // lblwarehouseB
             // 
-            this.lblwarehouseB.Location = new System.Drawing.Point(238, 291);
+            this.lblwarehouseB.Location = new System.Drawing.Point(238, 313);
             this.lblwarehouseB.Name = "lblwarehouseB";
             this.lblwarehouseB.Size = new System.Drawing.Size(27, 18);
             this.lblwarehouseB.StyleController = this.layoutControl1;
@@ -413,7 +413,7 @@
             // 
             // lblwarehouseA
             // 
-            this.lblwarehouseA.Location = new System.Drawing.Point(72, 291);
+            this.lblwarehouseA.Location = new System.Drawing.Point(72, 313);
             this.lblwarehouseA.Name = "lblwarehouseA";
             this.lblwarehouseA.Size = new System.Drawing.Size(35, 18);
             this.lblwarehouseA.StyleController = this.layoutControl1;
@@ -421,7 +421,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(638, 152);
+            this.labelControl7.Location = new System.Drawing.Point(638, 156);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(61, 18);
             this.labelControl7.StyleController = this.layoutControl1;
@@ -430,9 +430,9 @@
             // 
             // pcbdumpB
             // 
-            this.pcbdumpB.Location = new System.Drawing.Point(622, 174);
+            this.pcbdumpB.Location = new System.Drawing.Point(622, 178);
             this.pcbdumpB.Name = "pcbdumpB";
-            this.pcbdumpB.Size = new System.Drawing.Size(100, 113);
+            this.pcbdumpB.Size = new System.Drawing.Size(100, 131);
             this.pcbdumpB.TabIndex = 39;
             this.pcbdumpB.TabStop = false;
             // 
@@ -448,7 +448,7 @@
             // 
             // lblhum2
             // 
-            this.lblhum2.Location = new System.Drawing.Point(707, 114);
+            this.lblhum2.Location = new System.Drawing.Point(707, 118);
             this.lblhum2.Name = "lblhum2";
             this.lblhum2.Size = new System.Drawing.Size(25, 34);
             this.lblhum2.TabIndex = 37;
@@ -456,7 +456,7 @@
             // 
             // lblhum
             // 
-            this.lblhum.Location = new System.Drawing.Point(682, 114);
+            this.lblhum.Location = new System.Drawing.Point(682, 118);
             this.lblhum.Name = "lblhum";
             this.lblhum.Size = new System.Drawing.Size(21, 18);
             this.lblhum.StyleController = this.layoutControl1;
@@ -464,7 +464,7 @@
             // 
             // lblTemp
             // 
-            this.lblTemp.Location = new System.Drawing.Point(574, 114);
+            this.lblTemp.Location = new System.Drawing.Point(574, 118);
             this.lblTemp.Name = "lblTemp";
             this.lblTemp.Size = new System.Drawing.Size(28, 18);
             this.lblTemp.StyleController = this.layoutControl1;
@@ -472,7 +472,7 @@
             // 
             // lblTemp2
             // 
-            this.lblTemp2.Location = new System.Drawing.Point(606, 114);
+            this.lblTemp2.Location = new System.Drawing.Point(606, 118);
             this.lblTemp2.Name = "lblTemp2";
             this.lblTemp2.Size = new System.Drawing.Size(16, 18);
             this.lblTemp2.StyleController = this.layoutControl1;
@@ -486,7 +486,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(310, 313);
+            this.labelControl5.Location = new System.Drawing.Point(310, 335);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(176, 34);
             this.labelControl5.StyleController = this.layoutControl1;
@@ -496,10 +496,12 @@
             // btnCCTV
             // 
             this.btnCCTV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCCTV.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCCTV.Appearance.Options.UseFont = true;
             this.btnCCTV.ImageOptions.Image = global::InspectionProcess.Properties.Resources.iconfinder_Muslim_Mosque_18_2044979;
-            this.btnCCTV.Location = new System.Drawing.Point(617, 624);
+            this.btnCCTV.Location = new System.Drawing.Point(638, 624);
             this.btnCCTV.Name = "btnCCTV";
-            this.btnCCTV.Size = new System.Drawing.Size(161, 68);
+            this.btnCCTV.Size = new System.Drawing.Size(140, 68);
             this.btnCCTV.StyleController = this.layoutControl1;
             this.btnCCTV.TabIndex = 30;
             this.btnCCTV.Text = "CCTV";
@@ -508,15 +510,15 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::InspectionProcess.Properties.Resources.GIF;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 351);
+            this.pictureBox1.Location = new System.Drawing.Point(103, 373);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(606, 269);
+            this.pictureBox1.Size = new System.Drawing.Size(606, 247);
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(208, 152);
+            this.labelControl4.Location = new System.Drawing.Point(208, 156);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(35, 18);
             this.labelControl4.StyleController = this.layoutControl1;
@@ -525,7 +527,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(361, 152);
+            this.labelControl3.Location = new System.Drawing.Point(361, 156);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(35, 18);
             this.labelControl3.StyleController = this.layoutControl1;
@@ -534,7 +536,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(493, 152);
+            this.labelControl2.Location = new System.Drawing.Point(493, 156);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 18);
             this.labelControl2.StyleController = this.layoutControl1;
@@ -543,25 +545,25 @@
             // 
             // pcbwarehouseB
             // 
-            this.pcbwarehouseB.Location = new System.Drawing.Point(186, 174);
+            this.pcbwarehouseB.Location = new System.Drawing.Point(186, 178);
             this.pcbwarehouseB.Name = "pcbwarehouseB";
-            this.pcbwarehouseB.Size = new System.Drawing.Size(100, 113);
+            this.pcbwarehouseB.Size = new System.Drawing.Size(100, 131);
             this.pcbwarehouseB.TabIndex = 22;
             this.pcbwarehouseB.TabStop = false;
             // 
             // pcbwarehouseC
             // 
-            this.pcbwarehouseC.Location = new System.Drawing.Point(330, 174);
+            this.pcbwarehouseC.Location = new System.Drawing.Point(330, 178);
             this.pcbwarehouseC.Name = "pcbwarehouseC";
-            this.pcbwarehouseC.Size = new System.Drawing.Size(100, 113);
+            this.pcbwarehouseC.Size = new System.Drawing.Size(100, 131);
             this.pcbwarehouseC.TabIndex = 21;
             this.pcbwarehouseC.TabStop = false;
             // 
             // pcbwarehouseA
             // 
-            this.pcbwarehouseA.Location = new System.Drawing.Point(45, 174);
+            this.pcbwarehouseA.Location = new System.Drawing.Point(45, 178);
             this.pcbwarehouseA.Name = "pcbwarehouseA";
-            this.pcbwarehouseA.Size = new System.Drawing.Size(100, 113);
+            this.pcbwarehouseA.Size = new System.Drawing.Size(100, 131);
             this.pcbwarehouseA.TabIndex = 20;
             this.pcbwarehouseA.TabStop = false;
             // 
@@ -569,7 +571,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(330, 114);
+            this.labelControl6.Location = new System.Drawing.Point(330, 118);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(104, 34);
             this.labelControl6.StyleController = this.layoutControl1;
@@ -579,7 +581,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.labelControl3;
-            this.layoutControlItem5.Location = new System.Drawing.Point(349, 140);
+            this.layoutControlItem5.Location = new System.Drawing.Point(349, 144);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(39, 22);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -588,27 +590,27 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.pcbwarehouseB;
-            this.layoutControlItem9.Location = new System.Drawing.Point(174, 162);
+            this.layoutControlItem9.Location = new System.Drawing.Point(174, 166);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(104, 117);
+            this.layoutControlItem9.Size = new System.Drawing.Size(104, 135);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.pcbwarehouseC;
-            this.layoutControlItem10.Location = new System.Drawing.Point(318, 162);
+            this.layoutControlItem10.Location = new System.Drawing.Point(318, 166);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(104, 117);
+            this.layoutControlItem10.Size = new System.Drawing.Size(104, 135);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.btnCCTV;
-            this.layoutControlItem14.Location = new System.Drawing.Point(605, 612);
+            this.layoutControlItem14.Location = new System.Drawing.Point(626, 612);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(165, 72);
+            this.layoutControlItem14.Size = new System.Drawing.Size(144, 72);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -623,16 +625,16 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.pictureBox1;
-            this.layoutControlItem12.Location = new System.Drawing.Point(91, 339);
+            this.layoutControlItem12.Location = new System.Drawing.Point(91, 361);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(610, 273);
+            this.layoutControlItem12.Size = new System.Drawing.Size(610, 251);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.labelControl5;
-            this.layoutControlItem15.Location = new System.Drawing.Point(298, 301);
+            this.layoutControlItem15.Location = new System.Drawing.Point(298, 323);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(180, 38);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
@@ -641,56 +643,56 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 162);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 166);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(33, 117);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(33, 135);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(278, 162);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(278, 166);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(40, 117);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(40, 135);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(422, 162);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(422, 166);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(38, 117);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(38, 135);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(564, 162);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(564, 166);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(46, 117);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(46, 135);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.pcbwarehouseA;
-            this.layoutControlItem11.Location = new System.Drawing.Point(33, 162);
+            this.layoutControlItem11.Location = new System.Drawing.Point(33, 166);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(104, 117);
+            this.layoutControlItem11.Size = new System.Drawing.Size(104, 135);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(137, 162);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(137, 166);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(37, 117);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(37, 135);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(91, 140);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(91, 144);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
             this.emptySpaceItem9.Size = new System.Drawing.Size(105, 22);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -698,7 +700,7 @@
             // emptySpaceItem10
             // 
             this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(0, 140);
+            this.emptySpaceItem10.Location = new System.Drawing.Point(0, 144);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
             this.emptySpaceItem10.Size = new System.Drawing.Size(52, 22);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -706,7 +708,7 @@
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
-            this.emptySpaceItem11.Location = new System.Drawing.Point(235, 140);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(235, 144);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
             this.emptySpaceItem11.Size = new System.Drawing.Size(114, 22);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -714,7 +716,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.labelControl4;
-            this.layoutControlItem4.Location = new System.Drawing.Point(196, 140);
+            this.layoutControlItem4.Location = new System.Drawing.Point(196, 144);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(39, 22);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -723,7 +725,7 @@
             // emptySpaceItem12
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(388, 140);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(388, 144);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
             this.emptySpaceItem12.Size = new System.Drawing.Size(93, 22);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
@@ -731,7 +733,7 @@
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(691, 140);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(691, 144);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
             this.emptySpaceItem13.Size = new System.Drawing.Size(79, 22);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
@@ -739,7 +741,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.labelControl2;
-            this.layoutControlItem6.Location = new System.Drawing.Point(481, 140);
+            this.layoutControlItem6.Location = new System.Drawing.Point(481, 144);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(65, 22);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -748,7 +750,7 @@
             // emptySpaceItem16
             // 
             this.emptySpaceItem16.AllowHotTrack = false;
-            this.emptySpaceItem16.Location = new System.Drawing.Point(0, 301);
+            this.emptySpaceItem16.Location = new System.Drawing.Point(0, 323);
             this.emptySpaceItem16.Name = "emptySpaceItem16";
             this.emptySpaceItem16.Size = new System.Drawing.Size(298, 38);
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
@@ -756,7 +758,7 @@
             // emptySpaceItem17
             // 
             this.emptySpaceItem17.AllowHotTrack = false;
-            this.emptySpaceItem17.Location = new System.Drawing.Point(478, 301);
+            this.emptySpaceItem17.Location = new System.Drawing.Point(478, 323);
             this.emptySpaceItem17.Name = "emptySpaceItem17";
             this.emptySpaceItem17.Size = new System.Drawing.Size(292, 38);
             this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
@@ -764,9 +766,9 @@
             // emptySpaceItem19
             // 
             this.emptySpaceItem19.AllowHotTrack = false;
-            this.emptySpaceItem19.Location = new System.Drawing.Point(701, 339);
+            this.emptySpaceItem19.Location = new System.Drawing.Point(701, 361);
             this.emptySpaceItem19.Name = "emptySpaceItem19";
-            this.emptySpaceItem19.Size = new System.Drawing.Size(69, 273);
+            this.emptySpaceItem19.Size = new System.Drawing.Size(69, 251);
             this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem22
@@ -774,13 +776,13 @@
             this.emptySpaceItem22.AllowHotTrack = false;
             this.emptySpaceItem22.Location = new System.Drawing.Point(273, 612);
             this.emptySpaceItem22.Name = "emptySpaceItem22";
-            this.emptySpaceItem22.Size = new System.Drawing.Size(332, 72);
+            this.emptySpaceItem22.Size = new System.Drawing.Size(353, 72);
             this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem24
             // 
             this.emptySpaceItem24.AllowHotTrack = false;
-            this.emptySpaceItem24.Location = new System.Drawing.Point(724, 102);
+            this.emptySpaceItem24.Location = new System.Drawing.Point(724, 106);
             this.emptySpaceItem24.Name = "emptySpaceItem24";
             this.emptySpaceItem24.Size = new System.Drawing.Size(46, 38);
             this.emptySpaceItem24.TextSize = new System.Drawing.Size(0, 0);
@@ -788,7 +790,7 @@
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.lblTemp2;
-            this.layoutControlItem19.Location = new System.Drawing.Point(594, 102);
+            this.layoutControlItem19.Location = new System.Drawing.Point(594, 106);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(20, 38);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
@@ -797,7 +799,7 @@
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.lblTemp;
-            this.layoutControlItem20.Location = new System.Drawing.Point(562, 102);
+            this.layoutControlItem20.Location = new System.Drawing.Point(562, 106);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(32, 38);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
@@ -806,7 +808,7 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.lblhum;
-            this.layoutControlItem17.Location = new System.Drawing.Point(670, 102);
+            this.layoutControlItem17.Location = new System.Drawing.Point(670, 106);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(25, 38);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
@@ -815,7 +817,7 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.lblhum2;
-            this.layoutControlItem18.Location = new System.Drawing.Point(695, 102);
+            this.layoutControlItem18.Location = new System.Drawing.Point(695, 106);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(29, 38);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
@@ -824,7 +826,7 @@
             // emptySpaceItem21
             // 
             this.emptySpaceItem21.AllowHotTrack = false;
-            this.emptySpaceItem21.Location = new System.Drawing.Point(614, 102);
+            this.emptySpaceItem21.Location = new System.Drawing.Point(614, 106);
             this.emptySpaceItem21.Name = "emptySpaceItem21";
             this.emptySpaceItem21.Size = new System.Drawing.Size(56, 38);
             this.emptySpaceItem21.TextSize = new System.Drawing.Size(0, 0);
@@ -832,7 +834,7 @@
             // emptySpaceItem27
             // 
             this.emptySpaceItem27.AllowHotTrack = false;
-            this.emptySpaceItem27.Location = new System.Drawing.Point(426, 102);
+            this.emptySpaceItem27.Location = new System.Drawing.Point(426, 106);
             this.emptySpaceItem27.Name = "emptySpaceItem27";
             this.emptySpaceItem27.Size = new System.Drawing.Size(136, 38);
             this.emptySpaceItem27.TextSize = new System.Drawing.Size(0, 0);
@@ -840,7 +842,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl6;
-            this.layoutControlItem3.Location = new System.Drawing.Point(318, 102);
+            this.layoutControlItem3.Location = new System.Drawing.Point(318, 106);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(108, 38);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -849,7 +851,7 @@
             // emptySpaceItem28
             // 
             this.emptySpaceItem28.AllowHotTrack = false;
-            this.emptySpaceItem28.Location = new System.Drawing.Point(0, 102);
+            this.emptySpaceItem28.Location = new System.Drawing.Point(0, 106);
             this.emptySpaceItem28.Name = "emptySpaceItem28";
             this.emptySpaceItem28.Size = new System.Drawing.Size(318, 38);
             this.emptySpaceItem28.TextSize = new System.Drawing.Size(0, 0);
@@ -874,24 +876,24 @@
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.pcbdumpB;
-            this.layoutControlItem22.Location = new System.Drawing.Point(610, 162);
+            this.layoutControlItem22.Location = new System.Drawing.Point(610, 166);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(104, 117);
+            this.layoutControlItem22.Size = new System.Drawing.Size(104, 135);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(714, 162);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(714, 166);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(56, 117);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(56, 135);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.labelControl7;
-            this.layoutControlItem23.Location = new System.Drawing.Point(626, 140);
+            this.layoutControlItem23.Location = new System.Drawing.Point(626, 144);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(65, 22);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
@@ -900,7 +902,7 @@
             // emptySpaceItem15
             // 
             this.emptySpaceItem15.AllowHotTrack = false;
-            this.emptySpaceItem15.Location = new System.Drawing.Point(546, 140);
+            this.emptySpaceItem15.Location = new System.Drawing.Point(546, 144);
             this.emptySpaceItem15.Name = "emptySpaceItem15";
             this.emptySpaceItem15.Size = new System.Drawing.Size(80, 22);
             this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
@@ -908,7 +910,7 @@
             // emptySpaceItem25
             // 
             this.emptySpaceItem25.AllowHotTrack = false;
-            this.emptySpaceItem25.Location = new System.Drawing.Point(691, 279);
+            this.emptySpaceItem25.Location = new System.Drawing.Point(691, 301);
             this.emptySpaceItem25.Name = "emptySpaceItem25";
             this.emptySpaceItem25.Size = new System.Drawing.Size(79, 22);
             this.emptySpaceItem25.TextSize = new System.Drawing.Size(0, 0);
@@ -916,7 +918,7 @@
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.lblwarehouseA;
-            this.layoutControlItem24.Location = new System.Drawing.Point(60, 279);
+            this.layoutControlItem24.Location = new System.Drawing.Point(60, 301);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Size = new System.Drawing.Size(39, 22);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
@@ -925,7 +927,7 @@
             // layoutControlItem25
             // 
             this.layoutControlItem25.Control = this.lblwarehouseB;
-            this.layoutControlItem25.Location = new System.Drawing.Point(226, 279);
+            this.layoutControlItem25.Location = new System.Drawing.Point(226, 301);
             this.layoutControlItem25.Name = "layoutControlItem25";
             this.layoutControlItem25.Size = new System.Drawing.Size(31, 22);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
@@ -934,7 +936,7 @@
             // layoutControlItem26
             // 
             this.layoutControlItem26.Control = this.lblwarehouseC;
-            this.layoutControlItem26.Location = new System.Drawing.Point(373, 279);
+            this.layoutControlItem26.Location = new System.Drawing.Point(373, 301);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(30, 22);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
@@ -943,7 +945,7 @@
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.lbldumpA;
-            this.layoutControlItem27.Location = new System.Drawing.Point(516, 279);
+            this.layoutControlItem27.Location = new System.Drawing.Point(516, 301);
             this.layoutControlItem27.Name = "layoutControlItem27";
             this.layoutControlItem27.Size = new System.Drawing.Size(30, 22);
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
@@ -952,7 +954,7 @@
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.lbldumpB;
-            this.layoutControlItem28.Location = new System.Drawing.Point(659, 279);
+            this.layoutControlItem28.Location = new System.Drawing.Point(659, 301);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(32, 22);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
@@ -961,7 +963,7 @@
             // emptySpaceItem20
             // 
             this.emptySpaceItem20.AllowHotTrack = false;
-            this.emptySpaceItem20.Location = new System.Drawing.Point(99, 279);
+            this.emptySpaceItem20.Location = new System.Drawing.Point(99, 301);
             this.emptySpaceItem20.Name = "emptySpaceItem20";
             this.emptySpaceItem20.Size = new System.Drawing.Size(127, 22);
             this.emptySpaceItem20.TextSize = new System.Drawing.Size(0, 0);
@@ -969,7 +971,7 @@
             // emptySpaceItem26
             // 
             this.emptySpaceItem26.AllowHotTrack = false;
-            this.emptySpaceItem26.Location = new System.Drawing.Point(257, 279);
+            this.emptySpaceItem26.Location = new System.Drawing.Point(257, 301);
             this.emptySpaceItem26.Name = "emptySpaceItem26";
             this.emptySpaceItem26.Size = new System.Drawing.Size(116, 22);
             this.emptySpaceItem26.TextSize = new System.Drawing.Size(0, 0);
@@ -977,7 +979,7 @@
             // emptySpaceItem29
             // 
             this.emptySpaceItem29.AllowHotTrack = false;
-            this.emptySpaceItem29.Location = new System.Drawing.Point(403, 279);
+            this.emptySpaceItem29.Location = new System.Drawing.Point(403, 301);
             this.emptySpaceItem29.Name = "emptySpaceItem29";
             this.emptySpaceItem29.Size = new System.Drawing.Size(113, 22);
             this.emptySpaceItem29.TextSize = new System.Drawing.Size(0, 0);
@@ -985,7 +987,7 @@
             // emptySpaceItem30
             // 
             this.emptySpaceItem30.AllowHotTrack = false;
-            this.emptySpaceItem30.Location = new System.Drawing.Point(546, 279);
+            this.emptySpaceItem30.Location = new System.Drawing.Point(546, 301);
             this.emptySpaceItem30.Name = "emptySpaceItem30";
             this.emptySpaceItem30.Size = new System.Drawing.Size(113, 22);
             this.emptySpaceItem30.TextSize = new System.Drawing.Size(0, 0);
@@ -993,7 +995,7 @@
             // emptySpaceItem31
             // 
             this.emptySpaceItem31.AllowHotTrack = false;
-            this.emptySpaceItem31.Location = new System.Drawing.Point(0, 279);
+            this.emptySpaceItem31.Location = new System.Drawing.Point(0, 301);
             this.emptySpaceItem31.Name = "emptySpaceItem31";
             this.emptySpaceItem31.Size = new System.Drawing.Size(60, 22);
             this.emptySpaceItem31.TextSize = new System.Drawing.Size(0, 0);
@@ -1001,9 +1003,9 @@
             // emptySpaceItem18
             // 
             this.emptySpaceItem18.AllowHotTrack = false;
-            this.emptySpaceItem18.Location = new System.Drawing.Point(0, 339);
+            this.emptySpaceItem18.Location = new System.Drawing.Point(0, 361);
             this.emptySpaceItem18.Name = "emptySpaceItem18";
-            this.emptySpaceItem18.Size = new System.Drawing.Size(91, 273);
+            this.emptySpaceItem18.Size = new System.Drawing.Size(91, 251);
             this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
             // 
             // RealTimeStatusForm
