@@ -67,5 +67,6 @@ namespace InspectionProcess.Data
 
             return list.ConvertAll(x => x.InspectionResult);
         }
+
     }
 }

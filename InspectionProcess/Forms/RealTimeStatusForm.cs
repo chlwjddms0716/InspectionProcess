@@ -57,5 +57,13 @@ namespace InspectionProcess.Forms
         {
             serialPort1.Open();
         }
+
+
+
+        protected override void OnShown(EventArgs e)
+        {
+            p
+        }
+           
     }
 }

@@ -55,5 +55,7 @@ namespace InspectionProcess.Forms
         {
             inspectionResultBindingSource.DataSource = DataRepository.InspectionResult.SearchByQuality((int?)lkuInspectionID.EditValue, (int?)lkuProductId.EditValue, (int?)lkuInspectionTeamName.EditValue);
         }
+
+        
     }
 }

@@ -45,9 +45,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pcbwarehouseB = new System.Windows.Forms.PictureBox();
+            this.pcbwarehouseC = new System.Windows.Forms.PictureBox();
+            this.pcbwarehouseA = new System.Windows.Forms.PictureBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -99,15 +99,19 @@
             this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem23 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem15 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -157,6 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -176,16 +183,16 @@
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.pictureBox7);
-            this.layoutControl1.Controls.Add(this.pictureBox6);
-            this.layoutControl1.Controls.Add(this.pictureBox4);
-            this.layoutControl1.Controls.Add(this.pictureBox5);
+            this.layoutControl1.Controls.Add(this.pcbwarehouseB);
+            this.layoutControl1.Controls.Add(this.pcbwarehouseC);
+            this.layoutControl1.Controls.Add(this.pcbwarehouseA);
             this.layoutControl1.Controls.Add(this.labelControl6);
             this.layoutControl1.Controls.Add(this.pictureBox3);
             this.layoutControl1.Controls.Add(this.pictureBox2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(947, 242, 812, 500);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1040, 598, 812, 500);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(790, 704);
             this.layoutControl1.TabIndex = 0;
@@ -323,39 +330,35 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_125136783;
             this.pictureBox7.Location = new System.Drawing.Point(526, 179);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(100, 93);
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox6
+            // pcbwarehouseB
             // 
-            this.pictureBox6.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_123343794;
-            this.pictureBox6.Location = new System.Drawing.Point(225, 179);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 93);
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
+            this.pcbwarehouseB.Location = new System.Drawing.Point(225, 179);
+            this.pcbwarehouseB.Name = "pcbwarehouseB";
+            this.pcbwarehouseB.Size = new System.Drawing.Size(100, 93);
+            this.pcbwarehouseB.TabIndex = 22;
+            this.pcbwarehouseB.TabStop = false;
             // 
-            // pictureBox4
+            // pcbwarehouseC
             // 
-            this.pictureBox4.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_123343692;
-            this.pictureBox4.Location = new System.Drawing.Point(378, 179);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 93);
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
+            this.pcbwarehouseC.Location = new System.Drawing.Point(378, 179);
+            this.pcbwarehouseC.Name = "pcbwarehouseC";
+            this.pcbwarehouseC.Size = new System.Drawing.Size(100, 93);
+            this.pcbwarehouseC.TabIndex = 21;
+            this.pcbwarehouseC.TabStop = false;
             // 
-            // pictureBox5
+            // pcbwarehouseA
             // 
-            this.pictureBox5.Image = global::InspectionProcess.Properties.Resources.KakaoTalk_20200721_125016507;
-            this.pictureBox5.Location = new System.Drawing.Point(68, 179);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 93);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
+            this.pcbwarehouseA.Location = new System.Drawing.Point(68, 179);
+            this.pcbwarehouseA.Name = "pcbwarehouseA";
+            this.pcbwarehouseA.Size = new System.Drawing.Size(100, 93);
+            this.pcbwarehouseA.TabIndex = 20;
+            this.pcbwarehouseA.TabStop = false;
             // 
             // labelControl6
             // 
@@ -435,7 +438,8 @@
             this.layoutControlItem3,
             this.emptySpaceItem28,
             this.layoutControlItem21,
-            this.emptySpaceItem14});
+            this.emptySpaceItem14,
+            this.emptySpaceItem15});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(790, 704);
             this.Root.TextVisible = false;
@@ -495,7 +499,7 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.pictureBox6;
+            this.layoutControlItem9.Control = this.pcbwarehouseB;
             this.layoutControlItem9.Location = new System.Drawing.Point(213, 167);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(104, 97);
@@ -504,7 +508,7 @@
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.pictureBox4;
+            this.layoutControlItem10.Control = this.pcbwarehouseC;
             this.layoutControlItem10.Location = new System.Drawing.Point(366, 167);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(104, 97);
@@ -575,12 +579,12 @@
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.Location = new System.Drawing.Point(618, 167);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(152, 97);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(76, 97);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.Control = this.pictureBox5;
+            this.layoutControlItem11.Control = this.pcbwarehouseA;
             this.layoutControlItem11.Location = new System.Drawing.Point(56, 167);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(104, 97);
@@ -834,6 +838,41 @@
             this.serialPort1.PortName = "COM13";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(651, 167);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(119, 70);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem15
+            // 
+            this.emptySpaceItem15.AllowHotTrack = false;
+            this.emptySpaceItem15.Location = new System.Drawing.Point(694, 167);
+            this.emptySpaceItem15.Name = "emptySpaceItem15";
+            this.emptySpaceItem15.Size = new System.Drawing.Size(76, 97);
+            this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Location = new System.Drawing.Point(12, 674);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(52, 18);
+            this.labelControl21.TabIndex = 25;
+            this.labelControl21.Text = "폐기창고";
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.labelControl21;
+            this.layoutControlItem23.CustomizationFormText = "layoutControlItem6";
+            this.layoutControlItem23.Location = new System.Drawing.Point(0, 662);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(770, 22);
+            this.layoutControlItem23.Text = "layoutControlItem6";
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem23.TextVisible = false;
+            // 
             // RealTimeStatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -849,9 +888,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbwarehouseA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -901,6 +940,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -920,9 +962,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pcbwarehouseB;
+        private System.Windows.Forms.PictureBox pcbwarehouseC;
+        private System.Windows.Forms.PictureBox pcbwarehouseA;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
@@ -977,5 +1019,9 @@
         private DevExpress.XtraEditors.SimpleButton btnConnect;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
     }
 }
