@@ -169,10 +169,12 @@
             this.colFinishTime});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colProductId
             // 
+            this.colProductId.Caption = "생산품ID";
             this.colProductId.FieldName = "ProductId";
             this.colProductId.MinWidth = 25;
             this.colProductId.Name = "colProductId";
@@ -182,6 +184,7 @@
             // 
             // colMerchandiseName
             // 
+            this.colMerchandiseName.Caption = "상품명";
             this.colMerchandiseName.FieldName = "MerchandiseName";
             this.colMerchandiseName.MinWidth = 25;
             this.colMerchandiseName.Name = "colMerchandiseName";
@@ -191,6 +194,7 @@
             // 
             // colProductionTeam
             // 
+            this.colProductionTeam.Caption = "생산조";
             this.colProductionTeam.FieldName = "ProductionTeam";
             this.colProductionTeam.MinWidth = 25;
             this.colProductionTeam.Name = "colProductionTeam";
@@ -200,6 +204,7 @@
             // 
             // colFinishTime
             // 
+            this.colFinishTime.Caption = "종료시간";
             this.colFinishTime.FieldName = "FinishTime";
             this.colFinishTime.MinWidth = 25;
             this.colFinishTime.Name = "colFinishTime";
