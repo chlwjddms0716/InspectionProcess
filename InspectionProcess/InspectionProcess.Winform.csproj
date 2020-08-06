@@ -299,9 +299,6 @@
     <None Include="Resources\temperature.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\humidity.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\temperature2.png" />
   </ItemGroup>
   <ItemGroup>
