@@ -18,6 +18,7 @@ namespace InspectionProcess.Data
         public Team()
         {
             this.Inspections = new HashSet<Inspection>();
+            this.Products = new HashSet<Product>();
         }
     
         public int TeamId { get; set; }
@@ -25,5 +26,7 @@ namespace InspectionProcess.Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inspection> Inspections { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

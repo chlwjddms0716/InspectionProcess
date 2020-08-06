@@ -162,7 +162,7 @@
             this.colWarehouseName.MinWidth = 25;
             this.colWarehouseName.Name = "colWarehouseName";
             this.colWarehouseName.Visible = true;
-            this.colWarehouseName.VisibleIndex = 0;
+            this.colWarehouseName.VisibleIndex = 1;
             this.colWarehouseName.Width = 94;
             // 
             // colCount
@@ -192,7 +192,7 @@
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 94;
             // 
             // dteKeepFrom
