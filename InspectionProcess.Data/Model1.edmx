@@ -33,6 +33,7 @@
           <Property Name="InspectionResultId" Type="int" Nullable="false" />
           <Property Name="WarehouseId" Type="int" Nullable="false" />
           <Property Name="KeepingDate" Type="datetime" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Merchandise">
           <Key>
@@ -260,6 +261,7 @@
           <Property Name="InspectionResultId" Type="Int32" Nullable="false" />
           <Property Name="WarehouseId" Type="Int32" Nullable="false" />
           <Property Name="KeepingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
           <NavigationProperty Name="InspectionResult" Relationship="InspectionProcessModel.FK_입고_검사결과1" FromRole="Keeping" ToRole="InspectionResult" />
           <NavigationProperty Name="Warehouse" Relationship="InspectionProcessModel.FK_입고_창고" FromRole="Keeping" ToRole="Warehouse" />
         </EntityType>
@@ -416,6 +418,7 @@
           <EntitySetMapping Name="Keepings">
             <EntityTypeMapping TypeName="InspectionProcessModel.Keeping">
               <MappingFragment StoreEntitySet="Keeping">
+                <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="KeepingDate" ColumnName="KeepingDate" />
                 <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
                 <ScalarProperty Name="InspectionResultId" ColumnName="InspectionResultId" />

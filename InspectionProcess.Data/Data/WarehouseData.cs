@@ -107,5 +107,18 @@ namespace InspectionProcess.Data
 
             return query.FirstOrDefault();
         }
+
+        public List<Warehouse> Searchby(int? warehouseId)
+        {
+            var context = CreateContext();
+
+            var query = from x in context.Warehouses
+                        select x;
+
+            if (warehouseId.HasValue)
+                query = query.Where(x => x.WarehouseId == warehouseId);
+           
+            return query.ToList();
+        }
     }
 }

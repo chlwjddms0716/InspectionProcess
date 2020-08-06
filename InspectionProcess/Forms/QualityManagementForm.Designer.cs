@@ -153,7 +153,7 @@
             this.btnReInspection.Size = new System.Drawing.Size(201, 34);
             this.btnReInspection.StyleController = this.layoutControl1;
             this.btnReInspection.TabIndex = 27;
-            this.btnReInspection.Text = "재검사";
+            this.btnReInspection.Text = "재검사(&I)";
             // 
             // lkuInspectionTeamName
             // 

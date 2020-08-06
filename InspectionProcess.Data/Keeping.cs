@@ -17,6 +17,7 @@ namespace InspectionProcess.Data
         public int InspectionResultId { get; set; }
         public int WarehouseId { get; set; }
         public System.DateTime KeepingDate { get; set; }
+        public int Count { get; set; }
     
         public virtual InspectionResult InspectionResult { get; set; }
         public virtual Warehouse Warehouse { get; set; }

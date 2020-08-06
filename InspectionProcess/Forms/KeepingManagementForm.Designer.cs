@@ -188,7 +188,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "검사ID";
-            this.gridColumn1.FieldName = "KeepInspectionId";
+            this.gridColumn1.FieldName = "InspectionResultId";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;

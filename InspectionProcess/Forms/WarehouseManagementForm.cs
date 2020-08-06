@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Utils.Extensions;
+using DevExpress.XtraEditors;
 using InspectionProcess.Data;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ using System.Windows.Forms;
 
 namespace InspectionProcess.Forms
 {
-    public partial class DisposalManagementForm : XtraForm
+    public partial class WarehouseManagementForm : XtraForm
     {
-        public DisposalManagementForm()
+        public WarehouseManagementForm()
         {
             InitializeComponent();
         }
@@ -22,9 +23,8 @@ namespace InspectionProcess.Forms
         protected async override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
-            bdsWarehouse.DataSource = await DataRepository.Warehouse.GetbyDumpAsync();
-          
+            //bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
+            bdsWarehouse.DataSource = await DataRepository.Warehouse.GetAllAsync();
         }
 
 
@@ -36,31 +36,31 @@ namespace InspectionProcess.Forms
 
         internal void DeleteOneKeeping()
         {
-            Keeping keeping = bdsKeeping.Current as Keeping;
-            if (keeping == null)
+            Warehouse warehouse = warehouseBindingSource.Current as Warehouse;
+
+            if (warehouse == null)
                 return;
             if (Helpers.DeleteHelper.SureToDelete() == false)
                 return;
 
-            DataRepository.Keeping.Delete(keeping);
+            warehouse.Count = 0;
 
-            bdsKeeping.Remove(keeping);
+            DataRepository.Warehouse.Update(warehouse);
+
         }
 
         private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            
+
             lkuWarehouseName.EditValue = null;
 
-            dteKeepFrom.EditValue = null;
-            dteKeepTo.EditValue = null;
         }
 
         private void uscSearch_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
-            bdsKeeping.DataSource = DataRepository.Keeping.Searchby((int?)lkuWarehouseName.EditValue, (DateTime?)dteKeepFrom.EditValue, (DateTime?)dteKeepTo.EditValue);
+            warehouseBindingSource.DataSource = DataRepository.Warehouse.Searchby((int?)lkuWarehouseName.EditValue);
         }
 
-      
+
     }
 }
