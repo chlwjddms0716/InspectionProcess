@@ -116,10 +116,7 @@ namespace InspectionProcess.Forms
 
 
 
-        protected override void OnShown(EventArgs e)
-        {
-            p
-        }
+      
            
     }
 }
