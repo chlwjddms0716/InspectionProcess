@@ -11,10 +11,10 @@ namespace InspectionProcess.Helpers
 {
     public static class SocketHelper
     {
-        public async static Task ManageSocketAsync(int inspectionResultId, int inspectionId)
-        {
-            Task.Factory.StartNew(() => ManageSocket(inspectionResultId, inspectionId));
-        }
+        //public async static Task ManageSocketAsync(int inspectionResultId, int inspectionId)
+        //{
+        //    await Task.Factory.StartNew(() => ManageSocket(inspectionResultId, inspectionId));
+        //}
         public static void ManageSocket(int inspectionResultId, int inspectionId)
         {
             // (1) 소켓 객체 생성 (TCP 소켓)
@@ -36,13 +36,13 @@ namespace InspectionProcess.Helpers
             sock.Send(buff, SocketFlags.None);
 
             // (4) 서버에서 데이타 수신
-            int n = sock.Receive(receiverBuff);
-
-            string data = Encoding.UTF8.GetString(receiverBuff, 0, n);
-            Console.WriteLine(data);
+            sock.Receive(receiverBuff);
+            //string data = Encoding.UTF8.GetString(receiverBuff, 0, n);
 
             // (5) 소켓 닫기
             sock.Close();
         }
+
+
     }
 }
