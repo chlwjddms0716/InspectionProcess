@@ -35,6 +35,7 @@
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lkuInspectionID = new DevExpress.XtraEditors.LookUpEdit();
             this.inspectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnReInspection = new DevExpress.XtraEditors.SimpleButton();
             this.lkuInspectionTeamName = new DevExpress.XtraEditors.LookUpEdit();
             this.teamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -50,6 +51,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblInspectionTeam = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -67,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblInspectionTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -77,6 +82,7 @@
             this.layoutControl1.Controls.Add(this.searchButtonControl1);
             this.layoutControl1.Controls.Add(this.lkuProductId);
             this.layoutControl1.Controls.Add(this.lkuInspectionID);
+            this.layoutControl1.Controls.Add(this.btnReInspection);
             this.layoutControl1.Controls.Add(this.lkuInspectionTeamName);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -108,6 +114,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "")});
             this.lkuProductId.Properties.DataSource = this.productBindingSource;
             this.lkuProductId.Properties.DisplayMember = "ProductId";
+            this.lkuProductId.Properties.NullText = "";
             this.lkuProductId.Properties.ValueMember = "ProductId";
             this.lkuProductId.Size = new System.Drawing.Size(551, 24);
             this.lkuProductId.StyleController = this.layoutControl1;
@@ -127,6 +134,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("InspectionId", "")});
             this.lkuInspectionID.Properties.DataSource = this.inspectionBindingSource;
             this.lkuInspectionID.Properties.DisplayMember = "InspectionId";
+            this.lkuInspectionID.Properties.NullText = "";
             this.lkuInspectionID.Properties.ValueMember = "InspectionId";
             this.lkuInspectionID.Size = new System.Drawing.Size(551, 24);
             this.lkuInspectionID.StyleController = this.layoutControl1;
@@ -135,6 +143,17 @@
             // inspectionBindingSource
             // 
             this.inspectionBindingSource.DataSource = typeof(InspectionProcess.Data.Inspection);
+            // 
+            // btnReInspection
+            // 
+            this.btnReInspection.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReInspection.Appearance.Options.UseFont = true;
+            this.btnReInspection.Location = new System.Drawing.Point(587, 494);
+            this.btnReInspection.Name = "btnReInspection";
+            this.btnReInspection.Size = new System.Drawing.Size(201, 34);
+            this.btnReInspection.StyleController = this.layoutControl1;
+            this.btnReInspection.TabIndex = 27;
+            this.btnReInspection.Text = "재검사(&I)";
             // 
             // lkuInspectionTeamName
             // 
@@ -146,6 +165,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lkuInspectionTeamName.Properties.DataSource = this.teamBindingSource;
             this.lkuInspectionTeamName.Properties.DisplayMember = "Name";
+            this.lkuInspectionTeamName.Properties.NullText = "";
             this.lkuInspectionTeamName.Properties.ValueMember = "TeamId";
             this.lkuInspectionTeamName.Size = new System.Drawing.Size(551, 24);
             this.lkuInspectionTeamName.StyleController = this.layoutControl1;
@@ -161,7 +181,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 96);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 432);
+            this.gridControl1.Size = new System.Drawing.Size(776, 394);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -262,6 +282,8 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.lblInspectionTeam,
+            this.layoutControlItem4,
+            this.emptySpaceItem1,
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem5});
@@ -274,7 +296,7 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 436);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 398);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -286,6 +308,23 @@
             this.lblInspectionTeam.Size = new System.Drawing.Size(628, 28);
             this.lblInspectionTeam.Text = "검사조 : ";
             this.lblInspectionTeam.TextSize = new System.Drawing.Size(70, 18);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnReInspection;
+            this.layoutControlItem4.Location = new System.Drawing.Point(575, 482);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(205, 38);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 482);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(575, 38);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
@@ -337,6 +376,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblInspectionTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -356,7 +397,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNormalNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colDefectiveNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colCount;
+        private DevExpress.XtraEditors.SimpleButton btnReInspection;
         private System.Windows.Forms.BindingSource teamBindingSource;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LookUpEdit lkuInspectionTeamName;

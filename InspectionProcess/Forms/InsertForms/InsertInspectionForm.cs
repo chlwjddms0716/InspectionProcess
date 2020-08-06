@@ -1,4 +1,5 @@
 ﻿using InspectionProcess.Data;
+using InspectionProcess.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,7 @@ namespace InspectionProcess.Forms
         private InspectionResult _inspectionResult;
         private Inspection _inspection;
         private Product _product;
-        
-       
+
         public InsertInspectionForm()
         {
             InitializeComponent(); 
@@ -51,6 +51,9 @@ namespace InspectionProcess.Forms
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show("작업시시 했습니다.");
+
+            JobQueue.Instance.AddList(_inspectionResult.InspectionResultId, _inspection.InspectionId);
+
             Close();
         }
 

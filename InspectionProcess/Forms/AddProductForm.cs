@@ -71,5 +71,6 @@ namespace InspectionProcess.Forms
 
             bdsProduct.DataSource = DataRepository.Product.Search(null, merchandiseId, teamId);
         }
+
     }
 }

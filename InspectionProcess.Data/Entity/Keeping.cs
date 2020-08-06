@@ -9,8 +9,6 @@ namespace InspectionProcess.Data
     public partial class Keeping
     {
         public string WarehouseName { get; set; }
-        public int Count { get; set; }
-
         public int KeepInspectionId { get; set; }
     }
 }

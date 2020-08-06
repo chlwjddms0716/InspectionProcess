@@ -50,8 +50,8 @@ namespace InspectionProcess.Data
 
             if (merchandiseId.HasValue)
                 query = query.Where(x => x.Product.MerchandiseId == merchandiseId);
-            //if (teamId.HasValue) 
-            //    query = query.Where(x =>x.Product.)
+            if (teamId.HasValue)
+                query = query.Where(x => x.Product.ProductionTeam == teamId);
 
             var items = query.ToList();
 
