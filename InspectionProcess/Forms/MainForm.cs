@@ -208,6 +208,24 @@ namespace InspectionProcess.Forms
             realTimeStatusForm.WindowState = FormWindowState.Maximized;
             realTimeStatusForm.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(RealTimeStatusForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
+
+            RealTimeStatusForm realTimeStatusForm = new RealTimeStatusForm();
+            realTimeStatusForm.MdiParent = this;
+            realTimeStatusForm.WindowState = FormWindowState.Maximized;
+            realTimeStatusForm.Show();
+        }
     }
 }
 

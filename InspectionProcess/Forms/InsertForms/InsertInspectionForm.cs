@@ -15,6 +15,7 @@ namespace InspectionProcess.Forms
     public partial class InsertInspectionForm : ChildRootForm
     {
         private InspectionResult _inspectionResult;
+        private InspectionResult __inspectionResult;
         private Inspection _inspection;
         private Product _product;
 
@@ -37,9 +38,10 @@ namespace InspectionProcess.Forms
 
         protected override void btnAction_Click(object sender, EventArgs e)
         {
-            //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
             _inspectionResult = new InspectionResult();
             _inspection = new Inspection();
+            //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
+
             WriteToEntity();
             try
             {
@@ -50,7 +52,7 @@ namespace InspectionProcess.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("작업시시 했습니다.");
+            MessageBox.Show("작업지시 했습니다.");
 
             JobQueue.Instance.AddList(_inspectionResult.InspectionResultId, _inspection.InspectionId);
 

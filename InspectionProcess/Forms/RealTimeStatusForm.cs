@@ -113,10 +113,5 @@ namespace InspectionProcess.Forms
         {
             serialPort1.Open();
         }
-
-
-
-      
-           
     }
 }

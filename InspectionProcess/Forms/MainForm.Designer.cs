@@ -203,6 +203,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "메인메뉴";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
