@@ -8,7 +8,7 @@
 ## 기능 목록
 
 
-##### 1. 생산관리
+#### 1. 생산관리
 
 <img src="https://user-images.githubusercontent.com/63761322/89504584-3b52b900-d803-11ea-8b98-1696986ddb4b.JPG" width="60%"></img>
 
@@ -17,19 +17,19 @@
 - 실수로 등록하였을 경우 삭제버튼 눌러 삭제 할 수 있다.
 
 
-<img src="https://user-images.githubusercontent.com/63761322/89504399-df883000-d802-11ea-8d98-118084472b50.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/89504399-df883000-d802-11ea-8d98-118084472b50.JPG" width="40%"></img>
 
 
 - 생산이 다 끝나면 상품명, 생산완료일, 생산완료시각, 생산조를 적어서 등록할 수 있다.
 
                                                                                                                         
-##### 2. 작업관리
+#### 2. 작업관리
 
-<img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG" width="60%"></img>
 
 - 생산ID와 상품명을 이용하여 검색을 할 수 있고, 검색조건 초기화를 눌러서 검색조건을 초기화 할 수 있다.
 
-<img src="https://user-images.githubusercontent.com/63761322/89505070-fb400600-d803-11ea-9711-fb21eaa79501.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/89505070-fb400600-d803-11ea-9711-fb21eaa79501.JPG" width="40%"></img>
 
 - 작업지시 할 행을 선택하여 작업지시을 버튼을 클릭하면 검사조를 배정하면 작업이 시작된다.
 
