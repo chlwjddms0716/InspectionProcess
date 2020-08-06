@@ -43,7 +43,9 @@ namespace InspectionProcess.API.Controllers
             InspectionResult _inspectionResult = DataRepository.InspectionResult.Get(id);
             _inspectionResult.NormalNumber = inspectionResult.NormalNumber;
             _inspectionResult.DefectiveNumber = inspectionResult.DefectiveNumber;
-            _inspectionResult.Count++;
+            _inspectionResult.Count = _inspectionResult.Count+1;
+
+            
             if (_inspectionResult.Count == 3) {
                 InsertKeeping(_inspectionResult);
 
