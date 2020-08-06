@@ -101,6 +101,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueTeamName.Properties.DataSource = this.bdsTeam;
             this.lueTeamName.Properties.DisplayMember = "Name";
+            this.lueTeamName.Properties.NullText = "";
             this.lueTeamName.Properties.ValueMember = "TeamId";
             this.lueTeamName.Size = new System.Drawing.Size(390, 24);
             this.lueTeamName.StyleController = this.layoutControl1;
