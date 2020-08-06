@@ -1,7 +1,7 @@
 ﻿## InspectionProcess
 
 
-#### 개요 스마트팩토리의 여러 라인중 불량품 판별공정을 C# EntityFrameWrok 와 RasBerryPi의 Python 통신을 이용해 구현함
+#### 개요 : 스마트팩토리의 여러 라인중 불량품 판별공정을 C# EntityFrameWrok 와 RasBerryPi의 Python 통신을 이용해 구현함
  
 
 ## 기능 목록
