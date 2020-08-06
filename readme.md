@@ -1,47 +1,58 @@
 ﻿## InspectionProcess
 
-- 
-- 
--  
+
+#### 개요 
+- 스마트팩토리의 여러 라인중 불량품 판별공정을 C# EntityFrameWork 와 RasBerryPi의 Thonny Python IDE , Arduino 통신을 이용해 구현하였다.
  
 
 ## 기능 목록
 
-#### 
-----------------------
-##### 1. 
+
+#### 1. 생산관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89504584-3b52b900-d803-11ea-8b98-1696986ddb4b.JPG" width="60%"></img>
+
+
+- 상품명과 생산조를 이용하여 검색을 할 수 있고, 검색조건 초기화를 눌러서 검색조건을 초기화 할 수 있다.
+- 실수로 등록하였을 경우 삭제버튼 눌러 삭제 할 수 있다.
+  
+  
+
+
+<img src="https://user-images.githubusercontent.com/63761322/89504399-df883000-d802-11ea-8d98-118084472b50.JPG" width="40%"></img>
+
+
+- 생산이 다 끝나면 상품명, 생산완료일, 생산완료시각, 생산조를 적어서 등록할 수 있다.
+  
+  
+
+------------------------------                                                                                                                      
+#### 2. 작업관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG" width="60%"></img>
+
+- 생산ID와 상품명을 이용하여 검색을 할 수 있다.
+  
+  
+
+<img src="https://user-images.githubusercontent.com/63761322/89505070-fb400600-d803-11ea-9711-fb21eaa79501.JPG" width="40%"></img>
+
+- 작업지시 할 행을 선택하여 작업지시 버튼을 클릭하고 검사조를 배정하면 작업이 시작된다.
+  
+  
+
+                                                                                                                                                                                                                                                 
+------------------------------                                                                                                                                                                                 
+##### 3. 품질관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503918-35a8a380-d802-11ea-9fd5-e02e6fb2aa0a.JPG" width="60%"></img>
+
+- 검사ID와 생산품ID와 검사조를 이용하여 검색 할 수 있다.
 
 
 
-##### 2. 
-
-
-##### 3.
  　    
  
-
-
-#### 
-----------------------
-##### 
-
-##### 
-
-
-##### 
-
-
-##### 
-  
-  
-  
-
-##
-
-#### 
-#### 
-
-
 # 사용 기술
 
 ### 언어
@@ -108,21 +119,19 @@
  
 <img src="https://user-images.githubusercontent.com/63761486/89500330-861d0280-d7fc-11ea-832e-f8dc98f701e4.jpg" width="50%"></img>
 
-### 프리웨어 사용시 팝업광고가 발생하는 문제
-<img src="file.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+### 윈폼에서  이용하여 라즈베리파이의 센서를 작동시키고 싶은데 전달이 어려운 경우  
 
 ------------------------------
 #### 증상
- - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
+ - 윈폼은 서버고 라즈베리파이 센서들은 클라이언트라 지시를 내리기 어려움
 
 #### 원인
- - 프리버전의 Devexpress 사용
+ - 윈폼에서 작업지시를 내렸을 때 라즈베리파이 센서들을 작동시키고 싶은데 방법을 잘 몰랐음
 
 #### 결과
- - 공개된 광고 제거 소스코드를 인용하여 devexpress 광고 제거 기능을 추가함  
+ -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈 소켓을 이용하면 파이썬은 서버 C#은 클라이언트가 됨 
 　  
-
-
+<img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
 
 
