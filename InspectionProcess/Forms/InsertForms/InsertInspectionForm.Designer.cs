@@ -111,7 +111,7 @@
             this.layoutControlItem4.Control = this.lueTeamName;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(532, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(532, 227);
             this.layoutControlItem4.Text = "검사조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(39, 18);
             // 

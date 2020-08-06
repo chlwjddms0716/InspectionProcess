@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Windows.Forms;
 using InspectionProcess.Data;
 
 namespace InspectionProcess.API.Controllers
@@ -42,6 +43,11 @@ namespace InspectionProcess.API.Controllers
             InspectionResult _inspectionResult = DataRepository.InspectionResult.Get(id);
             _inspectionResult.NormalNumber = inspectionResult.NormalNumber;
             _inspectionResult.DefectiveNumber = inspectionResult.DefectiveNumber;
+            _inspectionResult.Count++;
+            if (_inspectionResult.Count == 3) {
+                InsertKeeping(_inspectionResult);
+
+            }
             try
             {
                 DataRepository.InspectionResult.Update(_inspectionResult);
@@ -53,6 +59,42 @@ namespace InspectionProcess.API.Controllers
             }
 
             return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        private void InsertKeeping(InspectionResult inspectionResult)
+        {
+            Keeping _keeping = new Keeping();
+            WriteToEntity(_keeping, inspectionResult,0);
+
+            Keeping _dumpKeeping = new Keeping();
+            WriteToEntity(_dumpKeeping, inspectionResult,1);
+            IncreaseWarehouse(_keeping, _dumpKeeping, inspectionResult);
+
+            DataRepository.Keeping.Insert(_keeping);
+            DataRepository.Keeping.Insert(_dumpKeeping);
+        }
+
+        private void IncreaseWarehouse(Keeping keeping, Keeping dumpkeeping, InspectionResult inspectionResult)
+        {
+            Warehouse warehouse = DataRepository.Warehouse.Get(keeping.WarehouseId);
+            warehouse.Count += inspectionResult.NormalNumber;
+            DataRepository.Warehouse.Update(warehouse);
+
+            Warehouse dumpWarehouse = DataRepository.Warehouse.Get(dumpkeeping.WarehouseId);
+            dumpWarehouse.Count += inspectionResult.DefectiveNumber;
+            DataRepository.Warehouse.Update(dumpWarehouse);
+        }
+
+        private void WriteToEntity(Keeping keeping, InspectionResult inspectionResult, int isDefect)
+        {
+            keeping.InspectionResultId = inspectionResult.InspectionResultId;
+            if (isDefect == 0)
+                keeping.WarehouseId = DataRepository.Warehouse.Get(1).Count >= 100 ?
+                    (DataRepository.Warehouse.Get(2).Count >= 100 ?
+                    3: 2): 1;
+            else
+                keeping.WarehouseId = DataRepository.Warehouse.Get(4).Count >= 100 ? 5 : 4;
+            keeping.KeepingDate = DateTime.Now;
         }
 
         // POST: api/InspectionResult
