@@ -120,8 +120,7 @@
 #### 결과
  -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈 소켓을 이용하면 파이썬은 서버 C#은 클라이언트가 됨 
 　  
-
-
+<img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
 
 
