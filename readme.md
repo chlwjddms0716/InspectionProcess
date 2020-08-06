@@ -88,7 +88,7 @@
 - 동기적프로그래밍을 비동기적 프로그래밍으로 바꿨음
 - 비동기적 프로그래밍은 요청을 하면 그 즉시 결과가 주어지지 않아도 되기 때문에 리스트를 불러올때까지 다른 일을 할 수 있음
 　    
-<img src="https://user-images.githubusercontent.com/63761486/89500295-78677d00-d7fc-11ea-8a4f-7a1db27568d9.jpg" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/89500295-78677d00-d7fc-11ea-8a4f-7a1db27568d9.jpg" width="80%"></img>
 
 　  
 
