@@ -31,19 +31,23 @@
 
 <img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG" width="60%"></img>
 
-- 생산ID와 상품명을 이용하여 검색을 할 수 있고, 검색조건 초기화를 눌러서 검색조건을 초기화 할 수 있다.
+- 생산ID와 상품명을 이용하여 검색을 할 수 있다.
   
   
 
 <img src="https://user-images.githubusercontent.com/63761322/89505070-fb400600-d803-11ea-9711-fb21eaa79501.JPG" width="40%"></img>
 
-- 작업지시 할 행을 선택하여 작업지시을 버튼을 클릭하면 검사조를 배정하면 작업이 시작된다.
+- 작업지시 할 행을 선택하여 작업지시 버튼을 클릭하고 검사조를 배정하면 작업이 시작된다.
   
   
 
                                                                                                                                                                                                                                                  
 ------------------------------                                                                                                                                                                                 
 ##### 3. 품질관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503918-35a8a380-d802-11ea-9fd5-e02e6fb2aa0a.JPG" width="60%"></img>
+
+- 검사ID와 생산품ID와 검사조를 이용하여 검색 할 수 있다.
 
 
 
