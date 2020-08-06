@@ -2,7 +2,7 @@
 
 
 #### 개요 
-- 스마트팩토리의 여러 라인중 불량품 판별공정을 C# EntityFrameWork 와 RasBerryPi의 Thonny Python IDE , Arduino 통신을 이용해 구현함
+- 스마트팩토리의 여러 라인중 불량품 판별공정을 C# EntityFrameWork 와 RasBerryPi의 Thonny Python IDE , Arduino 통신을 이용해 구현하였다.
  
 
 ## 기능 목록
@@ -20,15 +20,25 @@
 <img src="https://user-images.githubusercontent.com/63761322/89504399-df883000-d802-11ea-8d98-118084472b50.JPG" width="60%"></img>
 
 
-- 생산이 다 끝나면 상품명 생산완료일 생산완료시각 생산조를 적어서 등록할 수 있다
+- 생산이 다 끝나면 상품명, 생산완료일, 생산완료시각, 생산조를 적어서 등록할 수 있다.
 
                                                                                                                         
+##### 2. 작업관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG width="60%"></img>
+
+- 생산ID와 상품명을 이용하여 검색을 할 수 있고, 검색조건 초기화를 눌러서 검색조건을 초기화 할 수 있다.
+
+<img src="https://user-images.githubusercontent.com/63761322/89505070-fb400600-d803-11ea-9711-fb21eaa79501.JPG" width="60%"></img>
+
+- 작업지시 할 행을 선택하여 작업지시을 버튼을 클릭하면 검사조를 배정하면 작업이 시작된다.
+
+                                                                                                                          
+                                                                                                                          
+                                                                                                                                                                                 
+##### 3. 품질관리
 
 
-##### 2. 
-
-
-##### 3.
  　    
  
 # 사용 기술
