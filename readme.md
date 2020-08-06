@@ -69,7 +69,7 @@
 
 # 데이터베이스 스키마
 
-<img src="https://user-images.githubusercontent.com/63761486/89482951-ef3d4f80-d7d5-11ea-8eda-e87becc529be.jpg" width="80%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>
 
 # Point of Interest
 
