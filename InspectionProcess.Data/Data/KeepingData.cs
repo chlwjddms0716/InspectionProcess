@@ -30,7 +30,7 @@ namespace InspectionProcess.Data
             var context = CreateContext();
 
             var query = from x in context.Keepings
-                        select new { Keeping = x, WarehouseName = x.Warehouse.Name, KeepInspectionId = x.InspectionResult.InspectionId,  Count = x.Warehouse.Count };
+                        select new { Keeping = x, WarehouseName = x.Warehouse.Name, KeepInspectionId = x.InspectionResult.InspectionId,  Count = x.Count };
 
             if (warehouseId.HasValue)
                 query = query.Where(x => x.Keeping.WarehouseId == warehouseId);
@@ -46,42 +46,14 @@ namespace InspectionProcess.Data
             foreach (var x in items)
             {
                 x.Keeping.WarehouseName = x.WarehouseName;
-                x.Keeping.Count = x.Count;
+                
                 x.Keeping.KeepInspectionId = x.KeepInspectionId;
             }
 
             return items.ConvertAll(x => x.Keeping);
 
         }
-        public List<Keeping> Searchby(int? warehouseId, DateTime? keepFrom, DateTime? keepTo)
-        {
-            var context = CreateContext();
-
-            var query = from x in context.Keepings
-                        where x.WarehouseId > 3
-                        select new { Keeping = x, WarehouseName = x.Warehouse.Name, KeepInspectionId = x.InspectionResult.InspectionId, Count = x.Warehouse.Count };
-
-            if (warehouseId.HasValue)
-                query = query.Where(x => x.Keeping.WarehouseId == warehouseId);
-            if (!keepTo.HasValue)
-                keepTo = DateTime.Now;
-
-            if (keepFrom.HasValue)
-                query = query.Where(x =>
-                   x.Keeping.KeepingDate >= keepFrom && x.Keeping.KeepingDate <= keepTo);
-
-            var items = query.ToList();
-
-            foreach (var x in items)
-            {
-                x.Keeping.WarehouseName = x.WarehouseName;
-                x.Keeping.Count = x.Count;
-                x.Keeping.KeepInspectionId = x.KeepInspectionId;
-            }
-
-            return items.ConvertAll(x => x.Keeping);
-
-        }
+        
 
     }
 }

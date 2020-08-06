@@ -90,9 +90,10 @@
             this.lkuProductionId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkuProductionId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "Name1")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProductId", "")});
             this.lkuProductionId.Properties.DataSource = this.bdsProductId;
             this.lkuProductionId.Properties.DisplayMember = "ProductId";
+            this.lkuProductionId.Properties.NullText = "";
             this.lkuProductionId.Properties.ValueMember = "ProductId";
             this.lkuProductionId.Size = new System.Drawing.Size(577, 24);
             this.lkuProductionId.StyleController = this.layoutControl1;
@@ -109,9 +110,10 @@
             this.lkuMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkuMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name2")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lkuMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lkuMerchandiseName.Properties.DisplayMember = "Name";
+            this.lkuMerchandiseName.Properties.NullText = "";
             this.lkuMerchandiseName.Properties.ValueMember = "MerchandiseId";
             this.lkuMerchandiseName.Size = new System.Drawing.Size(577, 24);
             this.lkuMerchandiseName.StyleController = this.layoutControl1;
@@ -133,12 +135,14 @@
             // 
             // btnInstruction
             // 
-            this.btnInstruction.Location = new System.Drawing.Point(633, 468);
+            this.btnInstruction.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.btnInstruction.Appearance.Options.UseFont = true;
+            this.btnInstruction.Location = new System.Drawing.Point(633, 461);
             this.btnInstruction.Name = "btnInstruction";
-            this.btnInstruction.Size = new System.Drawing.Size(155, 27);
+            this.btnInstruction.Size = new System.Drawing.Size(155, 34);
             this.btnInstruction.StyleController = this.layoutControl1;
             this.btnInstruction.TabIndex = 11;
-            this.btnInstruction.Text = "작업지시";
+            this.btnInstruction.Text = "작업지시(&O)";
             this.btnInstruction.Click += new System.EventHandler(this.btnInstruction_Click);
             // 
             // gridControl1
@@ -147,7 +151,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 68);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 396);
+            this.gridControl1.Size = new System.Drawing.Size(776, 389);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -165,6 +169,7 @@
             this.colProductionTeam});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colProductId
@@ -229,24 +234,24 @@
             this.layoutControlItem4.Control = this.gridControl1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(780, 400);
+            this.layoutControlItem4.Size = new System.Drawing.Size(780, 393);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 456);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 449);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(621, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(621, 38);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnInstruction;
-            this.layoutControlItem6.Location = new System.Drawing.Point(621, 456);
+            this.layoutControlItem6.Location = new System.Drawing.Point(621, 449);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(159, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(159, 38);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 

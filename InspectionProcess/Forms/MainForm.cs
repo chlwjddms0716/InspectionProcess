@@ -159,7 +159,7 @@ namespace InspectionProcess.Forms
         {
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm.GetType() == typeof(DisposalManagementForm))
+                if (frm.GetType() == typeof(WarehouseManagementForm))
                 {
                     frm.Activate();
                     frm.BringToFront();
@@ -167,7 +167,7 @@ namespace InspectionProcess.Forms
                 }
             }
 
-            DisposalManagementForm disposalManagementForm = new DisposalManagementForm();
+            WarehouseManagementForm disposalManagementForm = new WarehouseManagementForm();
             disposalManagementForm.MdiParent = this;
             disposalManagementForm.WindowState = FormWindowState.Maximized;
             disposalManagementForm.Show();

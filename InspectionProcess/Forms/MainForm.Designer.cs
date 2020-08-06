@@ -70,7 +70,7 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(960, 197);
+            this.ribbonControl1.Size = new System.Drawing.Size(960, 186);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnProduce
@@ -96,7 +96,7 @@
             // 
             // btnDump
             // 
-            this.btnDump.Caption = "폐기관리";
+            this.btnDump.Caption = "창고관리";
             this.btnDump.Id = 4;
             this.btnDump.Name = "btnDump";
             this.btnDump.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDump_ItemClick);
@@ -178,11 +178,11 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 782);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 783);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(960, 30);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(960, 29);
             // 
             // ribbonPage2
             // 
@@ -196,7 +196,6 @@
             this.ClientSize = new System.Drawing.Size(960, 812);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
-           
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";

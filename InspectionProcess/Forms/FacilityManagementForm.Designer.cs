@@ -93,13 +93,13 @@
             // dteFinishDate
             // 
             this.dteFinishDate.EditValue = null;
-            this.dteFinishDate.Location = new System.Drawing.Point(269, 23);
+            this.dteFinishDate.Location = new System.Drawing.Point(411, 23);
             this.dteFinishDate.Name = "dteFinishDate";
             this.dteFinishDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFinishDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFinishDate.Size = new System.Drawing.Size(466, 24);
+            this.dteFinishDate.Size = new System.Drawing.Size(324, 24);
             this.dteFinishDate.StyleController = this.layoutControl1;
             this.dteFinishDate.TabIndex = 6;
             // 
@@ -112,7 +112,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteStartDate.Size = new System.Drawing.Size(185, 24);
+            this.dteStartDate.Size = new System.Drawing.Size(327, 24);
             this.dteStartDate.StyleController = this.layoutControl1;
             this.dteStartDate.TabIndex = 5;
             // 
@@ -219,16 +219,16 @@
             this.layoutControlItem2.Control = this.dteStartDate;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 11);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(223, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(365, 28);
             this.layoutControlItem2.Text = "날짜 ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(31, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dteFinishDate;
-            this.layoutControlItem3.Location = new System.Drawing.Point(223, 11);
+            this.layoutControlItem3.Location = new System.Drawing.Point(365, 11);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(504, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(362, 28);
             this.layoutControlItem3.Text = " ~";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(31, 18);
             // 

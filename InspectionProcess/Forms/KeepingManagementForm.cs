@@ -41,8 +41,7 @@ namespace InspectionProcess.Forms
 
         private void uscSearch_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
         {
-            //TODO : LookUpEdit로 변경
-            lkuMerchandiseName.EditValue = null;
+            //TODO : LookUpEdit로 변경.
             lkuWarehouse.EditValue = null;
             dteKeepFrom.EditValue = null;
             dteKeepTo.EditValue = null;
