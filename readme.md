@@ -79,7 +79,7 @@
 
 #### 5. 설비관리
 
-<img src="https://user-images.githubusercontent.com/63761322/89503914-34777680-d802-11ea-8e82-a5355ce9d8a7.JPG width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/89503914-34777680-d802-11ea-8e82-a5355ce9d8a7.JPG" width="60%"></img>
 
 
 - 검사 ID에 따라 검사 설비가 언제 시작했고 언제 끝났는지 볼 수 있다.
