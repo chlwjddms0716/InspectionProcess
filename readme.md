@@ -106,7 +106,7 @@
  - 같은 기능과 모양 가진 버튼들을 유저컨트롤로 묶었음
  - 이벤트 생성기 프로그램을 이용하여 유저컨트롤에서 이벤트를 만들어서 다른 폼에서도 이벤트핸들러로 쓸 수 있게 만들었음
  
-<img src="https://user-images.githubusercontent.com/63761486/89500330-861d0280-d7fc-11ea-832e-f8dc98f701e4.jpg" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/89500330-861d0280-d7fc-11ea-832e-f8dc98f701e4.jpg" width="50%"></img>
 
 ### 프리웨어 사용시 팝업광고가 발생하는 문제
 <img src="file.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
