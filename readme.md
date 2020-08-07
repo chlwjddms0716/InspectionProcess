@@ -144,7 +144,12 @@
 
 # 데이터베이스 스키마
 
-<img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>  
+------------------------------  
+
+# 시퀀스 다이어그램
+
+![시퀀스다이어그램](https://user-images.githubusercontent.com/63270925/89598090-e6f91900-d896-11ea-8a84-bf5660ec7e85.png)
 
 # Point of Interest
 
