@@ -222,7 +222,7 @@
 
  - 버튼의 기능이 상속되기 때문에 자식폼에서 필요할 경우에 override함    
  - 반드시 상속해야하는 경우 virtual 메서드에 NotImplimentedException을 throw해서 override되지 않았음을 알게 함    
- - abstract 클래스로 만드는 방법도 있음    
+ - abstract 클래스로 만드는 방법도 있음       
 <img src="https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png" width="50%"></img>     
  
 
@@ -236,26 +236,26 @@
  - 검사가 종료되어야 새로운 작업 지시를 받을 수 있음    
  
 #### 결과
- - JobQueue 클래스를 만들고, 작업 지시 내역을 담을 큐를 프로퍼티로 만듦    
- <img src="https://user-images.githubusercontent.com/63270925/89672857-549d5780-d920-11ea-9529-9208a2ef3894.png" width="30%"></img> 
+ - JobQueue 클래스를 만들고, 작업 지시 내역을 담을 큐를 프로퍼티로 만듦       
+ <img src="https://user-images.githubusercontent.com/63270925/89672857-549d5780-d920-11ea-9529-9208a2ef3894.png" width="50%"></img> 
  
- - 작업 내역을 담을 큐는 프로그램 내에서 한 개만 사용할 것이므로 싱글톤 패턴을 이용함   
+ - 작업 내역을 담을 큐는 프로그램 내에서 한 개만 사용할 것이므로 싱글톤 패턴을 이용함       
   <img src="https://user-images.githubusercontent.com/63270925/89673326-20766680-d921-11ea-89ce-492d48dc3524.png" width="50%"></img> 
 
- - 작업 지시를 내리면 큐에 담음
-  <img src="https://user-images.githubusercontent.com/63270925/89673711-cde97a00-d921-11ea-81dd-0b57c54724f5.png" width="30%"></img> 
+ - 작업 지시를 내리면 큐에 담음     
+  <img src="https://user-images.githubusercontent.com/63270925/89673711-cde97a00-d921-11ea-81dd-0b57c54724f5.png" width="50%"></img> 
  
  
  
  ### 백그라운드 쓰레드를 이용한 검사 자동화
  ------------------------------
  #### 증상
-  - 큐에 담긴 작업 지시 내역이 장비로 전송되지 않음    
+  - 큐에 담긴 작업 지시 내역이 장비로 전송되지 않음     
  #### 원인
-  - 큐의 지시를 꺼내서 장비와 통신해야 함    
+  - 큐의 지시를 꺼내서 장비와 통신해야 함     
  #### 결과
-  - 큐를 다룰 백그라운드 쓰레드와 실행할 메서드를 만들었고, 큐를 계속 검사해서 자동으로 소켓통신하도록 함    
-  <img src="https://user-images.githubusercontent.com/63270925/89674231-c8406400-d922-11ea-9760-83ea8c4029a7.png" width="40%"></img>
-  <img src="https://user-images.githubusercontent.com/63270925/89674470-2b31fb00-d923-11ea-98af-e9de84511f82.png" width="40%"></img>
+  - 큐를 다룰 백그라운드 쓰레드와 실행할 메서드를 만들었고, 큐를 계속 검사해서 자동으로 소켓통신하도록 함     
+  <img src="https://user-images.githubusercontent.com/63270925/89674231-c8406400-d922-11ea-9760-83ea8c4029a7.png" width="50%"></img>      
+  <img src="https://user-images.githubusercontent.com/63270925/89675696-56b5e500-d925-11ea-947b-2f3e2806306e.png" width="50%"></img>
  
  
