@@ -75,7 +75,7 @@ while True:
     red =0
     blue = 0
     count = 0
-    while count < 2:
+    while count < 10:
 
         if ser.readable():    #read from arduino
             res = ser.read()
