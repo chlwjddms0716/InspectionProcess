@@ -17,6 +17,7 @@ namespace InspectionProcess.Forms
         private InspectionResult _inspectionResult;
         private InspectionResult __inspectionResult;
         private Inspection _inspection;
+        private Inspection __inspection;
         private Product _product;
 
         public InsertInspectionForm()
@@ -29,6 +30,11 @@ namespace InspectionProcess.Forms
             _product = product;
         }
 
+        public InsertInspectionForm(InspectionResult inspectionResult) : this()
+        {
+            __inspectionResult = inspectionResult;
+        }
+
         protected async override void OnShown(EventArgs e)
         {
             //base.OnShown(e);
@@ -38,25 +44,46 @@ namespace InspectionProcess.Forms
 
         protected override void btnAction_Click(object sender, EventArgs e)
         {
-            _inspectionResult = new InspectionResult();
-            _inspection = new Inspection();
-            //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
-
-            WriteToEntity();
-            try
+            if (__inspectionResult.ProductId == DataRepository.Product.GetbyId(__inspectionResult.ProductId))
             {
-                DataRepository.Inspection.Insert(_inspection);
-                DataRepository.InspectionResult.Insert(_inspectionResult);
+                __inspectionResult.Count += 1;
+
+                if (__inspectionResult.InspectionId == DataRepository.Inspection.GetbyId(__inspectionResult.InspectionId))
+                {
+                    __inspection = DataRepository.Inspection.Get(__inspectionResult.InspectionId);
+                    __inspection.InspectionTeam = (int)lueTeamName.EditValue;
+                }
+                
+                DataRepository.InspectionResult.Update(__inspectionResult);
+                DataRepository.Inspection.Update(__inspection);
+
+                MessageBox.Show("작업지시 했습니다.");
+
+                JobQueue.Instance.AddList(__inspectionResult.InspectionResultId, __inspection.InspectionId);
+                Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                _inspectionResult = new InspectionResult();
+                _inspection = new Inspection();
+                //Helpers.WarehouseId.warehouseId = (int)cbbWarehouseName.SelectedValue;
+
+                WriteToEntity();
+                try
+                {
+                    DataRepository.Inspection.Insert(_inspection);
+                    DataRepository.InspectionResult.Insert(_inspectionResult);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                MessageBox.Show("작업지시 했습니다.");
+
+                JobQueue.Instance.AddList(_inspectionResult.InspectionResultId, _inspection.InspectionId);
+
+                Close();
             }
-            MessageBox.Show("작업지시 했습니다.");
-
-            JobQueue.Instance.AddList(_inspectionResult.InspectionResultId, _inspection.InspectionId);
-
-            Close();
         }
 
        

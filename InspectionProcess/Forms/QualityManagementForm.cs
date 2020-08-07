@@ -41,20 +41,11 @@ namespace InspectionProcess.Forms
 
         private void btnReInspection_Click(object sender, EventArgs e)
         {
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm.GetType() == typeof(ProductManagementForm))
-                {
-                    frm.Activate();
-                    frm.BringToFront();
-                    return;
-                }
-            }
-
-            ProductManagementForm productManagamentForm = new ProductManagementForm();
-            //productManagamentForm.MdiParent = this;
-            //productManagamentForm.WindowState = FormWindowState.Maximized;
-            productManagamentForm.Show();
+            InspectionResult inspectionResult = inspectionResultBindingSource.Current as InspectionResult;
+            if (inspectionResult == null)
+                return;
+            InsertInspectionForm form = new InsertInspectionForm(inspectionResult);
+            form.ShowDialog();
         }
     }
 }

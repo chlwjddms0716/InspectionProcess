@@ -54,5 +54,16 @@ namespace InspectionProcess.Data
                         select x;
             return query.ToList();
         }
+
+        public int GetbyId(int inspectionId)
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Inspections
+                        where x.InspectionId == inspectionId
+                        select x.InspectionId;
+
+            return query.FirstOrDefault();
+        }
     }
 }
