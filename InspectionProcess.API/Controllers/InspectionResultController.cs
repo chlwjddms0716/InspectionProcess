@@ -46,7 +46,7 @@ namespace InspectionProcess.API.Controllers
             _inspectionResult.Count = _inspectionResult.Count+1;
 
             
-            if (_inspectionResult.Count == 3) {
+            if (_inspectionResult.Count == 3 && _inspectionResult.NormalNumber == 10) {
                 InsertKeeping(_inspectionResult);
 
             }
