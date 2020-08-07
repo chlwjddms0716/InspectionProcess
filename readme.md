@@ -208,7 +208,7 @@
 　  
 <img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
-***
+
 
 ### 폼의 상속으로 코드의 중복을 최소화
 ------------------------------
