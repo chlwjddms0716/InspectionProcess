@@ -46,7 +46,7 @@ namespace InspectionProcess.Forms
         {
             if (__inspectionResult.ProductId == DataRepository.Product.GetbyId(__inspectionResult.ProductId))
             {
-                __inspectionResult.Count += 1;
+                
 
                 if (__inspectionResult.InspectionId == DataRepository.Inspection.GetbyId(__inspectionResult.InspectionId))
                 {
@@ -54,7 +54,7 @@ namespace InspectionProcess.Forms
                     __inspection.InspectionTeam = (int)lueTeamName.EditValue;
                 }
                 
-                DataRepository.InspectionResult.Update(__inspectionResult);
+                
                 DataRepository.Inspection.Update(__inspection);
 
                 MessageBox.Show("작업지시 했습니다.");
