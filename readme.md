@@ -31,7 +31,7 @@
 
 <img src="https://user-images.githubusercontent.com/63761322/89503917-35100d00-d802-11ea-9bf4-246fdb2bc28e.JPG" width="60%"></img>
 
-- 생산ID와 상품명을 이용하여 검색을 할 수 있다.
+- 생산품에 배정된 검사조를 확인 할 수 있다.
   
   
 
@@ -43,11 +43,75 @@
 
                                                                                                                                                                                                                                                  
 ------------------------------                                                                                                                                                                                 
-##### 3. 품질관리
+#### 3. 품질관리
 
 <img src="https://user-images.githubusercontent.com/63761322/89503918-35a8a380-d802-11ea-9fd5-e02e6fb2aa0a.JPG" width="60%"></img>
 
-- 검사ID와 생산품ID와 검사조를 이용하여 검색 할 수 있다.
+- 생산품을 검사 한 결과를 볼 수 있으며, 검사횟수를 확인 할 수 있다.
+- 재검사를 눌렀을 경우 검사조를 배정하여 검사를 다시 할 수 있다.
+
+
+------------------------------
+
+
+#### 4. 입고관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503912-33464980-d802-11ea-93ea-5282938cd874.JPG" width="60%"></img>
+
+- 검사횟수는 최대 3번으로 검사 횟수가 3번이거나 양품개수 10개인 경우 자동으로 창고로 입고된다
+- 검사 ID를 보고 창고명 , 개수 , 입고날짜를 확인 할 수 있다.
+
+
+------------------------------
+
+
+#### 5. 창고관리
+<img src="https://user-images.githubusercontent.com/63761322/89503913-33dee000-d802-11ea-8ac2-0dca929a92ab.JPG" width="60%"></img>
+
+- 창고에 따라 개수를 확인 할 수 있다.
+- 비우기 버튼을 사용하여 창고에 있는 생산품을 출고하거나, 폐기 할 수 있다.
+
+
+
+------------------------------
+
+
+
+#### 5. 설비관리
+
+<img src="https://user-images.githubusercontent.com/63761322/89503914-34777680-d802-11ea-8e82-a5355ce9d8a7.JPG" width="60%"></img>
+
+
+- 검사 ID에 따라 검사 설비가 언제 시작했고 언제 끝났는지 볼 수 있다.
+
+------------------------------
+
+#### 6. 실시간 상태
+
+
+<img src="https://user-images.githubusercontent.com/63761322/89510373-73f69080-d80b-11ea-9ec1-4344f4fc2914.png" width="60%"></img>
+
+
+- 온/습도 보기버튼을 클릭하여 현장의 환경을 볼 수 있다.
+- 창고에 생산품이 얼마나 들어가 있는지 확인 할 수 있고, 개수에 따라 창고 이미지가 바뀐다.
+- CCTV 버튼을 클릭하여 실시간 공정화면을 확인 할 수 있다.
+
+
+<img src="https://user-images.githubusercontent.com/63761322/89510717-e7000700-d80b-11ea-9c1d-9b31dbf2ed6c.png" width="60%"></img>
+
+
+
+                                                                                                                          
+                                                                                                                          
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +144,17 @@
 
 # 데이터베이스 스키마
 
-<img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>  
+***
+
+# 시퀀스 다이어그램
+
+![시퀀스다이어그램](https://user-images.githubusercontent.com/63270925/89598090-e6f91900-d896-11ea-8a84-bf5660ec7e85.png)  
+
+***
+# 센서 제어 알고리즘  
+![알고리즘 다이어그램](https://user-images.githubusercontent.com/63270925/89598299-71417d00-d897-11ea-8985-5b2d0279efd4.png)   
+
 
 # Point of Interest
 
@@ -129,10 +203,22 @@
  - 윈폼에서 작업지시를 내렸을 때 라즈베리파이 센서들을 작동시키고 싶은데 방법을 잘 몰랐음
 
 #### 결과
- -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈 소켓을 이용하면 파이썬은 서버 C#은 클라이언트가 됨 
+ -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈. 장비(라즈베리파이)가 소켓 서버를 활성화하고, 애플리케이션(윈폼)이 소켓 클라이언트로서 연결함
 　  
 <img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
+***
 
+### 폼의 상속으로 코드의 중복을 최소화  
+#### 원인
+ - 등록과 수정을 위해 추가적인 폼을 만들어야 했고, 쓰임새나 폼의 형식이 유사함      
+![등록수정폼](https://user-images.githubusercontent.com/63270925/89598949-1e68c500-d899-11ea-956a-3c2979a35ec9.png)
 
+#### 해결
+ - 추가적으로 생성되는 폼을 ChildRootForm이라는 부모 폼을 만들어 상속받게 함      
+ ![childRootFormDesign](https://user-images.githubusercontent.com/63270925/89599593-fc704200-d89a-11ea-9048-53415438dd0c.png)
+
+ - 버튼의 기능이 상속되기 때문에 자식폼에서 필요할 경우에 override함    
+ ![childRootFormCode](https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png)  
+ 
 
