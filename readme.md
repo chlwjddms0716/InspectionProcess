@@ -127,7 +127,7 @@
 
 ### 프레임워크
 
-* Arduino
+* Arduino 
 * Thonny Python IDE
 * .Net FrameWork 4.8+
 * Winform
