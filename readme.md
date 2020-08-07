@@ -210,18 +210,19 @@
 
 ***
 
-### 폼의 상속으로 코드의 중복을 최소화  
+### 폼의 상속으로 코드의 중복을 최소화
+------------------------------
 #### 원인
  - 등록과 수정을 위해 추가적인 폼을 만들어야 했고, 쓰임새나 폼의 디자인이 유사함      
-![등록수정폼](https://user-images.githubusercontent.com/63270925/89598949-1e68c500-d899-11ea-956a-3c2979a35ec9.png)
+<img src="https://user-images.githubusercontent.com/63270925/89598949-1e68c500-d899-11ea-956a-3c2979a35ec9.png" width="50%"></img>
 
 #### 해결
  - 추가적으로 생성되는 폼을 ChildRootForm이라는 부모 폼을 만들어 상속받게 함      
- ![childRootFormDesign](https://user-images.githubusercontent.com/63270925/89599593-fc704200-d89a-11ea-9048-53415438dd0c.png)
+ <img src="https://user-images.githubusercontent.com/63270925/89599593-fc704200-d89a-11ea-9048-53415438dd0c.png" width="50%"></img>
 
  - 버튼의 기능이 상속되기 때문에 자식폼에서 필요할 경우에 override함    
  - 반드시 상속해야하는 경우 virtual 함수에 NotImplimentedException을 throw해서 override되지 않았음을 알게 함    
  - abstract 클래스로 만드는 방법도 있음    
- ![childRootFormCode](https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png)      
+<img src="https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png" width="50%"></img>     
  
 
