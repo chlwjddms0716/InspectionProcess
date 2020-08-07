@@ -52,7 +52,7 @@ void setup() {
 
 void loop() {
   char color;
-  if(count==2){
+  if(count==10){
       Serial.read();
       Serial.print(red);
       count =0;
