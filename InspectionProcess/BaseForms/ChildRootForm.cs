@@ -18,20 +18,14 @@ namespace InspectionProcess
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        protected void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         protected virtual void btnAction_Click(object sender, EventArgs e)
         {
-            //Register();
             throw new NotImplementedException();
         }
-
-        //protected virtual void Register()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

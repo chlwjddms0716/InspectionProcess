@@ -21,23 +21,12 @@ namespace InspectionProcess.Forms
             InitializeComponent();
         }
 
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         protected async override void OnShown(EventArgs e)
         {
             //base.OnShown(e);
             bdsMerchandise.DataSource = await DataRepository.Merchandise.GetAllAsync();
             bdsProductionTeamId.DataSource = await DataRepository.Product.GetAllAsync();
             bdsTeam.DataSource = await DataRepository.Team.GetAllAsync();
-        }
-
-        private void InsertProductForm_Load(object sender, EventArgs e)
-        {
-            
         }
 
         protected override void btnAction_Click(object sender, EventArgs e)
@@ -48,14 +37,20 @@ namespace InspectionProcess.Forms
             try
             {
                 DataRepository.Product.Insert(_product);
+                MessageBox.Show("등록되었습니다.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("등록되었습니다.");
+
             Close();
         }
+
+        //protected override void btnAction_Click(object sender, EventArgs e)
+        //{
+
+        //}
 
         private void WriteToEntity()
         {

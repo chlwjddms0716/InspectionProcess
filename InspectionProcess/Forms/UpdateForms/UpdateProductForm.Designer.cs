@@ -186,6 +186,8 @@
             this.lueMerchandiseName.Name = "lueMerchandiseName";
             this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 49, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandiseName.Properties.DisplayMember = "Name";
             this.lueMerchandiseName.Properties.NullText = "";
