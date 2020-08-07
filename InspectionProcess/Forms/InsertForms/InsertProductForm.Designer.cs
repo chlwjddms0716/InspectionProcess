@@ -98,12 +98,12 @@
             // 
             this.btnAction.Location = new System.Drawing.Point(286, 220);
             this.btnAction.Size = new System.Drawing.Size(89, 27);
+            this.btnAction.Text = "등록(&I)";
             // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(379, 220);
             this.btnClose.Size = new System.Drawing.Size(90, 27);
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // layoutControlItem2
             // 
@@ -201,7 +201,7 @@
             this.layoutControlItem1.Control = this.lueProductionTeamId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(461, 155);
+            this.layoutControlItem1.Size = new System.Drawing.Size(461, 28);
             this.layoutControlItem1.Text = "생산조";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 18);
             // 
@@ -224,7 +224,6 @@
             this.ClientSize = new System.Drawing.Size(481, 259);
             this.Name = "InsertProductForm";
             this.Text = "생산등록";
-            this.Load += new System.EventHandler(this.InsertProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

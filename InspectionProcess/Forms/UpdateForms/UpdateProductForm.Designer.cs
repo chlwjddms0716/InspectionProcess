@@ -36,11 +36,11 @@
             this.teFinishTime = new DevExpress.XtraEditors.TimeEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lueMerchandiseName = new DevExpress.XtraEditors.LookUpEdit();
-            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lueTeamName = new DevExpress.XtraEditors.LookUpEdit();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsMerchandise = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -56,11 +56,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -186,16 +186,14 @@
             this.lueMerchandiseName.Name = "lueMerchandiseName";
             this.lueMerchandiseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMerchandiseName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 49, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandiseName.Properties.DisplayMember = "Name";
             this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
             this.lueMerchandiseName.Size = new System.Drawing.Size(401, 24);
             this.lueMerchandiseName.StyleController = this.layoutControl1;
             this.lueMerchandiseName.TabIndex = 12;
-            // 
-            // bdsMerchandise
-            // 
-            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
             // layoutControlItem8
             // 
@@ -222,10 +220,6 @@
             this.lueTeamName.StyleController = this.layoutControl1;
             this.lueTeamName.TabIndex = 13;
             // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.lueTeamName;
@@ -234,6 +228,14 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(487, 28);
             this.layoutControlItem4.Text = "생산조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(78, 18);
+            // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
+            // 
+            // bdsMerchandise
+            // 
+            this.bdsMerchandise.DataSource = typeof(InspectionProcess.Data.Merchandise);
             // 
             // UpdateProductForm
             // 
@@ -258,11 +260,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.teFinishTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueMerchandiseName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMerchandise)).EndInit();
             this.ResumeLayout(false);
 
         }

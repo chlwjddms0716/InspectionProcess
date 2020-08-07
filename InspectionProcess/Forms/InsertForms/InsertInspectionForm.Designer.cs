@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lueTeamName = new DevExpress.XtraEditors.LookUpEdit();
-            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.bdsTeam = new System.Windows.Forms.BindingSource(this.components);
             this.bdsWarehouse = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -41,8 +41,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             // 
             this.btnAction.Location = new System.Drawing.Point(268, 208);
             this.btnAction.Size = new System.Drawing.Size(86, 27);
+            this.btnAction.Text = "등록(&I)";
             // 
             // btnClose
             // 
@@ -106,10 +107,6 @@
             this.lueTeamName.StyleController = this.layoutControl1;
             this.lueTeamName.TabIndex = 7;
             // 
-            // bdsTeam
-            // 
-            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.lueTeamName;
@@ -118,6 +115,10 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(437, 28);
             this.layoutControlItem4.Text = "검사조";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(39, 18);
+            // 
+            // bdsTeam
+            // 
+            this.bdsTeam.DataSource = typeof(InspectionProcess.Data.Team);
             // 
             // bdsWarehouse
             // 
@@ -138,8 +139,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueTeamName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsWarehouse)).EndInit();
             this.ResumeLayout(false);
 

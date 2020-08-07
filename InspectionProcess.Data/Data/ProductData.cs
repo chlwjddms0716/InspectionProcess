@@ -66,9 +66,5 @@ namespace InspectionProcess.Data
 
         }
 
-        public void Insert(object product)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
