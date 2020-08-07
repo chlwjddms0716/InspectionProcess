@@ -207,6 +207,18 @@
 　  
 <img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
+***
 
+### 폼의 상속으로 코드의 중복을 최소화  
+#### 원인
+ - 등록과 수정을 위해 추가적인 폼을 만들어야 했고, 쓰임새나 폼의 형식이 유사함      
+![등록수정폼](https://user-images.githubusercontent.com/63270925/89598949-1e68c500-d899-11ea-956a-3c2979a35ec9.png)
 
+#### 해결
+ - 추가적으로 생성되는 폼을 ChildRootForm이라는 부모 폼을 만들어 상속받게 함      
+ ![childRootFormDesign](https://user-images.githubusercontent.com/63270925/89599593-fc704200-d89a-11ea-9048-53415438dd0c.png)
+
+ - 버튼의 기능이 상속되기 때문에 자식폼에서 필요할 경우에 override함    
+ ![childRootFormCode](https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png)  
+ 
 
