@@ -164,9 +164,10 @@
             this.lueMerchandise.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueMerchandise.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueMerchandise.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandise.Properties.DisplayMember = "Name";
+            this.lueMerchandise.Properties.NullText = "";
             this.lueMerchandise.Properties.ValueMember = "MerchandiseId";
             this.lueMerchandise.Size = new System.Drawing.Size(375, 24);
             this.lueMerchandise.StyleController = this.layoutControl1;
@@ -188,9 +189,10 @@
             this.lueProductionTeamId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueProductionTeamId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name12")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "")});
             this.lueProductionTeamId.Properties.DataSource = this.bdsTeam;
             this.lueProductionTeamId.Properties.DisplayMember = "Name";
+            this.lueProductionTeamId.Properties.NullText = "";
             this.lueProductionTeamId.Properties.ValueMember = "TeamId";
             this.lueProductionTeamId.Size = new System.Drawing.Size(375, 24);
             this.lueProductionTeamId.StyleController = this.layoutControl1;

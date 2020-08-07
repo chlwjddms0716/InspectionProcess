@@ -54,8 +54,6 @@ namespace InspectionProcess.UserControls
 
         public class SearchButtonClickedEventArgs : EventArgs
         {
-
-
             /*public SearchButtonClickedEventArgs()
             {
             }

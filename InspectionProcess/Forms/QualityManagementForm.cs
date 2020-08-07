@@ -25,23 +25,6 @@ namespace InspectionProcess.Forms
             inspectionBindingSource.DataSource = await DataRepository.Inspection.GetAllAsync();
             productBindingSource.DataSource = await DataRepository.Product.GetAllAsync();
 
-            //if(DataRepository.InspectionResult.GetbyNormal() == 10)
-            //{
-            //    DataRepository.InspectionResult.DeleteByNormal();
-
-            //    Warehouse warehouse = new Warehouse();
-            //    warehouse.Name = 
-            //    DataRepository.Warehouse.Insert(warehouse);
-            //}
-            //DataRepository.InspectionResult.DeleteByDefective();
-            //TODO : 양품개수가 10개 일 때, 검사 횟수가 3번이면 창고.count, 지정된 창고에 들어가게 해야 함
-
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-           
-            //하이
         }
 
         private void searchButtonControl1_ResetButtonClicked(object sender, UserControls.SearchButtonControl.ResetButtonClickedEventArgs e)
@@ -54,6 +37,24 @@ namespace InspectionProcess.Forms
         private void searchButtonControl1_SearchButtonClicked(object sender, UserControls.SearchButtonControl.SearchButtonClickedEventArgs e)
         {
             inspectionResultBindingSource.DataSource = DataRepository.InspectionResult.SearchByQuality((int?)lkuInspectionID.EditValue, (int?)lkuProductId.EditValue, (int?)lkuInspectionTeamName.EditValue);
+        }
+
+        private void btnReInspection_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.GetType() == typeof(ProductManagementForm))
+                {
+                    frm.Activate();
+                    frm.BringToFront();
+                    return;
+                }
+            }
+
+            ProductManagementForm productManagamentForm = new ProductManagementForm();
+            //productManagamentForm.MdiParent = this;
+            //productManagamentForm.WindowState = FormWindowState.Maximized;
+            productManagamentForm.Show();
         }
     }
 }

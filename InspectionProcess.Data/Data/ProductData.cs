@@ -66,5 +66,20 @@ namespace InspectionProcess.Data
 
         }
 
+        public void Insert(object product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetbyId(int ProductId)
+        {
+            InspectionProcessEntities context = CreateContext();
+
+            var query = from x in context.Products
+                        where x.ProductId == ProductId
+                        select x.ProductId;
+
+            return query.FirstOrDefault();
+        }
     }
 }

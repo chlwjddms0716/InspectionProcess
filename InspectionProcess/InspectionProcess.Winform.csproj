@@ -85,7 +85,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Mjpegprocessor">
-      <HintPath>..\..\..\Users\kccistc\Desktop\mjpg\Mjpegprocessor.dll</HintPath>
+      <HintPath>..\..\..\Users\kccistc\Documents\카카오톡 받은 파일\Mjpegprocessor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -294,9 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\temperature.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\humidity.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\temperature2.png" />

@@ -154,6 +154,7 @@
             this.btnReInspection.StyleController = this.layoutControl1;
             this.btnReInspection.TabIndex = 27;
             this.btnReInspection.Text = "재검사(&I)";
+            this.btnReInspection.Click += new System.EventHandler(this.btnReInspection_Click);
             // 
             // lkuInspectionTeamName
             // 

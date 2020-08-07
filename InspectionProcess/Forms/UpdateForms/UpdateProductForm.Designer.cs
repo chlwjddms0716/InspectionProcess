@@ -190,6 +190,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 49, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueMerchandiseName.Properties.DataSource = this.bdsMerchandise;
             this.lueMerchandiseName.Properties.DisplayMember = "Name";
+            this.lueMerchandiseName.Properties.NullText = "";
             this.lueMerchandiseName.Properties.ValueMember = "MerchandiseId";
             this.lueMerchandiseName.Size = new System.Drawing.Size(401, 24);
             this.lueMerchandiseName.StyleController = this.layoutControl1;
@@ -215,6 +216,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.lueTeamName.Properties.DataSource = this.bdsTeam;
             this.lueTeamName.Properties.DisplayMember = "Name";
+            this.lueTeamName.Properties.NullText = "";
             this.lueTeamName.Properties.ValueMember = "TeamId";
             this.lueTeamName.Size = new System.Drawing.Size(401, 24);
             this.lueTeamName.StyleController = this.layoutControl1;
