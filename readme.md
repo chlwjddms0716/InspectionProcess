@@ -149,7 +149,8 @@
 
 # 시퀀스 다이어그램
 
-![시퀀스다이어그램](https://user-images.githubusercontent.com/63270925/89598090-e6f91900-d896-11ea-8a84-bf5660ec7e85.png)  
+![SequenceDiagram](https://user-images.githubusercontent.com/63270925/89602551-f3cf3a00-d8a1-11ea-9e72-fe9edcb19978.png)    
+
 
 ***
 # 센서 제어 알고리즘  
