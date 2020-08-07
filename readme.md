@@ -145,11 +145,16 @@
 # 데이터베이스 스키마
 
 <img src="https://user-images.githubusercontent.com/63761486/89498131-9d59f100-d7f8-11ea-8404-363ee25799c7.jpg" width="80%"></img>  
-------------------------------  
+***
 
 # 시퀀스 다이어그램
 
-![시퀀스다이어그램](https://user-images.githubusercontent.com/63270925/89598090-e6f91900-d896-11ea-8a84-bf5660ec7e85.png)
+![시퀀스다이어그램](https://user-images.githubusercontent.com/63270925/89598090-e6f91900-d896-11ea-8a84-bf5660ec7e85.png)  
+
+***
+# 센서 제어 알고리즘  
+![알고리즘 다이어그램](https://user-images.githubusercontent.com/63270925/89598299-71417d00-d897-11ea-8985-5b2d0279efd4.png)   
+
 
 # Point of Interest
 
@@ -198,7 +203,7 @@
  - 윈폼에서 작업지시를 내렸을 때 라즈베리파이 센서들을 작동시키고 싶은데 방법을 잘 몰랐음
 
 #### 결과
- -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈 소켓을 이용하면 파이썬은 서버 C#은 클라이언트가 됨 
+ -  소켓을 이용하여 서버와 클라이언트의 역할을 바꿈. 장비(라즈베리파이)가 소켓 서버를 활성화하고, 애플리케이션(윈폼)이 소켓 클라이언트로서 연결함
 　  
 <img src="https://user-images.githubusercontent.com/63761322/89503098-080f2a80-d801-11ea-8507-e84d0af63d55.JPG" width="50%"></img>
 
