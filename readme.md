@@ -221,7 +221,7 @@
  <img src="https://user-images.githubusercontent.com/63270925/89599593-fc704200-d89a-11ea-9048-53415438dd0c.png" width="40%"></img>
 
  - 버튼의 기능이 상속되기 때문에 자식폼에서 필요할 경우에 override함    
- - 반드시 상속해야하는 경우 virtual 함수에 NotImplimentedException을 throw해서 override되지 않았음을 알게 함    
+ - 반드시 상속해야하는 경우 virtual 메서드에 NotImplimentedException을 throw해서 override되지 않았음을 알게 함    
  - abstract 클래스로 만드는 방법도 있음    
 <img src="https://user-images.githubusercontent.com/63270925/89599775-6852aa80-d89b-11ea-80f5-8fd6ab45921c.png" width="50%"></img>     
  
